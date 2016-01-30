@@ -1,0 +1,90 @@
+---
+title: "Novel oral anticoagulants network meta-analysis"
+author: "Benjamin Chan"
+date: "`r Sys.time()`"
+output: 
+  html_document: 
+    keep_md: yes
+    number_sections: yes
+    toc: yes
+---
+
+
+# Read data
+
+> From: Marian McDonagh  
+> Sent: Friday, January 29, 2016 4:19 PM  
+> To: Benjamin Chan  
+> Subject: Re: Network Meta-analysis  
+> 
+> OK, last email for today!
+> I put it all into an excel spreadsheet --- all the outcomes.
+> Looks like it might not add up to much since several outcome cells are 0's.
+> Let me know what you think.
+
+```{r}
+library(openxlsx)
+library(data.table)
+list.files(getwd())
+readSheet <- function (sheet) {
+  D <- data.table(read.xlsx("NOAC NMA Data.xlsx", sheet=sheet, startRow=3, cols=1:5))
+  names(D) <- c("label", "nNOAC", "yNOAC", "nWarfarin", "yWarfarin")
+  D
+}
+D1 <- readSheet("Mortality")
+D2 <- readSheet("Stroke")
+D3 <- readSheet("MI")
+D4 <- readSheet("Bleeding")
+```
+
+
+# Mortality
+
+Clean up the data (do not the code).
+
+```{r, echo=FALSE}
+D <- D1
+names(D) <- c("label", "nNOAC", "yNOAC", "nWarfarin", "yWarfarin")
+D <- D[, label := gsub("  ", " ", label)]
+D <- D[, label := gsub("\\s$", "", label)]
+D <- D[, label := gsub("\\sivaroxaban", " Rivaroxaban", label)]
+D <- D[, `:=` (study = NA_character_, noac = NA_character_)]
+assignStudy <- function (str) {
+  D[grep(str, label), study := str]
+}
+assignNOAC <- function (str) {
+  D[grep(str, label), noac := str]
+}
+D <- assignStudy("RE-LY")
+D <- assignStudy("ENGAGE AF-TIMI")
+D <- assignStudy("Yamashita, 2012")
+D <- assignStudy("ARISTOTLE")
+D <- assignStudy("ARISTOTLE-J")
+D <- assignStudy("J-ROCKET")
+D <- assignStudy("ROCKET-AF")
+D <- assignNOAC("Dabigatran 110 mg")
+D <- assignNOAC("Dabigatran 150 mg")
+D <- assignNOAC("Edoxaban 30 mg")
+D <- assignNOAC("Edoxaban 60 mg")
+D <- assignNOAC("Apixaban 5 mg")
+D <- assignNOAC("Rivaroxaban 15 mg")
+D <- assignNOAC("Rivaroxaban 20 mg")
+D <- D[, label := NULL]
+D <- melt(D, id.vars=c("study", "noac"))
+D <- rbindlist(list(merge(D[variable == "nNOAC"],
+                          D[variable == "yNOAC"],
+                          by=c("study", "noac")),
+                    merge(D[variable == "nWarfarin"],
+                          D[variable == "yWarfarin"],
+                          by=c("study", "noac"))))
+D <- D[grep("NOAC", variable.x), treatment := noac]
+D <- D[grep("Warfarin", variable.x), treatment := "Warfarin"]
+D <- D[, treatment := gsub(" ", "_", treatment)]
+D <- D[, noac := NULL]
+D <- D[, `:=` (variable.x = NULL, variable.y = NULL)]
+setnames(D, c("value.x", "value.y"), c("sampleSize", "responders"))
+setkey(D, study, treatment)
+setcolorder(D, c("study", "treatment", "responders", "sampleSize"))
+D <- unique(D)
+show(D)
+```
