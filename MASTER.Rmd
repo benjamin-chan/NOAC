@@ -89,6 +89,7 @@ cleanData <- function (D) {
   setkey(D, study, treatment)
   setcolorder(D, c("study", "treatment", "responders", "sampleSize"))
   D <- unique(D)
+  D <- D[study %in% c("RE-LY", "ARISTOTLE", "ROCKET-AF", "ENGAGE AF-TIMI")]  # Replicate Fu 2014
   D
 }
 ```
