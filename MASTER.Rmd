@@ -88,3 +88,37 @@ setcolorder(D, c("study", "treatment", "responders", "sampleSize"))
 D <- unique(D)
 show(D)
 ```
+
+Plot the network.
+
+```{r mortalityNetwork}
+library(gemtc)
+network <- mtc.network(D)
+plot(network)
+```
+
+Run the model.
+
+```{r}
+M <- mtc.model(network, type="consistency")
+system.time(results <- mtc.run(M, thin=10))
+```
+
+Sampler diagnostics.
+
+```{r mortalityGelman, fig.height=8}
+gelman.plot(results)
+```
+
+Sampler diagnostics.
+
+```{r mortalityTrace, fig.height=10}
+plot(results)
+```
+
+Summary.
+
+```{r mortalityForest}
+summary(results)
+forest(results)
+```
