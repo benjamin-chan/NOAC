@@ -107,9 +107,9 @@ plot(network)
 
 Run the model.
 
-```{r}
+```{r, results='hide'}
 M <- mtc.model(network, type="consistency", linearModel="fixed")
-system.time(results <- mtc.run(M, thin=20))
+system.time(results <- mtc.run(M, n.adapt=20000, n.iter=20000, thin=20))
 ```
 
 Sampler diagnostics.
@@ -150,9 +150,9 @@ plot(network)
 
 Run the model.
 
-```{r}
+```{r, results='hide'}
 M <- mtc.model(network, type="consistency", linearModel="fixed")
-system.time(results <- mtc.run(M, thin=20))
+system.time(results <- mtc.run(M, n.adapt=20000, n.iter=20000, thin=20))
 ```
 
 Sampler diagnostics.
@@ -193,9 +193,9 @@ plot(network)
 
 Run the model.
 
-```{r}
+```{r, results='hide'}
 M <- mtc.model(network, type="consistency", linearModel="fixed")
-system.time(results <- mtc.run(M, thin=20))
+system.time(results <- mtc.run(M, n.adapt=20000, n.iter=20000, thin=20))
 ```
 
 Sampler diagnostics.
@@ -236,9 +236,9 @@ plot(network)
 
 Run the model.
 
-```{r}
+```{r, results='hide'}
 M <- mtc.model(network, type="consistency", linearModel="fixed")
-system.time(results <- mtc.run(M, thin=20))
+system.time(results <- mtc.run(M, n.adapt=20000, n.iter=20000, thin=20))
 ```
 
 Sampler diagnostics.
