@@ -36,10 +36,8 @@ readSheet <- function (sheet) {
   names(D) <- c("label", "nNOAC", "yNOAC", "nWarfarin", "yWarfarin")
   D
 }
-D1 <- readSheet("Mortality")
-D2 <- readSheet("Stroke")
-D3 <- readSheet("MI")
-D4 <- readSheet("Bleeding")
+```
+
 Clean up the data (do not show the code).
 
 ```{r, echo=FALSE}
@@ -97,9 +95,12 @@ cleanData <- function (D) {
 
 # Mortality
 
-Clean up the data (do not the code).
+Clean up the data (do not show the code).
 
 ```{r, echo=FALSE}
+D1 <- readSheet("Mortality")
+D1 <- cleanData(D1)
+show(D1)
 ```
 
 Plot the network.
@@ -134,4 +135,36 @@ Summary.
 ```{r mortalityForest}
 summary(results)
 forest(results)
+```
+
+
+# Stroke
+
+Clean up the data (do not show the code).
+
+```{r, echo=FALSE}
+D2 <- readSheet("Stroke")
+D2 <- cleanData(D2)
+show(D2)
+```
+
+
+# MI
+
+Clean up the data (do not show the code).
+
+```{r, echo=FALSE}
+D3 <- readSheet("MI")
+D3 <- cleanData(D3)
+show(D3)
+
+
+# Bleeding
+
+Clean up the data (do not show the code).
+
+```{r, echo=FALSE}
+D4 <- readSheet("Bleeding")
+D4 <- cleanData(D4)
+show(D4)
 ```
