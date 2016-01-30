@@ -107,7 +107,7 @@ Plot the network.
 
 ```{r mortalityNetwork}
 library(gemtc)
-network <- mtc.network(D)
+network <- mtc.network(D1)
 plot(network)
 ```
 
@@ -115,7 +115,7 @@ Run the model.
 
 ```{r}
 M <- mtc.model(network, type="consistency")
-system.time(results <- mtc.run(M, thin=10))
+system.time(results <- mtc.run(M, thin=20))
 ```
 
 Sampler diagnostics.
@@ -149,6 +149,41 @@ show(D2)
 ```
 
 
+Plot the network.
+
+```{r strokeNetwork}
+library(gemtc)
+network <- mtc.network(D2)
+plot(network)
+```
+
+Run the model.
+
+```{r}
+M <- mtc.model(network, type="consistency")
+system.time(results <- mtc.run(M, thin=20))
+```
+
+Sampler diagnostics.
+
+```{r strokeGelman, fig.height=8}
+gelman.plot(results)
+```
+
+Sampler diagnostics.
+
+```{r strokeTrace, fig.height=10}
+plot(results)
+```
+
+Summary.
+
+```{r strokeForest}
+summary(results)
+forest(results)
+```
+
+
 # MI
 
 Clean up the data (do not show the code).
@@ -157,6 +192,42 @@ Clean up the data (do not show the code).
 D3 <- readSheet("MI")
 D3 <- cleanData(D3)
 show(D3)
+```
+
+
+Plot the network.
+
+```{r miNetwork}
+library(gemtc)
+network <- mtc.network(D3)
+plot(network)
+```
+
+Run the model.
+
+```{r}
+M <- mtc.model(network, type="consistency")
+system.time(results <- mtc.run(M, thin=20))
+```
+
+Sampler diagnostics.
+
+```{r miGelman, fig.height=8}
+gelman.plot(results)
+```
+
+Sampler diagnostics.
+
+```{r miTrace, fig.height=10}
+plot(results)
+```
+
+Summary.
+
+```{r miForest}
+summary(results)
+forest(results)
+```
 
 
 # Bleeding
@@ -167,4 +238,39 @@ Clean up the data (do not show the code).
 D4 <- readSheet("Bleeding")
 D4 <- cleanData(D4)
 show(D4)
+```
+
+
+Plot the network.
+
+```{r bleedingNetwork}
+library(gemtc)
+network <- mtc.network(D4[!is.na(responders)])
+plot(network)
+```
+
+Run the model.
+
+```{r}
+M <- mtc.model(network, type="consistency")
+system.time(results <- mtc.run(M, thin=20))
+```
+
+Sampler diagnostics.
+
+```{r bleedingGelman, fig.height=8}
+gelman.plot(results)
+```
+
+Sampler diagnostics.
+
+```{r bleedingTrace, fig.height=10}
+plot(results)
+```
+
+Summary.
+
+```{r bleedingForest}
+summary(results)
+forest(results)
 ```
