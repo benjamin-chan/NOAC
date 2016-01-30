@@ -40,6 +40,57 @@ D1 <- readSheet("Mortality")
 D2 <- readSheet("Stroke")
 D3 <- readSheet("MI")
 D4 <- readSheet("Bleeding")
+Clean up the data (do not show the code).
+
+```{r, echo=FALSE}
+cleanData <- function (D) {
+  names(D) <- c("label", "nNOAC", "yNOAC", "nWarfarin", "yWarfarin")
+  D <- D[, label := gsub("\\s{2,}", " ", label)]
+  D <- D[, label := gsub("\\s$", "", label)]
+  D <- D[, label := gsub("\\sivaroxaban", " Rivaroxaban", label)]
+  D <- D[, label := gsub("0$", "0 mg", label)]
+  D <- D[, `:=` (study = NA_character_, noac = NA_character_)]
+  assignStudy <- function (str) {
+    D[grep(str, label), study := str]
+  }
+  assignNOAC <- function (str) {
+    D[grep(str, label), noac := str]
+  }
+  D <- assignStudy("RE-LY")
+  D <- assignStudy("ENGAGE AF-TIMI")
+  D <- assignStudy("Yamashita, 2012")
+  D <- assignStudy("ARISTOTLE")
+  D <- assignStudy("ARISTOTLE-J")
+  D <- assignStudy("J-ROCKET")
+  D <- assignStudy("ROCKET-AF")
+  D <- assignStudy("PETRO")
+  D <- assignStudy("Mao, 2014")
+  D <- assignNOAC("Dabigatran 110 mg")
+  D <- assignNOAC("Dabigatran 150 mg")
+  D <- assignNOAC("Edoxaban 30 mg")
+  D <- assignNOAC("Edoxaban 60 mg")
+  D <- assignNOAC("Apixaban 5 mg")
+  D <- assignNOAC("Rivaroxaban 15 mg")
+  D <- assignNOAC("Rivaroxaban 20 mg")
+  D <- D[, label := NULL]
+  D <- melt(D, id.vars=c("study", "noac"))
+  D <- rbindlist(list(merge(D[variable == "nNOAC"],
+                            D[variable == "yNOAC"],
+                            by=c("study", "noac")),
+                      merge(D[variable == "nWarfarin"],
+                            D[variable == "yWarfarin"],
+                            by=c("study", "noac"))))
+  D <- D[grep("NOAC", variable.x), treatment := noac]
+  D <- D[grep("Warfarin", variable.x), treatment := "Warfarin"]
+  D <- D[, treatment := gsub(" ", "_", treatment)]
+  D <- D[, noac := NULL]
+  D <- D[, `:=` (variable.x = NULL, variable.y = NULL)]
+  setnames(D, c("value.x", "value.y"), c("sampleSize", "responders"))
+  setkey(D, study, treatment)
+  setcolorder(D, c("study", "treatment", "responders", "sampleSize"))
+  D <- unique(D)
+  D
+}
 ```
 
 
@@ -48,50 +99,6 @@ D4 <- readSheet("Bleeding")
 Clean up the data (do not the code).
 
 ```{r, echo=FALSE}
-D <- D1
-names(D) <- c("label", "nNOAC", "yNOAC", "nWarfarin", "yWarfarin")
-D <- D[, label := gsub("  ", " ", label)]
-D <- D[, label := gsub("\\s$", "", label)]
-D <- D[, label := gsub("\\sivaroxaban", " Rivaroxaban", label)]
-D <- D[, `:=` (study = NA_character_, noac = NA_character_)]
-assignStudy <- function (str) {
-  D[grep(str, label), study := str]
-}
-assignNOAC <- function (str) {
-  D[grep(str, label), noac := str]
-}
-D <- assignStudy("RE-LY")
-D <- assignStudy("ENGAGE AF-TIMI")
-D <- assignStudy("Yamashita, 2012")
-D <- assignStudy("ARISTOTLE")
-D <- assignStudy("ARISTOTLE-J")
-D <- assignStudy("J-ROCKET")
-D <- assignStudy("ROCKET-AF")
-D <- assignNOAC("Dabigatran 110 mg")
-D <- assignNOAC("Dabigatran 150 mg")
-D <- assignNOAC("Edoxaban 30 mg")
-D <- assignNOAC("Edoxaban 60 mg")
-D <- assignNOAC("Apixaban 5 mg")
-D <- assignNOAC("Rivaroxaban 15 mg")
-D <- assignNOAC("Rivaroxaban 20 mg")
-D <- D[, label := NULL]
-D <- melt(D, id.vars=c("study", "noac"))
-D <- rbindlist(list(merge(D[variable == "nNOAC"],
-                          D[variable == "yNOAC"],
-                          by=c("study", "noac")),
-                    merge(D[variable == "nWarfarin"],
-                          D[variable == "yWarfarin"],
-                          by=c("study", "noac"))))
-D <- D[grep("NOAC", variable.x), treatment := noac]
-D <- D[grep("Warfarin", variable.x), treatment := "Warfarin"]
-D <- D[, treatment := gsub(" ", "_", treatment)]
-D <- D[, noac := NULL]
-D <- D[, `:=` (variable.x = NULL, variable.y = NULL)]
-setnames(D, c("value.x", "value.y"), c("sampleSize", "responders"))
-setkey(D, study, treatment)
-setcolorder(D, c("study", "treatment", "responders", "sampleSize"))
-D <- unique(D)
-show(D)
 ```
 
 Plot the network.
