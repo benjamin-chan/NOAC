@@ -1,0 +1,58 @@
+
+
+# Mortality
+
+Clean up the data (do not show the code).
+
+```{r, echo=FALSE}
+D1 <- readSheet("Mortality")
+D1 <- tidyData(D1)
+show(D1)
+network <- mtc.network(D1)
+```
+
+Plot the network.
+
+```{r mortalityNetwork}
+plot(network)
+```
+
+Run the model.
+
+```{r, results='hide'}
+M <- mtc.model(network, type="consistency", linearModel="random")
+runtime <- system.time(results <- mtc.run(M, n.adapt=5000, n.iter=20000, thin=10))
+```
+
+```{r}
+runtime
+```
+
+Sampler diagnostics.
+
+```{r mortalityGelman, fig.height=8}
+gelman.plot(results)
+gelman.diag(results)
+```
+
+```{r mortalityTrace, fig.height=10}
+plot(results)
+```
+
+Summary.
+
+```{r mortalityForest}
+summary(results)
+forest(results)
+```
+
+Assess the degree of heterogeneity and inconsistency.
+
+```{r, results='hide'}
+anohe <- mtc.anohe(network, n.adapt=5000, n.iter=20000, thin=10)
+```
+
+```{r mortalityAnohe, fig.height=8}
+summary(anohe)
+plot(anohe)
+```
