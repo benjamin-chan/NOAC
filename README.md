@@ -7,7 +7,6 @@ This network meta-analysis is an update to
 [Fu *et al*, 2014](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4244213/),
 *J Cardiovasc Med (Hagerstown).* 2014 Dec; 15(12): 873-879.
 
-
 > From: Marian McDonagh  
 > Sent: Friday, January 29, 2016 4:19 PM  
 > To: Benjamin Chan  
@@ -17,6 +16,16 @@ This network meta-analysis is an update to
 > I put it all into an excel spreadsheet --- all the outcomes.
 > Looks like it might not add up to much since several outcome cells are 0's.
 > Let me know what you think.
+
+Use the [`gemtc`](https://drugis.org/software/r-packages/gemtc) package.
+Check the link for references.
+
+
+```r
+library(openxlsx)
+library(data.table)
+library(gemtc)
+```
 
 
 ```
@@ -69,7 +78,6 @@ Plot the network.
 
 
 ```r
-network <- mtc.network(D1)
 plot(network)
 ```
 
@@ -79,8 +87,18 @@ Run the model.
 
 
 ```r
-M <- mtc.model(network, type="consistency", linearModel="fixed")
-system.time(results <- mtc.run(M, n.adapt=20000, n.iter=20000, thin=20))
+M <- mtc.model(network, type="consistency", linearModel="random")
+runtime <- system.time(results <- mtc.run(M, n.adapt=5000, n.iter=20000, thin=10))
+```
+
+
+```r
+runtime
+```
+
+```
+##    user  system elapsed 
+##   10.81    0.00   10.98
 ```
 
 Sampler diagnostics.
@@ -91,6 +109,28 @@ gelman.plot(results)
 ```
 
 ![](index_files/figure-html/mortalityGelman-1.png) 
+
+```r
+gelman.diag(results)
+```
+
+```
+## Potential scale reduction factors:
+## 
+##                              Point est. Upper C.I.
+## d.Warfarin.Apixaban_5_mg              1       1.00
+## d.Warfarin.Dabigatran_110_mg          1       1.00
+## d.Warfarin.Dabigatran_150_mg          1       1.00
+## d.Warfarin.Edoxaban_30_mg             1       1.00
+## d.Warfarin.Edoxaban_60_mg             1       1.00
+## d.Warfarin.Rivaroxaban_15_mg          1       1.00
+## d.Warfarin.Rivaroxaban_20_mg          1       1.00
+## sd.d                                  1       1.01
+## 
+## Multivariate psrf
+## 
+## 1
+```
 
 
 ```r
@@ -112,38 +152,40 @@ summary(results)
 ## 
 ## $summaries
 ## 
-## Iterations = 20020:40000
-## Thinning interval = 20 
+## Iterations = 5010:25000
+## Thinning interval = 10 
 ## Number of chains = 4 
-## Sample size per chain = 1000 
+## Sample size per chain = 2000 
 ## 
 ## 1. Empirical mean and standard deviation for each variable,
 ##    plus standard error of the mean:
 ## 
-##                                  Mean      SD  Naive SE Time-series SE
-## d.Warfarin.Apixaban_5_mg     -0.11520 0.05908 0.0009341      0.0009342
-## d.Warfarin.Dabigatran_110_mg -0.09256 0.06840 0.0010815      0.0010941
-## d.Warfarin.Dabigatran_150_mg -0.12333 0.06858 0.0010843      0.0011018
-## d.Warfarin.Edoxaban_30_mg    -0.14733 0.05471 0.0008650      0.0008558
-## d.Warfarin.Edoxaban_60_mg    -0.09274 0.05254 0.0008308      0.0008416
-## d.Warfarin.Rivaroxaban_15_mg  0.36580 0.61363 0.0097024      0.0094432
-## d.Warfarin.Rivaroxaban_20_mg -0.19044 0.09482 0.0014992      0.0015483
+##                                  Mean     SD Naive SE Time-series SE
+## d.Warfarin.Apixaban_5_mg     -0.10081 0.6139 0.006863       0.007244
+## d.Warfarin.Dabigatran_110_mg -0.08539 0.6289 0.007031       0.006866
+## d.Warfarin.Dabigatran_150_mg -0.11708 0.6013 0.006723       0.006848
+## d.Warfarin.Edoxaban_30_mg    -0.26733 0.5823 0.006511       0.007340
+## d.Warfarin.Edoxaban_60_mg    -0.09684 0.5673 0.006343       0.006248
+## d.Warfarin.Rivaroxaban_15_mg  0.37877 0.8641 0.009661       0.011718
+## d.Warfarin.Rivaroxaban_20_mg -0.19561 0.6163 0.006890       0.006854
+## sd.d                          0.52359 0.3178 0.003553       0.007931
 ## 
 ## 2. Quantiles for each variable:
 ## 
-##                                 2.5%      25%      50%      75%     97.5%
-## d.Warfarin.Apixaban_5_mg     -0.2330 -0.15488 -0.11508 -0.07553  0.001401
-## d.Warfarin.Dabigatran_110_mg -0.2287 -0.13766 -0.09178 -0.04611  0.041293
-## d.Warfarin.Dabigatran_150_mg -0.2577 -0.16966 -0.12287 -0.07727  0.008726
-## d.Warfarin.Edoxaban_30_mg    -0.2555 -0.18518 -0.14668 -0.11044 -0.042499
-## d.Warfarin.Edoxaban_60_mg    -0.1961 -0.12855 -0.09266 -0.05595  0.006897
-## d.Warfarin.Rivaroxaban_15_mg -0.8328 -0.03673  0.34960  0.76289  1.640298
-## d.Warfarin.Rivaroxaban_20_mg -0.3764 -0.25467 -0.19072 -0.12866 -0.007603
+##                                  2.5%     25%      50%     75%  97.5%
+## d.Warfarin.Apixaban_5_mg     -1.43752 -0.3709 -0.10923 0.16595 1.2444
+## d.Warfarin.Dabigatran_110_mg -1.43765 -0.3574 -0.09570 0.19496 1.2965
+## d.Warfarin.Dabigatran_150_mg -1.39453 -0.3867 -0.12375 0.15454 1.2378
+## d.Warfarin.Edoxaban_30_mg    -1.64135 -0.5330 -0.19380 0.02045 0.8526
+## d.Warfarin.Edoxaban_60_mg    -1.35855 -0.3482 -0.09431 0.17133 1.1229
+## d.Warfarin.Rivaroxaban_15_mg -1.33802 -0.1575  0.37629 0.90303 2.1526
+## d.Warfarin.Rivaroxaban_20_mg -1.52506 -0.4710 -0.19364 0.06867 1.1739
+## sd.d                          0.03242  0.2484  0.49947 0.78806 1.0910
 ## 
 ## 
 ## $DIC
 ##     Dbar       pD      DIC 
-## 14.75180 13.11803 27.86982 
+## 14.82589 13.43100 28.25689 
 ## 
 ## attr(,"class")
 ## [1] "summary.mtc.result"
@@ -154,6 +196,66 @@ forest(results)
 ```
 
 ![](index_files/figure-html/mortalityForest-1.png) 
+
+Assess the degree of heterogeneity and inconsistency.
+
+
+```r
+anohe <- mtc.anohe(network, n.adapt=5000, n.iter=20000, thin=10)
+```
+
+
+```r
+summary(anohe)
+```
+
+```
+## Analysis of heterogeneity
+## =========================
+## 
+## Per-comparison I-squared:
+## -------------------------
+## 
+##                  t1                t2  i2.pair  i2.cons incons.p
+## 1     Apixaban_5_mg          Warfarin  0.00000  0.00000       NA
+## 2 Dabigatran_110_mg Dabigatran_150_mg       NA       NA       NA
+## 3 Dabigatran_110_mg          Warfarin       NA       NA       NA
+## 4 Dabigatran_150_mg          Warfarin       NA       NA       NA
+## 5    Edoxaban_30_mg    Edoxaban_60_mg 73.07315 25.16035       NA
+## 6    Edoxaban_30_mg          Warfarin 63.11958 30.14373       NA
+## 7    Edoxaban_60_mg          Warfarin  0.00000  0.00000       NA
+## 8 Rivaroxaban_15_mg          Warfarin       NA       NA       NA
+## 9 Rivaroxaban_20_mg          Warfarin       NA       NA       NA
+## 
+## Global I-squared:
+## -------------------------
+## 
+##   i2.pair i2.cons
+## 1       0       0
+```
+
+```r
+plot(anohe)
+```
+
+```
+## Analysis of heterogeneity -- convergence plots
+## Unrelated Study Effects (USE) model:
+```
+
+![](index_files/figure-html/mortalityAnohe-1.png) ![](index_files/figure-html/mortalityAnohe-2.png) ![](index_files/figure-html/mortalityAnohe-3.png) ![](index_files/figure-html/mortalityAnohe-4.png) 
+
+```
+## Unrelated Mean Effects (UME) model:
+```
+
+![](index_files/figure-html/mortalityAnohe-5.png) ![](index_files/figure-html/mortalityAnohe-6.png) ![](index_files/figure-html/mortalityAnohe-7.png) ![](index_files/figure-html/mortalityAnohe-8.png) 
+
+```
+## Consistency model:
+```
+
+![](index_files/figure-html/mortalityAnohe-9.png) ![](index_files/figure-html/mortalityAnohe-10.png) 
 
 
 # Stroke
@@ -206,7 +308,6 @@ Plot the network.
 
 
 ```r
-network <- mtc.network(D2)
 plot(network)
 ```
 
@@ -216,8 +317,18 @@ Run the model.
 
 
 ```r
-M <- mtc.model(network, type="consistency", linearModel="fixed")
-system.time(results <- mtc.run(M, n.adapt=20000, n.iter=20000, thin=20))
+M <- mtc.model(network, type="consistency", linearModel="random")
+runtime <- system.time(results <- mtc.run(M, n.adapt=5000, n.iter=20000, thin=10))
+```
+
+
+```r
+runtime
+```
+
+```
+##    user  system elapsed 
+##   13.25    0.01   15.35
 ```
 
 Sampler diagnostics.
@@ -228,6 +339,28 @@ gelman.plot(results)
 ```
 
 ![](index_files/figure-html/strokeGelman-1.png) 
+
+```r
+gelman.diag(results)
+```
+
+```
+## Potential scale reduction factors:
+## 
+##                              Point est. Upper C.I.
+## d.Warfarin.Apixaban_5_mg           1.01       1.02
+## d.Warfarin.Dabigatran_110_mg       1.00       1.00
+## d.Warfarin.Dabigatran_150_mg       1.00       1.00
+## d.Warfarin.Edoxaban_30_mg          1.00       1.00
+## d.Warfarin.Edoxaban_60_mg          1.00       1.00
+## d.Warfarin.Rivaroxaban_15_mg       1.00       1.00
+## d.Warfarin.Rivaroxaban_20_mg       1.00       1.01
+## sd.d                               1.01       1.04
+## 
+## Multivariate psrf
+## 
+## 1.01
+```
 
 
 ```r
@@ -249,38 +382,40 @@ summary(results)
 ## 
 ## $summaries
 ## 
-## Iterations = 20020:40000
-## Thinning interval = 20 
+## Iterations = 5010:25000
+## Thinning interval = 10 
 ## Number of chains = 4 
-## Sample size per chain = 1000 
+## Sample size per chain = 2000 
 ## 
 ## 1. Empirical mean and standard deviation for each variable,
 ##    plus standard error of the mean:
 ## 
-##                                  Mean      SD Naive SE Time-series SE
-## d.Warfarin.Apixaban_5_mg     -0.24494 0.09315 0.001473       0.001472
-## d.Warfarin.Dabigatran_110_mg -0.09111 0.10352 0.001637       0.001604
-## d.Warfarin.Dabigatran_150_mg -0.41885 0.11532 0.001823       0.001823
-## d.Warfarin.Edoxaban_30_mg    -0.24601 0.09948 0.001573       0.001557
-## d.Warfarin.Edoxaban_60_mg     0.09241 0.09271 0.001466       0.001466
-## d.Warfarin.Rivaroxaban_15_mg -0.72523 0.38825 0.006139       0.006354
-## d.Warfarin.Rivaroxaban_20_mg -0.25932 0.09736 0.001539       0.001491
+##                                  Mean     SD Naive SE Time-series SE
+## d.Warfarin.Apixaban_5_mg     -0.74149 0.9367 0.010472       0.017741
+## d.Warfarin.Dabigatran_110_mg -0.07968 0.9507 0.010629       0.010664
+## d.Warfarin.Dabigatran_150_mg -0.39000 0.9533 0.010658       0.010769
+## d.Warfarin.Edoxaban_30_mg    -0.25232 0.9583 0.010714       0.012691
+## d.Warfarin.Edoxaban_60_mg     0.08590 0.9568 0.010697       0.010984
+## d.Warfarin.Rivaroxaban_15_mg -0.72866 1.0515 0.011756       0.012167
+## d.Warfarin.Rivaroxaban_20_mg -0.30076 0.7333 0.008198       0.008354
+## sd.d                          0.80038 0.5445 0.006088       0.017303
 ## 
 ## 2. Quantiles for each variable:
 ## 
-##                                  2.5%      25%      50%      75%    97.5%
-## d.Warfarin.Apixaban_5_mg     -0.42747 -0.30953 -0.24545 -0.18122 -0.06336
-## d.Warfarin.Dabigatran_110_mg -0.29392 -0.16046 -0.09206 -0.02219  0.11182
-## d.Warfarin.Dabigatran_150_mg -0.64890 -0.49627 -0.42003 -0.34042 -0.19639
-## d.Warfarin.Edoxaban_30_mg    -0.43355 -0.31331 -0.24683 -0.18011 -0.05111
-## d.Warfarin.Edoxaban_60_mg    -0.08831  0.02896  0.09336  0.15453  0.27090
-## d.Warfarin.Rivaroxaban_15_mg -1.52260 -0.98898 -0.71351 -0.45995  0.01184
-## d.Warfarin.Rivaroxaban_20_mg -0.45476 -0.32411 -0.25945 -0.19415 -0.06721
+##                                  2.5%     25%      50%       75%  97.5%
+## d.Warfarin.Apixaban_5_mg     -3.12918 -1.1447 -0.50280 -0.198772 0.7224
+## d.Warfarin.Dabigatran_110_mg -2.14680 -0.4682 -0.09112  0.301834 2.1042
+## d.Warfarin.Dabigatran_150_mg -2.44072 -0.7718 -0.40337 -0.008533 1.7505
+## d.Warfarin.Edoxaban_30_mg    -2.37129 -0.6309 -0.23590  0.156663 1.8299
+## d.Warfarin.Edoxaban_60_mg    -2.02215 -0.2880  0.08700  0.460999 2.2482
+## d.Warfarin.Rivaroxaban_15_mg -3.02022 -1.2364 -0.71512 -0.196852 1.4765
+## d.Warfarin.Rivaroxaban_20_mg -1.91623 -0.6299 -0.28812  0.013225 1.3292
+## sd.d                          0.03475  0.3191  0.72540  1.228975 1.8616
 ## 
 ## 
 ## $DIC
 ##     Dbar       pD      DIC 
-## 17.80267 14.20603 32.00869 
+## 16.94495 14.84995 31.79490 
 ## 
 ## attr(,"class")
 ## [1] "summary.mtc.result"
@@ -291,6 +426,66 @@ forest(results)
 ```
 
 ![](index_files/figure-html/strokeForest-1.png) 
+
+Assess the degree of heterogeneity and inconsistency.
+
+
+```r
+anohe <- mtc.anohe(network, n.adapt=5000, n.iter=20000, thin=10)
+```
+
+
+```r
+summary(anohe)
+```
+
+```
+## Analysis of heterogeneity
+## =========================
+## 
+## Per-comparison I-squared:
+## -------------------------
+## 
+##                  t1                t2  i2.pair  i2.cons incons.p
+## 1     Apixaban_5_mg          Warfarin 98.85012 92.37425       NA
+## 2 Dabigatran_110_mg Dabigatran_150_mg       NA       NA       NA
+## 3 Dabigatran_110_mg          Warfarin       NA       NA       NA
+## 4 Dabigatran_150_mg          Warfarin  0.00000  0.00000       NA
+## 5    Edoxaban_30_mg    Edoxaban_60_mg  0.00000  0.00000       NA
+## 6    Edoxaban_30_mg          Warfarin  0.00000  0.00000       NA
+## 7    Edoxaban_60_mg          Warfarin  0.00000  0.00000       NA
+## 8 Rivaroxaban_15_mg          Warfarin       NA       NA       NA
+## 9 Rivaroxaban_20_mg          Warfarin  0.00000  0.00000       NA
+## 
+## Global I-squared:
+## -------------------------
+## 
+##    i2.pair i2.cons
+## 1 84.08612       0
+```
+
+```r
+plot(anohe)
+```
+
+```
+## Analysis of heterogeneity -- convergence plots
+## Unrelated Study Effects (USE) model:
+```
+
+![](index_files/figure-html/strokeAnohe-1.png) ![](index_files/figure-html/strokeAnohe-2.png) ![](index_files/figure-html/strokeAnohe-3.png) ![](index_files/figure-html/strokeAnohe-4.png) 
+
+```
+## Unrelated Mean Effects (UME) model:
+```
+
+![](index_files/figure-html/strokeAnohe-5.png) ![](index_files/figure-html/strokeAnohe-6.png) ![](index_files/figure-html/strokeAnohe-7.png) ![](index_files/figure-html/strokeAnohe-8.png) 
+
+```
+## Consistency model:
+```
+
+![](index_files/figure-html/strokeAnohe-9.png) ![](index_files/figure-html/strokeAnohe-10.png) 
 
 
 # MI
@@ -335,7 +530,6 @@ Plot the network.
 
 
 ```r
-network <- mtc.network(D3)
 plot(network)
 ```
 
@@ -345,8 +539,18 @@ Run the model.
 
 
 ```r
-M <- mtc.model(network, type="consistency", linearModel="fixed")
-system.time(results <- mtc.run(M, n.adapt=20000, n.iter=20000, thin=20))
+M <- mtc.model(network, type="consistency", linearModel="random")
+runtime <- system.time(results <- mtc.run(M, n.adapt=5000, n.iter=20000, thin=10))
+```
+
+
+```r
+runtime
+```
+
+```
+##    user  system elapsed 
+##    9.17    0.02   10.64
 ```
 
 Sampler diagnostics.
@@ -357,6 +561,28 @@ gelman.plot(results)
 ```
 
 ![](index_files/figure-html/miGelman-1.png) 
+
+```r
+gelman.diag(results)
+```
+
+```
+## Potential scale reduction factors:
+## 
+##                              Point est. Upper C.I.
+## d.Warfarin.Apixaban_5_mg              1       1.00
+## d.Warfarin.Dabigatran_110_mg          1       1.00
+## d.Warfarin.Dabigatran_150_mg          1       1.00
+## d.Warfarin.Edoxaban_30_mg             1       1.00
+## d.Warfarin.Edoxaban_60_mg             1       1.00
+## d.Warfarin.Rivaroxaban_15_mg          1       1.01
+## d.Warfarin.Rivaroxaban_20_mg          1       1.00
+## sd.d                                  1       1.01
+## 
+## Multivariate psrf
+## 
+## 1
+```
 
 
 ```r
@@ -378,38 +604,40 @@ summary(results)
 ## 
 ## $summaries
 ## 
-## Iterations = 20020:40000
-## Thinning interval = 20 
+## Iterations = 5010:25000
+## Thinning interval = 10 
 ## Number of chains = 4 
-## Sample size per chain = 1000 
+## Sample size per chain = 2000 
 ## 
 ## 1. Empirical mean and standard deviation for each variable,
 ##    plus standard error of the mean:
 ## 
-##                                  Mean     SD Naive SE Time-series SE
-## d.Warfarin.Apixaban_5_mg     -0.13392 0.1457 0.002304       0.002312
-## d.Warfarin.Dabigatran_110_mg  0.31636 0.1699 0.002687       0.002752
-## d.Warfarin.Dabigatran_150_mg  0.33974 0.1672 0.002643       0.002693
-## d.Warfarin.Edoxaban_30_mg    -0.05776 0.1218 0.001926       0.001924
-## d.Warfarin.Edoxaban_60_mg     0.18548 0.1163 0.001838       0.001835
-## d.Warfarin.Rivaroxaban_15_mg  1.51047 1.4366 0.022714       0.022347
-## d.Warfarin.Rivaroxaban_20_mg -0.22446 0.1360 0.002150       0.002127
+##                                 Mean     SD Naive SE Time-series SE
+## d.Warfarin.Apixaban_5_mg     -0.1151 0.5091 0.005691       0.005928
+## d.Warfarin.Dabigatran_110_mg  0.3277 0.5173 0.005783       0.006067
+## d.Warfarin.Dabigatran_150_mg  0.3496 0.5201 0.005815       0.005929
+## d.Warfarin.Edoxaban_30_mg    -0.0558 0.4939 0.005521       0.005581
+## d.Warfarin.Edoxaban_60_mg     0.1810 0.5052 0.005649       0.005649
+## d.Warfarin.Rivaroxaban_15_mg  1.4852 1.5155 0.016943       0.037126
+## d.Warfarin.Rivaroxaban_20_mg -0.2309 0.5031 0.005624       0.005644
+## sd.d                          0.4240 0.2442 0.002730       0.005600
 ## 
 ## 2. Quantiles for each variable:
 ## 
-##                                  2.5%     25%      50%      75%   97.5%
-## d.Warfarin.Apixaban_5_mg     -0.41763 -0.2331 -0.13639 -0.03535 0.15473
-## d.Warfarin.Dabigatran_110_mg -0.01135  0.2039  0.31312  0.42787 0.65136
-## d.Warfarin.Dabigatran_150_mg  0.01097  0.2281  0.33977  0.45390 0.66764
-## d.Warfarin.Edoxaban_30_mg    -0.29696 -0.1403 -0.05816  0.02335 0.18487
-## d.Warfarin.Edoxaban_60_mg    -0.03849  0.1046  0.18561  0.26286 0.41743
-## d.Warfarin.Rivaroxaban_15_mg -0.88645  0.5575  1.34321  2.30338 4.90191
-## d.Warfarin.Rivaroxaban_20_mg -0.49458 -0.3127 -0.22562 -0.13281 0.03673
+##                                  2.5%      25%      50%     75%  97.5%
+## d.Warfarin.Apixaban_5_mg     -1.20870 -0.37526 -0.11875 0.13683 0.9657
+## d.Warfarin.Dabigatran_110_mg -0.76154  0.05887  0.32605 0.59561 1.4490
+## d.Warfarin.Dabigatran_150_mg -0.75661  0.08146  0.34439 0.61545 1.4863
+## d.Warfarin.Edoxaban_30_mg    -1.12912 -0.29352 -0.06044 0.17929 0.9951
+## d.Warfarin.Edoxaban_60_mg    -0.88657 -0.06413  0.18114 0.42311 1.2441
+## d.Warfarin.Rivaroxaban_15_mg -1.07971  0.47876  1.31499 2.33861 5.0010
+## d.Warfarin.Rivaroxaban_20_mg -1.29449 -0.48568 -0.22830 0.01964 0.8528
+## sd.d                          0.02344  0.21256  0.42065 0.63730 0.8292
 ## 
 ## 
 ## $DIC
 ##     Dbar       pD      DIC 
-## 12.35913 12.17120 24.53033 
+## 12.31637 12.14848 24.46485 
 ## 
 ## attr(,"class")
 ## [1] "summary.mtc.result"
@@ -420,6 +648,66 @@ forest(results)
 ```
 
 ![](index_files/figure-html/miForest-1.png) 
+
+Assess the degree of heterogeneity and inconsistency.
+
+
+```r
+anohe <- mtc.anohe(network, n.adapt=5000, n.iter=20000, thin=10)
+```
+
+
+```r
+summary(anohe)
+```
+
+```
+## Analysis of heterogeneity
+## =========================
+## 
+## Per-comparison I-squared:
+## -------------------------
+## 
+##                  t1                t2 i2.pair i2.cons incons.p
+## 1     Apixaban_5_mg          Warfarin       0       0       NA
+## 2 Dabigatran_110_mg Dabigatran_150_mg      NA      NA       NA
+## 3 Dabigatran_110_mg          Warfarin      NA      NA       NA
+## 4 Dabigatran_150_mg          Warfarin      NA      NA       NA
+## 5    Edoxaban_30_mg    Edoxaban_60_mg      NA      NA       NA
+## 6    Edoxaban_30_mg          Warfarin      NA      NA       NA
+## 7    Edoxaban_60_mg          Warfarin      NA      NA       NA
+## 8 Rivaroxaban_15_mg          Warfarin      NA      NA       NA
+## 9 Rivaroxaban_20_mg          Warfarin      NA      NA       NA
+## 
+## Global I-squared:
+## -------------------------
+## 
+##   i2.pair i2.cons
+## 1       0       0
+```
+
+```r
+plot(anohe)
+```
+
+```
+## Analysis of heterogeneity -- convergence plots
+## Unrelated Study Effects (USE) model:
+```
+
+![](index_files/figure-html/miAnohe-1.png) ![](index_files/figure-html/miAnohe-2.png) 
+
+```
+## Unrelated Mean Effects (UME) model:
+```
+
+![](index_files/figure-html/miAnohe-3.png) ![](index_files/figure-html/miAnohe-4.png) ![](index_files/figure-html/miAnohe-5.png) ![](index_files/figure-html/miAnohe-6.png) 
+
+```
+## Consistency model:
+```
+
+![](index_files/figure-html/miAnohe-7.png) ![](index_files/figure-html/miAnohe-8.png) 
 
 
 # Bleeding
@@ -469,7 +757,6 @@ Plot the network.
 
 
 ```r
-network <- mtc.network(D4[!is.na(responders)])
 plot(network)
 ```
 
@@ -479,8 +766,18 @@ Run the model.
 
 
 ```r
-M <- mtc.model(network, type="consistency", linearModel="fixed")
-system.time(results <- mtc.run(M, n.adapt=20000, n.iter=20000, thin=20))
+M <- mtc.model(network, type="consistency", linearModel="random")
+runtime <- system.time(results <- mtc.run(M, n.adapt=5000, n.iter=20000, thin=10))
+```
+
+
+```r
+runtime
+```
+
+```
+##    user  system elapsed 
+##   10.98    0.00   11.37
 ```
 
 Sampler diagnostics.
@@ -491,6 +788,27 @@ gelman.plot(results)
 ```
 
 ![](index_files/figure-html/bleedingGelman-1.png) 
+
+```r
+gelman.diag(results)
+```
+
+```
+## Potential scale reduction factors:
+## 
+##                              Point est. Upper C.I.
+## d.Warfarin.Apixaban_5_mg              1       1.00
+## d.Warfarin.Dabigatran_110_mg          1       1.00
+## d.Warfarin.Dabigatran_150_mg          1       1.00
+## d.Warfarin.Edoxaban_30_mg             1       1.00
+## d.Warfarin.Edoxaban_60_mg             1       1.00
+## d.Warfarin.Rivaroxaban_20_mg          1       1.00
+## sd.d                                  1       1.01
+## 
+## Multivariate psrf
+## 
+## 1
+```
 
 
 ```r
@@ -512,36 +830,38 @@ summary(results)
 ## 
 ## $summaries
 ## 
-## Iterations = 20020:40000
-## Thinning interval = 20 
+## Iterations = 5010:25000
+## Thinning interval = 10 
 ## Number of chains = 4 
-## Sample size per chain = 1000 
+## Sample size per chain = 2000 
 ## 
 ## 1. Empirical mean and standard deviation for each variable,
 ##    plus standard error of the mean:
 ## 
-##                                  Mean      SD Naive SE Time-series SE
-## d.Warfarin.Apixaban_5_mg     -0.56794 0.10331 0.001633       0.001692
-## d.Warfarin.Dabigatran_110_mg -0.21841 0.07728 0.001222       0.001238
-## d.Warfarin.Dabigatran_150_mg -0.06315 0.07337 0.001160       0.001176
-## d.Warfarin.Edoxaban_30_mg    -0.24235 0.06804 0.001076       0.001024
-## d.Warfarin.Edoxaban_60_mg    -0.75573 0.07752 0.001226       0.001242
-## d.Warfarin.Rivaroxaban_20_mg  0.02585 0.07371 0.001165       0.001128
+##                                  Mean     SD Naive SE Time-series SE
+## d.Warfarin.Apixaban_5_mg     -0.86635 1.0359 0.011581        0.01227
+## d.Warfarin.Dabigatran_110_mg  0.10958 1.0816 0.012092        0.01210
+## d.Warfarin.Dabigatran_150_mg  0.57418 1.0211 0.011416        0.01273
+## d.Warfarin.Edoxaban_30_mg    -0.20444 1.0224 0.011431        0.01249
+## d.Warfarin.Edoxaban_60_mg     0.02606 1.0496 0.011735        0.01438
+## d.Warfarin.Rivaroxaban_20_mg  0.01306 1.1183 0.012503        0.01235
+## sd.d                          1.02791 0.4324 0.004835        0.01092
 ## 
 ## 2. Quantiles for each variable:
 ## 
-##                                 2.5%      25%      50%      75%    97.5%
-## d.Warfarin.Apixaban_5_mg     -0.7670 -0.63962 -0.56684 -0.49737 -0.36437
-## d.Warfarin.Dabigatran_110_mg -0.3675 -0.27152 -0.22021 -0.16647 -0.06632
-## d.Warfarin.Dabigatran_150_mg -0.2081 -0.11358 -0.06249 -0.01473  0.08457
-## d.Warfarin.Edoxaban_30_mg    -0.3764 -0.28807 -0.24181 -0.19664 -0.11234
-## d.Warfarin.Edoxaban_60_mg    -0.9094 -0.80680 -0.75445 -0.70309 -0.60517
-## d.Warfarin.Rivaroxaban_20_mg -0.1189 -0.02414  0.02568  0.07425  0.17077
+##                                  2.5%      25%      50%     75% 97.5%
+## d.Warfarin.Apixaban_5_mg     -3.13546 -1.44794 -0.76579 -0.2709 1.167
+## d.Warfarin.Dabigatran_110_mg -2.01184 -0.51068 -0.01476  0.7052 2.453
+## d.Warfarin.Dabigatran_150_mg -1.18377 -0.09001  0.41965  1.1603 2.913
+## d.Warfarin.Edoxaban_30_mg    -2.30235 -0.76750 -0.21361  0.3628 1.911
+## d.Warfarin.Edoxaban_60_mg    -1.78298 -0.71882 -0.12145  0.6592 2.350
+## d.Warfarin.Rivaroxaban_20_mg -2.32341 -0.57642  0.02464  0.6190 2.366
+## sd.d                          0.09235  0.72486  1.11017  1.3902 1.607
 ## 
 ## 
 ## $DIC
 ##     Dbar       pD      DIC 
-## 23.42012 13.25690 36.67702 
+## 18.88137 13.91594 32.79731 
 ## 
 ## attr(,"class")
 ## [1] "summary.mtc.result"
@@ -552,3 +872,62 @@ forest(results)
 ```
 
 ![](index_files/figure-html/bleedingForest-1.png) 
+
+Assess the degree of heterogeneity and inconsistency.
+
+
+```r
+anohe <- mtc.anohe(network, n.adapt=5000, n.iter=20000, thin=10)
+```
+
+
+```r
+summary(anohe)
+```
+
+```
+## Analysis of heterogeneity
+## =========================
+## 
+## Per-comparison I-squared:
+## -------------------------
+## 
+##                  t1                t2  i2.pair  i2.cons incons.p
+## 1     Apixaban_5_mg          Warfarin 99.94926 78.63290       NA
+## 2 Dabigatran_110_mg Dabigatran_150_mg       NA       NA       NA
+## 3 Dabigatran_110_mg          Warfarin       NA       NA       NA
+## 4 Dabigatran_150_mg          Warfarin 99.95921 96.50243       NA
+## 5    Edoxaban_30_mg    Edoxaban_60_mg 99.90591 96.79389       NA
+## 6    Edoxaban_30_mg          Warfarin 99.35676  0.00000       NA
+## 7    Edoxaban_60_mg          Warfarin 99.71464 97.71766       NA
+## 8 Rivaroxaban_20_mg          Warfarin       NA       NA       NA
+## 
+## Global I-squared:
+## -------------------------
+## 
+##    i2.pair  i2.cons
+## 1 99.79975 89.80639
+```
+
+```r
+plot(anohe)
+```
+
+```
+## Analysis of heterogeneity -- convergence plots
+## Unrelated Study Effects (USE) model:
+```
+
+![](index_files/figure-html/bleedingAnohe-1.png) ![](index_files/figure-html/bleedingAnohe-2.png) ![](index_files/figure-html/bleedingAnohe-3.png) ![](index_files/figure-html/bleedingAnohe-4.png) 
+
+```
+## Unrelated Mean Effects (UME) model:
+```
+
+![](index_files/figure-html/bleedingAnohe-5.png) ![](index_files/figure-html/bleedingAnohe-6.png) ![](index_files/figure-html/bleedingAnohe-7.png) 
+
+```
+## Consistency model:
+```
+
+![](index_files/figure-html/bleedingAnohe-8.png) ![](index_files/figure-html/bleedingAnohe-9.png) 
