@@ -1,3 +1,4 @@
+---
 title: "Novel oral anticoagulants network meta-analysis: Mortality"
 author: "Benjamin Chan"
 date: "`r Sys.time()`"
@@ -30,6 +31,15 @@ M <- mtc.model(network, type="consistency", linearModel="random")
 runtime <- system.time(results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=thin))
 ```
 
+# Summary
+
+```{r mortalityForest}
+summary(results)
+forest(results)
+```
+
+# Diagnostics
+
 ```{r}
 runtime
 ```
@@ -43,13 +53,6 @@ gelman.diag(results)
 
 ```{r mortalityTrace, fig.height=10}
 plot(results)
-```
-
-# Summary
-
-```{r mortalityForest}
-summary(results)
-forest(results)
 ```
 
 Assess the degree of heterogeneity and inconsistency.

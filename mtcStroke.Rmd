@@ -1,4 +1,13 @@
-# Stroke
+---
+title: "Novel oral anticoagulants network meta-analysis: Stroke"
+author: "Benjamin Chan"
+date: "`r Sys.time()`"
+output: 
+  html_document: 
+    keep_md: yes
+    toc: yes
+---
+
 
 Clean up the data (do not show the code).
 
@@ -9,8 +18,7 @@ show(D2)
 network <- mtc.network(D2)
 ```
 
-
-Plot the network.
+# Network plot
 
 ```{r strokeNetwork}
 plot(network)
@@ -22,6 +30,15 @@ Run the model.
 M <- mtc.model(network, type="consistency", linearModel="random")
 runtime <- system.time(results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=thin))
 ```
+
+# Summary
+
+```{r strokeForest}
+summary(results)
+forest(results)
+```
+
+# Diagnostics
 
 ```{r}
 runtime
@@ -36,13 +53,6 @@ gelman.diag(results)
 
 ```{r strokeTrace, fig.height=10}
 plot(results)
-```
-
-Summary.
-
-```{r strokeForest}
-summary(results)
-forest(results)
 ```
 
 Assess the degree of heterogeneity and inconsistency.
