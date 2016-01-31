@@ -1,5 +1,3 @@
-
-
 # Mortality
 
 Clean up the data (do not show the code).
@@ -21,7 +19,7 @@ Run the model.
 
 ```{r, results='hide'}
 M <- mtc.model(network, type="consistency", linearModel="random")
-runtime <- system.time(results <- mtc.run(M, n.adapt=5000, n.iter=20000, thin=10))
+runtime <- system.time(results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=thin))
 ```
 
 ```{r}
@@ -49,7 +47,7 @@ forest(results)
 Assess the degree of heterogeneity and inconsistency.
 
 ```{r, results='hide'}
-anohe <- mtc.anohe(network, n.adapt=5000, n.iter=20000, thin=10)
+anohe <- mtc.anohe(network, n.adapt=nAdapt, n.iter=nIter, thin=thin)
 ```
 
 ```{r mortalityAnohe, fig.height=8}
