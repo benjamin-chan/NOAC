@@ -101,12 +101,12 @@ Clean up the data (do not show the code).
 D1 <- readSheet("Mortality")
 D1 <- tidyData(D1)
 show(D1)
+network <- mtc.network(D1)
 ```
 
 Plot the network.
 
 ```{r mortalityNetwork}
-network <- mtc.network(D1)
 plot(network)
 ```
 
@@ -159,13 +159,13 @@ Clean up the data (do not show the code).
 D2 <- readSheet("Stroke")
 D2 <- tidyData(D2)
 show(D2)
+network <- mtc.network(D2)
 ```
 
 
 Plot the network.
 
 ```{r strokeNetwork}
-network <- mtc.network(D2)
 plot(network)
 ```
 
@@ -218,13 +218,13 @@ Clean up the data (do not show the code).
 D3 <- readSheet("MI")
 D3 <- tidyData(D3)
 show(D3)
+network <- mtc.network(D3)
 ```
 
 
 Plot the network.
 
 ```{r miNetwork}
-network <- mtc.network(D3)
 plot(network)
 ```
 
@@ -277,13 +277,13 @@ Clean up the data (do not show the code).
 D4 <- readSheet("Bleeding")
 D4 <- tidyData(D4)
 show(D4)
+network <- mtc.network(D4[!is.na(responders)])
 ```
 
 
 Plot the network.
 
 ```{r bleedingNetwork}
-network <- mtc.network(D4[!is.na(responders)])
 plot(network)
 ```
 
