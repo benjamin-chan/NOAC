@@ -13,7 +13,6 @@ This network meta-analysis is an update to
 [Fu *et al*, 2014](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4244213/),
 *J Cardiovasc Med (Hagerstown).* 2014 Dec; 15(12): 873-879.
 
-
 > From: Marian McDonagh  
 > Sent: Friday, January 29, 2016 4:19 PM  
 > To: Benjamin Chan  
@@ -24,10 +23,16 @@ This network meta-analysis is an update to
 > Looks like it might not add up to much since several outcome cells are 0's.
 > Let me know what you think.
 
-```{r, echo=FALSE}
+Use the [`gemtc`](https://drugis.org/software/r-packages/gemtc) package.
+Check the link for references.
+
+```{r}
 library(openxlsx)
 library(data.table)
 library(gemtc)
+```
+
+```{r, echo=FALSE}
 file.info("NOAC NMA Data.xlsx")[, c("mtime", "size")]
 
 readSheet <- function (sheet) {
