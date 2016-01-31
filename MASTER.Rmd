@@ -121,6 +121,7 @@ Sampler diagnostics.
 
 ```{r mortalityGelman, fig.height=8}
 gelman.plot(results)
+gelman.diag(results)
 ```
 
 ```{r mortalityTrace, fig.height=10}
@@ -164,6 +165,7 @@ Sampler diagnostics.
 
 ```{r strokeGelman, fig.height=8}
 gelman.plot(results)
+gelman.diag(results)
 ```
 
 ```{r strokeTrace, fig.height=10}
@@ -207,6 +209,7 @@ Sampler diagnostics.
 
 ```{r miGelman, fig.height=8}
 gelman.plot(results)
+gelman.diag(results)
 ```
 
 ```{r miTrace, fig.height=10}
@@ -250,6 +253,7 @@ Sampler diagnostics.
 
 ```{r bleedingGelman, fig.height=8}
 gelman.plot(results)
+gelman.diag(results)
 ```
 
 ```{r bleedingTrace, fig.height=10}
