@@ -1,4 +1,12 @@
-# Mortality
+title: "Novel oral anticoagulants network meta-analysis: Mortality"
+author: "Benjamin Chan"
+date: "`r Sys.time()`"
+output: 
+  html_document: 
+    keep_md: yes
+    toc: yes
+---
+
 
 Clean up the data (do not show the code).
 
@@ -9,7 +17,7 @@ show(D1)
 network <- mtc.network(D1)
 ```
 
-Plot the network.
+# Network plot
 
 ```{r mortalityNetwork}
 plot(network)
@@ -37,7 +45,7 @@ gelman.diag(results)
 plot(results)
 ```
 
-Summary.
+# Summary
 
 ```{r mortalityForest}
 summary(results)
