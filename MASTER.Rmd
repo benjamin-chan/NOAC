@@ -91,3 +91,12 @@ tidyData <- function (D) {
   D
 }
 ```
+
+Set sampler parameters.
+
+```{r}
+nAdapt <- 5000  # Burn-in
+# nChain <- 4  # gemtc defaults to 4 MCMC chains; no need to set
+nIter <- 20000
+thin <- 10
+```
