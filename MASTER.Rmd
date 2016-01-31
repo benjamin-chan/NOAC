@@ -139,6 +139,17 @@ summary(results)
 forest(results)
 ```
 
+Assess the degree of heterogeneity and inconsistency.
+
+```{r, results='hide'}
+anohe <- mtc.anohe(network, n.adapt=5000, n.iter=20000, thin=10)
+```
+
+```{r mortalityAnohe, fig.height=8}
+summary(anohe)
+plot(anohe)
+```
+
 
 # Stroke
 
@@ -185,6 +196,17 @@ Summary.
 ```{r strokeForest}
 summary(results)
 forest(results)
+```
+
+Assess the degree of heterogeneity and inconsistency.
+
+```{r, results='hide'}
+anohe <- mtc.anohe(network, n.adapt=5000, n.iter=20000, thin=10)
+```
+
+```{r strokeAnohe, fig.height=8}
+summary(anohe)
+plot(anohe)
 ```
 
 
@@ -235,6 +257,17 @@ summary(results)
 forest(results)
 ```
 
+Assess the degree of heterogeneity and inconsistency.
+
+```{r, results='hide'}
+anohe <- mtc.anohe(network, n.adapt=5000, n.iter=20000, thin=10)
+```
+
+```{r miAnohe, fig.height=8}
+summary(anohe)
+plot(anohe)
+```
+
 
 # Bleeding
 
@@ -281,4 +314,15 @@ Summary.
 ```{r bleedingForest}
 summary(results)
 forest(results)
+```
+
+Assess the degree of heterogeneity and inconsistency.
+
+```{r, results='hide'}
+anohe <- mtc.anohe(network, n.adapt=5000, n.iter=20000, thin=10)
+```
+
+```{r bleedingAnohe, fig.height=8}
+summary(anohe)
+plot(anohe)
 ```
