@@ -27,7 +27,7 @@ plot(network)
 Run the model.
 
 ```{r, results='hide'}
-M <- mtc.model(network, type="consistency", linearModel="random")
+M <- mtc.model(network, type="consistency", linearModel=error)
 runtime <- system.time(results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=thin))
 ```
 

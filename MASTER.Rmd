@@ -92,6 +92,12 @@ tidyData <- function (D) {
 }
 ```
 
+Set `linearModel`.
+
+```{r}
+effect <- "fixed"
+```
+
 Set sampler parameters.
 
 ```{r}
