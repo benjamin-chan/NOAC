@@ -113,3 +113,13 @@ Links to outcomes.
 * [Stroke](https://github.com/benjamin-chan/NOAC/blob/master/mtcStroke.md)
 * [MI](https://github.com/benjamin-chan/NOAC/blob/master/mtcMI.md)
 * [Bleeding](https://github.com/benjamin-chan/NOAC/blob/master/mtcBleeding.md)
+
+
+Run-time parameters (for reproducibility).
+
+```{r, echo=FALSE, messages=FALSE, results=FALSE}
+library(devtools)
+source_gist("https://gist.github.com/benjamin-chan/80149dd4cdb16b2760ec",
+            print.eval=TRUE,
+            quiet=TRUE)
+```
