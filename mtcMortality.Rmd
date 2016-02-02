@@ -36,6 +36,9 @@ runtime <- system.time(results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=
 ```{r mortalityForest}
 summary(results)
 forest(results)
+pairwiseComparisons <- combineResults()
+pairwiseComparisons[, .(label, result)]
+write.csv(pairwiseComparisons, file="mtcMortalityPairwiseComparisons.csv")
 ```
 
 # Diagnostics

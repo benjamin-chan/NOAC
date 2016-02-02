@@ -91,6 +91,34 @@ tidyData <- function (D) {
   # D <- D[study %in% c("RE-LY", "ARISTOTLE", "ROCKET-AF", "ENGAGE AF-TIMI")]  # Replicate Fu 2014
   D
 }
+
+tidyResults <- function (comparator) {
+  require(data.table)
+  D <- summary(relative.effect(results, comparator))$summaries$quantiles
+  D <- exp(D)
+  D <- data.table(treatment = rownames(D),
+                  comparator = comparator,
+                  D)
+  D <- D[grep("^sd", treatment, invert=TRUE)]
+  x <- gsub(sprintf("d\\.%s\\.", comparator), "", D[, treatment])
+  D <- D[, treatment := x]
+  D <- D[, c("treatment", "comparator", "50%", "2.5%", "97.5%"), with=FALSE]
+  setnames(D, c("50%", "2.5%", "97.5%"), c("median", "boundLower", "boundUpper"))
+  D <- D[,
+         `:=` (label = gsub("_", " ", sprintf("%s vs %s", treatment, comparator)),
+               result = sprintf("%.2f (%.2f, %.2f)", median, boundLower, boundUpper))]
+  D
+}
+combineResults <- function () {
+  rbindlist(list(tidyResults("Apixaban_5_mg"),
+                 tidyResults("Dabigatran_110_mg"),
+                 tidyResults("Dabigatran_150_mg"),
+                 tidyResults("Edoxaban_30_mg"),
+                 tidyResults("Edoxaban_60_mg"),
+                 tidyResults("Rivaroxaban_15_mg"),
+                 tidyResults("Rivaroxaban_20_mg"),
+                 tidyResults("Warfarin")))
+}
 ```
 
 Set `linearModel`.
