@@ -115,7 +115,7 @@ combineResults <- function () {
                  tidyResults("Dabigatran_150_mg"),
                  tidyResults("Edoxaban_30_mg"),
                  tidyResults("Edoxaban_60_mg"),
-                 # tidyResults("Rivaroxaban_15_mg"),
+                 tidyResults("Rivaroxaban_15_mg"),
                  tidyResults("Rivaroxaban_20_mg"),
                  tidyResults("Warfarin")))
 }
