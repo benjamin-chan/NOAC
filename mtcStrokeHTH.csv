@@ -1,50 +1,50 @@
-"treatment","comparator","median","boundLower","boundUpper","label","result"
-"Dabigatran_110_mg","Apixaban_5_mg",1.16541568489478,0.883183513099799,1.53612776190701,"Dabigatran 110 mg vs Apixaban 5 mg","1.17 (0.88, 1.54)"
-"Dabigatran_150_mg","Apixaban_5_mg",0.842480276362633,0.631564738388111,1.12133653691327,"Dabigatran 150 mg vs Apixaban 5 mg","0.84 (0.63, 1.12)"
-"Edoxaban_30_mg","Apixaban_5_mg",0.996462226099059,0.763282134972382,1.30016933109565,"Edoxaban 30 mg vs Apixaban 5 mg","1.00 (0.76, 1.30)"
-"Edoxaban_60_mg","Apixaban_5_mg",1.3981625884906,1.07391495636014,1.80837441524659,"Edoxaban 60 mg vs Apixaban 5 mg","1.40 (1.07, 1.81)"
-"Rivaroxaban_15_mg","Apixaban_5_mg",0.622187243123908,0.280188984601877,1.29154266730502,"Rivaroxaban 15 mg vs Apixaban 5 mg","0.62 (0.28, 1.29)"
-"Rivaroxaban_20_mg","Apixaban_5_mg",0.985672911894071,0.755185384770246,1.28817289810415,"Rivaroxaban 20 mg vs Apixaban 5 mg","0.99 (0.76, 1.29)"
-"Warfarin","Apixaban_5_mg",1.27817572305982,1.06854766551843,1.53778407222931,"Warfarin vs Apixaban 5 mg","1.28 (1.07, 1.54)"
-"Apixaban_5_mg","Dabigatran_110_mg",0.858062932360725,0.650987518615355,1.1322675131131,"Apixaban 5 mg vs Dabigatran 110 mg","0.86 (0.65, 1.13)"
-"Dabigatran_150_mg","Dabigatran_110_mg",0.723174681579553,0.574420555353255,0.906953478992961,"Dabigatran 150 mg vs Dabigatran 110 mg","0.72 (0.57, 0.91)"
-"Edoxaban_30_mg","Dabigatran_110_mg",0.855101758065475,0.645945208002547,1.13243594915598,"Edoxaban 30 mg vs Dabigatran 110 mg","0.86 (0.65, 1.13)"
-"Edoxaban_60_mg","Dabigatran_110_mg",1.20055803275277,0.915146038789097,1.58862352761425,"Edoxaban 60 mg vs Dabigatran 110 mg","1.20 (0.92, 1.59)"
-"Rivaroxaban_15_mg","Dabigatran_110_mg",0.531532369078205,0.24243868919223,1.11270526615755,"Rivaroxaban 15 mg vs Dabigatran 110 mg","0.53 (0.24, 1.11)"
-"Rivaroxaban_20_mg","Dabigatran_110_mg",0.848982674745489,0.636036230164462,1.1206084279421,"Rivaroxaban 20 mg vs Dabigatran 110 mg","0.85 (0.64, 1.12)"
-"Warfarin","Dabigatran_110_mg",1.0987705235233,0.892905077202227,1.34665677812861,"Warfarin vs Dabigatran 110 mg","1.10 (0.89, 1.35)"
-"Apixaban_5_mg","Dabigatran_150_mg",1.18697140818234,0.891792933772343,1.58336895525899,"Apixaban 5 mg vs Dabigatran 150 mg","1.19 (0.89, 1.58)"
-"Dabigatran_110_mg","Dabigatran_150_mg",1.3827917728201,1.10259238556574,1.7408847762856,"Dabigatran 110 mg vs Dabigatran 150 mg","1.38 (1.10, 1.74)"
-"Edoxaban_30_mg","Dabigatran_150_mg",1.18056304646923,0.886024259129603,1.58869716761499,"Edoxaban 30 mg vs Dabigatran 150 mg","1.18 (0.89, 1.59)"
-"Edoxaban_60_mg","Dabigatran_150_mg",1.65599909640426,1.25796069889067,2.21477559260013,"Edoxaban 60 mg vs Dabigatran 150 mg","1.66 (1.26, 2.21)"
-"Rivaroxaban_15_mg","Dabigatran_150_mg",0.738157906621164,0.331920759259309,1.54534270886196,"Rivaroxaban 15 mg vs Dabigatran 150 mg","0.74 (0.33, 1.55)"
-"Rivaroxaban_20_mg","Dabigatran_150_mg",1.17042467876911,0.875201687978967,1.56664802731203,"Rivaroxaban 20 mg vs Dabigatran 150 mg","1.17 (0.88, 1.57)"
-"Warfarin","Dabigatran_150_mg",1.51949950853038,1.22165375667813,1.9023646060904,"Warfarin vs Dabigatran 150 mg","1.52 (1.22, 1.90)"
-"Apixaban_5_mg","Edoxaban_30_mg",1.00355033418054,0.769130586365474,1.31013154138107,"Apixaban 5 mg vs Edoxaban 30 mg","1.00 (0.77, 1.31)"
-"Dabigatran_110_mg","Edoxaban_30_mg",1.16945146068034,0.88305215031836,1.54811892341813,"Dabigatran 110 mg vs Edoxaban 30 mg","1.17 (0.88, 1.55)"
-"Dabigatran_150_mg","Edoxaban_30_mg",0.847053448768155,0.629446580748447,1.12863726889641,"Dabigatran 150 mg vs Edoxaban 30 mg","0.85 (0.63, 1.13)"
-"Edoxaban_60_mg","Edoxaban_30_mg",1.40268009719912,1.16329872677434,1.69687541708456,"Edoxaban 60 mg vs Edoxaban 30 mg","1.40 (1.16, 1.70)"
-"Rivaroxaban_15_mg","Edoxaban_30_mg",0.624035654800938,0.285365024620948,1.27848306821628,"Rivaroxaban 15 mg vs Edoxaban 30 mg","0.62 (0.29, 1.28)"
-"Rivaroxaban_20_mg","Edoxaban_30_mg",0.989780885204273,0.752823276712884,1.30093635159158,"Rivaroxaban 20 mg vs Edoxaban 30 mg","0.99 (0.75, 1.30)"
-"Warfarin","Edoxaban_30_mg",1.28417607816208,1.05943669857417,1.56144562387785,"Warfarin vs Edoxaban 30 mg","1.28 (1.06, 1.56)"
-"Apixaban_5_mg","Edoxaban_60_mg",0.715224401104567,0.552982828981043,0.931172430440244,"Apixaban 5 mg vs Edoxaban 60 mg","0.72 (0.55, 0.93)"
-"Dabigatran_110_mg","Edoxaban_60_mg",0.832945990713248,0.629475758489976,1.09272177074949,"Dabigatran 110 mg vs Edoxaban 60 mg","0.83 (0.63, 1.09)"
-"Dabigatran_150_mg","Edoxaban_60_mg",0.603865063798249,0.451513012578401,0.794937394214182,"Dabigatran 150 mg vs Edoxaban 60 mg","0.60 (0.45, 0.79)"
-"Edoxaban_30_mg","Edoxaban_60_mg",0.712920930436531,0.589318455516389,0.859624425767968,"Edoxaban 30 mg vs Edoxaban 60 mg","0.71 (0.59, 0.86)"
-"Rivaroxaban_15_mg","Edoxaban_60_mg",0.444107997611913,0.203349448782046,0.915476380658081,"Rivaroxaban 15 mg vs Edoxaban 60 mg","0.44 (0.20, 0.92)"
-"Rivaroxaban_20_mg","Edoxaban_60_mg",0.705637278926898,0.537439931107541,0.925896500602673,"Rivaroxaban 20 mg vs Edoxaban 60 mg","0.71 (0.54, 0.93)"
-"Warfarin","Edoxaban_60_mg",0.916118795491456,0.763296710295088,1.09723746874041,"Warfarin vs Edoxaban 60 mg","0.92 (0.76, 1.10)"
-"Apixaban_5_mg","Rivaroxaban_20_mg",1.0145353371621,0.776293307732007,1.32417816891972,"Apixaban 5 mg vs Rivaroxaban 20 mg","1.01 (0.78, 1.32)"
-"Dabigatran_110_mg","Rivaroxaban_20_mg",1.17788033813503,0.892372371173768,1.57223748046778,"Dabigatran 110 mg vs Rivaroxaban 20 mg","1.18 (0.89, 1.57)"
-"Dabigatran_150_mg","Rivaroxaban_20_mg",0.854390733670845,0.638305466554442,1.14259377436671,"Dabigatran 150 mg vs Rivaroxaban 20 mg","0.85 (0.64, 1.14)"
-"Edoxaban_30_mg","Rivaroxaban_20_mg",1.01032462330652,0.768677113816207,1.32833299784032,"Edoxaban 30 mg vs Rivaroxaban 20 mg","1.01 (0.77, 1.33)"
-"Edoxaban_60_mg","Rivaroxaban_20_mg",1.4171586874219,1.0800343227878,1.8606730578043,"Edoxaban 60 mg vs Rivaroxaban 20 mg","1.42 (1.08, 1.86)"
-"Rivaroxaban_15_mg","Rivaroxaban_20_mg",0.629797852187863,0.283825314866742,1.3119996526692,"Rivaroxaban 15 mg vs Rivaroxaban 20 mg","0.63 (0.28, 1.31)"
-"Warfarin","Rivaroxaban_20_mg",1.29688045429742,1.06856093762767,1.57437689265575,"Warfarin vs Rivaroxaban 20 mg","1.30 (1.07, 1.57)"
-"Apixaban_5_mg","Warfarin",0.782365039453339,0.65028635558067,0.935849688572227,"Apixaban 5 mg vs Warfarin","0.78 (0.65, 0.94)"
-"Dabigatran_110_mg","Warfarin",0.910108142320212,0.742579710169103,1.11993987438546,"Dabigatran 110 mg vs Warfarin","0.91 (0.74, 1.12)"
-"Dabigatran_150_mg","Warfarin",0.658111433656976,0.525661588109088,0.818562538308037,"Dabigatran 150 mg vs Warfarin","0.66 (0.53, 0.82)"
-"Edoxaban_30_mg","Warfarin",0.778709412988915,0.640432164084267,0.943897829238724,"Edoxaban 30 mg vs Warfarin","0.78 (0.64, 0.94)"
-"Edoxaban_60_mg","Warfarin",1.09156149281223,0.911379740930614,1.31010652412402,"Edoxaban 60 mg vs Warfarin","1.09 (0.91, 1.31)"
-"Rivaroxaban_15_mg","Warfarin",0.484401547882478,0.225418057845423,0.985519583489431,"Rivaroxaban 15 mg vs Warfarin","0.48 (0.23, 0.99)"
-"Rivaroxaban_20_mg","Warfarin",0.771081094395661,0.635171923994097,0.93583806480903,"Rivaroxaban 20 mg vs Warfarin","0.77 (0.64, 0.94)"
+"label","result","treatment","comparator","median","boundLower","boundUpper"
+"Dabigatran 110 mg vs Apixaban 5 mg","1.17 (0.89, 1.54)","Dabigatran_110_mg","Apixaban_5_mg",1.16715753248838,0.885389712796465,1.54445542126876
+"Dabigatran 150 mg vs Apixaban 5 mg","0.84 (0.63, 1.13)","Dabigatran_150_mg","Apixaban_5_mg",0.843242615262372,0.631305506795392,1.12507001597334
+"Edoxaban 30 mg vs Apixaban 5 mg","0.99 (0.76, 1.31)","Edoxaban_30_mg","Apixaban_5_mg",0.993945775035577,0.763173232447241,1.31133834740206
+"Edoxaban 60 mg vs Apixaban 5 mg","1.40 (1.09, 1.81)","Edoxaban_60_mg","Apixaban_5_mg",1.39718085780383,1.08510846407225,1.81242525694137
+"Rivaroxaban 15 mg vs Apixaban 5 mg","0.61 (0.27, 1.28)","Rivaroxaban_15_mg","Apixaban_5_mg",0.613693992688738,0.273779797800194,1.28424800539508
+"Rivaroxaban 20 mg vs Apixaban 5 mg","0.99 (0.76, 1.29)","Rivaroxaban_20_mg","Apixaban_5_mg",0.988167837816621,0.76260441944201,1.28770591459956
+"Warfarin vs Apixaban 5 mg","1.28 (1.06, 1.54)","Warfarin","Apixaban_5_mg",1.27882607915752,1.06117459508539,1.53642771707102
+"Apixaban 5 mg vs Dabigatran 110 mg","0.86 (0.65, 1.13)","Apixaban_5_mg","Dabigatran_110_mg",0.85678237269994,0.647477412574657,1.12944614732595
+"Dabigatran 150 mg vs Dabigatran 110 mg","0.72 (0.57, 0.91)","Dabigatran_150_mg","Dabigatran_110_mg",0.722658265490536,0.57459838515687,0.905278828274777
+"Edoxaban 30 mg vs Dabigatran 110 mg","0.85 (0.64, 1.13)","Edoxaban_30_mg","Dabigatran_110_mg",0.852922971891712,0.642834646879703,1.12909166662891
+"Edoxaban 60 mg vs Dabigatran 110 mg","1.20 (0.92, 1.57)","Edoxaban_60_mg","Dabigatran_110_mg",1.19885127833696,0.917301562675804,1.5662229562805
+"Rivaroxaban 15 mg vs Dabigatran 110 mg","0.52 (0.24, 1.11)","Rivaroxaban_15_mg","Dabigatran_110_mg",0.524145016817474,0.237347602070302,1.10724215031052
+"Rivaroxaban 20 mg vs Dabigatran 110 mg","0.85 (0.64, 1.12)","Rivaroxaban_20_mg","Dabigatran_110_mg",0.84734454364691,0.641070412428026,1.12383224168004
+"Warfarin vs Dabigatran 110 mg","1.10 (0.90, 1.35)","Warfarin","Dabigatran_110_mg",1.09571006150749,0.898868149075832,1.34530980809306
+"Apixaban 5 mg vs Dabigatran 150 mg","1.19 (0.89, 1.58)","Apixaban_5_mg","Dabigatran_150_mg",1.18589831906071,0.888833571068786,1.58401913057302
+"Dabigatran 110 mg vs Dabigatran 150 mg","1.38 (1.10, 1.74)","Dabigatran_110_mg","Dabigatran_150_mg",1.38377992441726,1.10463204127477,1.74034599788684
+"Edoxaban 30 mg vs Dabigatran 150 mg","1.18 (0.87, 1.59)","Edoxaban_30_mg","Dabigatran_150_mg",1.18097723513089,0.874171034699129,1.58912512178128
+"Edoxaban 60 mg vs Dabigatran 150 mg","1.66 (1.24, 2.21)","Edoxaban_60_mg","Dabigatran_150_mg",1.65768098067634,1.23788719404603,2.2121036620707
+"Rivaroxaban 15 mg vs Dabigatran 150 mg","0.73 (0.33, 1.53)","Rivaroxaban_15_mg","Dabigatran_150_mg",0.726540201465034,0.328855773890697,1.53498994650735
+"Rivaroxaban 20 mg vs Dabigatran 150 mg","1.17 (0.87, 1.57)","Rivaroxaban_20_mg","Dabigatran_150_mg",1.17443801948352,0.870544926531278,1.57255825410368
+"Warfarin vs Dabigatran 150 mg","1.52 (1.21, 1.90)","Warfarin","Dabigatran_150_mg",1.51776308068343,1.20944037195869,1.89984341440784
+"Apixaban 5 mg vs Edoxaban 30 mg","1.01 (0.76, 1.31)","Apixaban_5_mg","Edoxaban_30_mg",1.0060911018654,0.762579697284946,1.310318493212
+"Dabigatran 110 mg vs Edoxaban 30 mg","1.17 (0.89, 1.56)","Dabigatran_110_mg","Edoxaban_30_mg",1.17243881681611,0.885667682753933,1.55560999217134
+"Dabigatran 150 mg vs Edoxaban 30 mg","0.85 (0.63, 1.14)","Dabigatran_150_mg","Edoxaban_30_mg",0.846756372817944,0.629277069686672,1.14394089978534
+"Edoxaban 60 mg vs Edoxaban 30 mg","1.40 (1.15, 1.70)","Edoxaban_60_mg","Edoxaban_30_mg",1.40397704825086,1.15397490634485,1.69969885965941
+"Rivaroxaban 15 mg vs Edoxaban 30 mg","0.62 (0.28, 1.29)","Rivaroxaban_15_mg","Edoxaban_30_mg",0.615538315129531,0.277282342542323,1.2931209281665
+"Rivaroxaban 20 mg vs Edoxaban 30 mg","0.99 (0.75, 1.30)","Rivaroxaban_20_mg","Edoxaban_30_mg",0.991862947606015,0.751592972330462,1.30310526918035
+"Warfarin vs Edoxaban 30 mg","1.29 (1.06, 1.57)","Warfarin","Edoxaban_30_mg",1.28640094064094,1.05621198154862,1.56613559675406
+"Apixaban 5 mg vs Edoxaban 60 mg","0.72 (0.55, 0.92)","Apixaban_5_mg","Edoxaban_60_mg",0.715726954327059,0.551746890620797,0.921566860005082
+"Dabigatran 110 mg vs Edoxaban 60 mg","0.83 (0.64, 1.09)","Dabigatran_110_mg","Edoxaban_60_mg",0.834131821077254,0.638478701892368,1.09015403514953
+"Dabigatran 150 mg vs Edoxaban 60 mg","0.60 (0.45, 0.81)","Dabigatran_150_mg","Edoxaban_60_mg",0.603252381885926,0.452058380963902,0.807828051546039
+"Edoxaban 30 mg vs Edoxaban 60 mg","0.71 (0.59, 0.87)","Edoxaban_30_mg","Edoxaban_60_mg",0.712262355888116,0.588339513389085,0.866569970024259
+"Rivaroxaban 15 mg vs Edoxaban 60 mg","0.44 (0.20, 0.91)","Rivaroxaban_15_mg","Edoxaban_60_mg",0.436937025306833,0.197703567610159,0.911800444128805
+"Rivaroxaban 20 mg vs Edoxaban 60 mg","0.71 (0.54, 0.93)","Rivaroxaban_20_mg","Edoxaban_60_mg",0.70722097262747,0.543066269891137,0.926149378051603
+"Warfarin vs Edoxaban 60 mg","0.91 (0.76, 1.10)","Warfarin","Edoxaban_60_mg",0.914288860618994,0.760255219256555,1.09579587119792
+"Apixaban 5 mg vs Rivaroxaban 20 mg","1.01 (0.78, 1.31)","Apixaban_5_mg","Rivaroxaban_20_mg",1.01197383858346,0.776574828664179,1.3112958363547
+"Dabigatran 110 mg vs Rivaroxaban 20 mg","1.18 (0.89, 1.56)","Dabigatran_110_mg","Rivaroxaban_20_mg",1.18015747843973,0.889812520866173,1.55989105192446
+"Dabigatran 150 mg vs Rivaroxaban 20 mg","0.85 (0.64, 1.15)","Dabigatran_150_mg","Rivaroxaban_20_mg",0.851471072470699,0.635906490198658,1.148705792801
+"Edoxaban 30 mg vs Rivaroxaban 20 mg","1.01 (0.77, 1.33)","Edoxaban_30_mg","Rivaroxaban_20_mg",1.00820380720303,0.767397710415982,1.33050738473419
+"Edoxaban 60 mg vs Rivaroxaban 20 mg","1.41 (1.08, 1.84)","Edoxaban_60_mg","Rivaroxaban_20_mg",1.41398521636709,1.07973942832393,1.84139589483335
+"Rivaroxaban 15 mg vs Rivaroxaban 20 mg","0.62 (0.28, 1.30)","Rivaroxaban_15_mg","Rivaroxaban_20_mg",0.620535749995653,0.279281534804559,1.29783331916522
+"Warfarin vs Rivaroxaban 20 mg","1.29 (1.07, 1.56)","Warfarin","Rivaroxaban_20_mg",1.29449304559806,1.06902967259158,1.56460564486037
+"Apixaban 5 mg vs Warfarin","0.78 (0.65, 0.94)","Apixaban_5_mg","Warfarin",0.781967162148264,0.650860427008149,0.942351998088994
+"Dabigatran 110 mg vs Warfarin","0.91 (0.74, 1.11)","Dabigatran_110_mg","Warfarin",0.912650193815135,0.743323206286194,1.1125102174642
+"Dabigatran 150 mg vs Warfarin","0.66 (0.53, 0.83)","Dabigatran_150_mg","Warfarin",0.658864359482057,0.526359168558998,0.826828691339697
+"Edoxaban 30 mg vs Warfarin","0.78 (0.64, 0.95)","Edoxaban_30_mg","Warfarin",0.777362615656793,0.638514316431207,0.946779640327311
+"Edoxaban 60 mg vs Warfarin","1.09 (0.91, 1.32)","Edoxaban_60_mg","Warfarin",1.09374623608886,0.912578725914351,1.31534776042431
+"Rivaroxaban 15 mg vs Warfarin","0.48 (0.22, 0.98)","Rivaroxaban_15_mg","Warfarin",0.478957805189264,0.221984697057982,0.979362256251454
+"Rivaroxaban 20 mg vs Warfarin","0.77 (0.64, 0.94)","Rivaroxaban_20_mg","Warfarin",0.772503184470953,0.63913868857941,0.93542773006082
