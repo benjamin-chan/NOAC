@@ -51,6 +51,9 @@ runtime <- system.time(results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=
 
 # Summary
 
+Head-to-head odds ratios and 95% confidence bounds are stored in
+[mtcStrokeHTH.csv](mtcStrokeHTH.csv).
+
 
 ```r
 hth <- combineResults()
@@ -59,60 +62,60 @@ hth[, .(label, result)]
 
 ```
 ##                                      label            result
-##  1:     Dabigatran 110 mg vs Apixaban 5 mg 1.17 (0.89, 1.53)
-##  2:     Dabigatran 150 mg vs Apixaban 5 mg 0.84 (0.62, 1.12)
+##  1:     Dabigatran 110 mg vs Apixaban 5 mg 1.17 (0.88, 1.54)
+##  2:     Dabigatran 150 mg vs Apixaban 5 mg 0.84 (0.63, 1.12)
 ##  3:        Edoxaban 30 mg vs Apixaban 5 mg 1.00 (0.76, 1.30)
-##  4:        Edoxaban 60 mg vs Apixaban 5 mg 1.40 (1.08, 1.80)
-##  5:     Rivaroxaban 15 mg vs Apixaban 5 mg 0.62 (0.28, 1.31)
-##  6:     Rivaroxaban 20 mg vs Apixaban 5 mg 0.98 (0.75, 1.29)
-##  7:              Warfarin vs Apixaban 5 mg 1.28 (1.06, 1.53)
-##  8:     Apixaban 5 mg vs Dabigatran 110 mg 0.86 (0.65, 1.12)
-##  9: Dabigatran 150 mg vs Dabigatran 110 mg 0.72 (0.57, 0.90)
-## 10:    Edoxaban 30 mg vs Dabigatran 110 mg 0.85 (0.64, 1.14)
-## 11:    Edoxaban 60 mg vs Dabigatran 110 mg 1.20 (0.91, 1.58)
-## 12: Rivaroxaban 15 mg vs Dabigatran 110 mg 0.53 (0.23, 1.12)
-## 13: Rivaroxaban 20 mg vs Dabigatran 110 mg 0.84 (0.64, 1.12)
-## 14:          Warfarin vs Dabigatran 110 mg 1.09 (0.90, 1.34)
-## 15:     Apixaban 5 mg vs Dabigatran 150 mg 1.19 (0.89, 1.60)
-## 16: Dabigatran 110 mg vs Dabigatran 150 mg 1.39 (1.11, 1.74)
-## 17:    Edoxaban 30 mg vs Dabigatran 150 mg 1.18 (0.88, 1.60)
+##  4:        Edoxaban 60 mg vs Apixaban 5 mg 1.40 (1.07, 1.81)
+##  5:     Rivaroxaban 15 mg vs Apixaban 5 mg 0.62 (0.28, 1.29)
+##  6:     Rivaroxaban 20 mg vs Apixaban 5 mg 0.99 (0.76, 1.29)
+##  7:              Warfarin vs Apixaban 5 mg 1.28 (1.07, 1.54)
+##  8:     Apixaban 5 mg vs Dabigatran 110 mg 0.86 (0.65, 1.13)
+##  9: Dabigatran 150 mg vs Dabigatran 110 mg 0.72 (0.57, 0.91)
+## 10:    Edoxaban 30 mg vs Dabigatran 110 mg 0.86 (0.65, 1.13)
+## 11:    Edoxaban 60 mg vs Dabigatran 110 mg 1.20 (0.92, 1.59)
+## 12: Rivaroxaban 15 mg vs Dabigatran 110 mg 0.53 (0.24, 1.11)
+## 13: Rivaroxaban 20 mg vs Dabigatran 110 mg 0.85 (0.64, 1.12)
+## 14:          Warfarin vs Dabigatran 110 mg 1.10 (0.89, 1.35)
+## 15:     Apixaban 5 mg vs Dabigatran 150 mg 1.19 (0.89, 1.58)
+## 16: Dabigatran 110 mg vs Dabigatran 150 mg 1.38 (1.10, 1.74)
+## 17:    Edoxaban 30 mg vs Dabigatran 150 mg 1.18 (0.89, 1.59)
 ## 18:    Edoxaban 60 mg vs Dabigatran 150 mg 1.66 (1.26, 2.21)
-## 19: Rivaroxaban 15 mg vs Dabigatran 150 mg 0.73 (0.32, 1.57)
-## 20: Rivaroxaban 20 mg vs Dabigatran 150 mg 1.17 (0.87, 1.57)
+## 19: Rivaroxaban 15 mg vs Dabigatran 150 mg 0.74 (0.33, 1.55)
+## 20: Rivaroxaban 20 mg vs Dabigatran 150 mg 1.17 (0.88, 1.57)
 ## 21:          Warfarin vs Dabigatran 150 mg 1.52 (1.22, 1.90)
-## 22:        Apixaban 5 mg vs Edoxaban 30 mg 1.00 (0.77, 1.32)
-## 23:    Dabigatran 110 mg vs Edoxaban 30 mg 1.17 (0.88, 1.56)
-## 24:    Dabigatran 150 mg vs Edoxaban 30 mg 0.85 (0.62, 1.13)
-## 25:       Edoxaban 60 mg vs Edoxaban 30 mg 1.40 (1.15, 1.71)
-## 26:    Rivaroxaban 15 mg vs Edoxaban 30 mg 0.62 (0.27, 1.30)
-## 27:    Rivaroxaban 20 mg vs Edoxaban 30 mg 0.99 (0.74, 1.31)
-## 28:             Warfarin vs Edoxaban 30 mg 1.28 (1.05, 1.57)
-## 29:        Apixaban 5 mg vs Edoxaban 60 mg 0.72 (0.56, 0.92)
-## 30:    Dabigatran 110 mg vs Edoxaban 60 mg 0.84 (0.63, 1.10)
-## 31:    Dabigatran 150 mg vs Edoxaban 60 mg 0.60 (0.45, 0.80)
-## 32:       Edoxaban 30 mg vs Edoxaban 60 mg 0.71 (0.59, 0.87)
-## 33:    Rivaroxaban 15 mg vs Edoxaban 60 mg 0.44 (0.20, 0.93)
-## 34:    Rivaroxaban 20 mg vs Edoxaban 60 mg 0.71 (0.54, 0.92)
-## 35:             Warfarin vs Edoxaban 60 mg 0.92 (0.76, 1.09)
-## 36:     Apixaban 5 mg vs Rivaroxaban 20 mg 1.02 (0.77, 1.33)
-## 37: Dabigatran 110 mg vs Rivaroxaban 20 mg 1.19 (0.89, 1.57)
-## 38: Dabigatran 150 mg vs Rivaroxaban 20 mg 0.85 (0.64, 1.15)
-## 39:    Edoxaban 30 mg vs Rivaroxaban 20 mg 1.01 (0.77, 1.34)
-## 40:    Edoxaban 60 mg vs Rivaroxaban 20 mg 1.42 (1.09, 1.86)
-## 41: Rivaroxaban 15 mg vs Rivaroxaban 20 mg 0.63 (0.28, 1.32)
+## 22:        Apixaban 5 mg vs Edoxaban 30 mg 1.00 (0.77, 1.31)
+## 23:    Dabigatran 110 mg vs Edoxaban 30 mg 1.17 (0.88, 1.55)
+## 24:    Dabigatran 150 mg vs Edoxaban 30 mg 0.85 (0.63, 1.13)
+## 25:       Edoxaban 60 mg vs Edoxaban 30 mg 1.40 (1.16, 1.70)
+## 26:    Rivaroxaban 15 mg vs Edoxaban 30 mg 0.62 (0.29, 1.28)
+## 27:    Rivaroxaban 20 mg vs Edoxaban 30 mg 0.99 (0.75, 1.30)
+## 28:             Warfarin vs Edoxaban 30 mg 1.28 (1.06, 1.56)
+## 29:        Apixaban 5 mg vs Edoxaban 60 mg 0.72 (0.55, 0.93)
+## 30:    Dabigatran 110 mg vs Edoxaban 60 mg 0.83 (0.63, 1.09)
+## 31:    Dabigatran 150 mg vs Edoxaban 60 mg 0.60 (0.45, 0.79)
+## 32:       Edoxaban 30 mg vs Edoxaban 60 mg 0.71 (0.59, 0.86)
+## 33:    Rivaroxaban 15 mg vs Edoxaban 60 mg 0.44 (0.20, 0.92)
+## 34:    Rivaroxaban 20 mg vs Edoxaban 60 mg 0.71 (0.54, 0.93)
+## 35:             Warfarin vs Edoxaban 60 mg 0.92 (0.76, 1.10)
+## 36:     Apixaban 5 mg vs Rivaroxaban 20 mg 1.01 (0.78, 1.32)
+## 37: Dabigatran 110 mg vs Rivaroxaban 20 mg 1.18 (0.89, 1.57)
+## 38: Dabigatran 150 mg vs Rivaroxaban 20 mg 0.85 (0.64, 1.14)
+## 39:    Edoxaban 30 mg vs Rivaroxaban 20 mg 1.01 (0.77, 1.33)
+## 40:    Edoxaban 60 mg vs Rivaroxaban 20 mg 1.42 (1.08, 1.86)
+## 41: Rivaroxaban 15 mg vs Rivaroxaban 20 mg 0.63 (0.28, 1.31)
 ## 42:          Warfarin vs Rivaroxaban 20 mg 1.30 (1.07, 1.57)
 ## 43:              Apixaban 5 mg vs Warfarin 0.78 (0.65, 0.94)
-## 44:          Dabigatran 110 mg vs Warfarin 0.91 (0.74, 1.11)
+## 44:          Dabigatran 110 mg vs Warfarin 0.91 (0.74, 1.12)
 ## 45:          Dabigatran 150 mg vs Warfarin 0.66 (0.53, 0.82)
-## 46:             Edoxaban 30 mg vs Warfarin 0.78 (0.64, 0.95)
+## 46:             Edoxaban 30 mg vs Warfarin 0.78 (0.64, 0.94)
 ## 47:             Edoxaban 60 mg vs Warfarin 1.09 (0.91, 1.31)
-## 48:          Rivaroxaban 15 mg vs Warfarin 0.48 (0.22, 0.99)
-## 49:          Rivaroxaban 20 mg vs Warfarin 0.77 (0.64, 0.93)
+## 48:          Rivaroxaban 15 mg vs Warfarin 0.48 (0.23, 0.99)
+## 49:          Rivaroxaban 20 mg vs Warfarin 0.77 (0.64, 0.94)
 ##                                      label            result
 ```
 
 ```r
-write.csv(hth, file="mtcStrokeHTH.csv")
+write.csv(hth, file="mtcStrokeHTH.csv", row.names=FALSE)
 ```
 
 # Diagnostics
@@ -124,7 +127,7 @@ runtime
 
 ```
 ##    user  system elapsed 
-##   15.35    0.01   15.50
+##   15.11    0.03   15.20
 ```
 
 ```r
@@ -146,29 +149,29 @@ summary(results)
 ##    plus standard error of the mean:
 ## 
 ##                                  Mean      SD Naive SE Time-series SE
-## d.Warfarin.Apixaban_5_mg     -0.24528 0.09335 0.001044       0.001131
-## d.Warfarin.Dabigatran_110_mg -0.09085 0.10403 0.001163       0.001271
-## d.Warfarin.Dabigatran_150_mg -0.41820 0.11359 0.001270       0.001327
-## d.Warfarin.Edoxaban_30_mg    -0.25004 0.10199 0.001140       0.001331
-## d.Warfarin.Edoxaban_60_mg     0.08835 0.09178 0.001026       0.001085
-## d.Warfarin.Rivaroxaban_15_mg -0.73850 0.38330 0.004285       0.004913
-## d.Warfarin.Rivaroxaban_20_mg -0.26124 0.09875 0.001104       0.001191
+## d.Warfarin.Apixaban_5_mg     -0.24630 0.09308 0.001041       0.001041
+## d.Warfarin.Dabigatran_110_mg -0.09382 0.10419 0.001165       0.001316
+## d.Warfarin.Dabigatran_150_mg -0.41849 0.11197 0.001252       0.001237
+## d.Warfarin.Edoxaban_30_mg    -0.25048 0.09849 0.001101       0.001323
+## d.Warfarin.Edoxaban_60_mg     0.08884 0.09250 0.001034       0.001068
+## d.Warfarin.Rivaroxaban_15_mg -0.73087 0.37529 0.004196       0.004644
+## d.Warfarin.Rivaroxaban_20_mg -0.26004 0.09858 0.001102       0.001135
 ## 
 ## 2. Quantiles for each variable:
 ## 
-##                                  2.5%      25%      50%      75%     97.5%
-## d.Warfarin.Apixaban_5_mg     -0.42794 -0.30877 -0.24493 -0.18202 -0.061427
-## d.Warfarin.Dabigatran_110_mg -0.29498 -0.16086 -0.09037 -0.01992  0.108833
-## d.Warfarin.Dabigatran_150_mg -0.64350 -0.49448 -0.41917 -0.34189 -0.196078
-## d.Warfarin.Edoxaban_30_mg    -0.45124 -0.31764 -0.25025 -0.18074 -0.051825
-## d.Warfarin.Edoxaban_60_mg    -0.08889  0.02558  0.08820  0.15051  0.268784
-## d.Warfarin.Rivaroxaban_15_mg -1.51086 -0.99063 -0.73010 -0.47599 -0.006907
-## d.Warfarin.Rivaroxaban_20_mg -0.45413 -0.32723 -0.26154 -0.19359 -0.072161
+##                                 2.5%      25%      50%      75%    97.5%
+## d.Warfarin.Apixaban_5_mg     -0.4303 -0.30825 -0.24543 -0.18473 -0.06630
+## d.Warfarin.Dabigatran_110_mg -0.2976 -0.16329 -0.09419 -0.02375  0.11328
+## d.Warfarin.Dabigatran_150_mg -0.6431 -0.49240 -0.41838 -0.34315 -0.20021
+## d.Warfarin.Edoxaban_30_mg    -0.4456 -0.31636 -0.25012 -0.18434 -0.05774
+## d.Warfarin.Edoxaban_60_mg    -0.0928  0.02582  0.08761  0.15104  0.27011
+## d.Warfarin.Rivaroxaban_15_mg -1.4898 -0.97991 -0.72484 -0.47431 -0.01459
+## d.Warfarin.Rivaroxaban_20_mg -0.4539 -0.32590 -0.25996 -0.19219 -0.06631
 ## 
 ## 
 ## $DIC
 ##     Dbar       pD      DIC 
-## 17.84336 14.24002 32.08338 
+## 17.65755 14.05451 31.71206 
 ## 
 ## attr(,"class")
 ## [1] "summary.mtc.result"
@@ -231,7 +234,7 @@ summary(anohe)
 ## -------------------------
 ## 
 ##                  t1                t2  i2.pair  i2.cons incons.p
-## 1     Apixaban_5_mg          Warfarin 98.54297 89.78434       NA
+## 1     Apixaban_5_mg          Warfarin 98.90107 89.45216       NA
 ## 2 Dabigatran_110_mg Dabigatran_150_mg       NA       NA       NA
 ## 3 Dabigatran_110_mg          Warfarin       NA       NA       NA
 ## 4 Dabigatran_150_mg          Warfarin  0.00000  0.00000       NA
@@ -245,7 +248,7 @@ summary(anohe)
 ## -------------------------
 ## 
 ##    i2.pair i2.cons
-## 1 79.87272       0
+## 1 84.78551       0
 ```
 
 ```r
