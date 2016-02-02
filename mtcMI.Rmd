@@ -33,10 +33,13 @@ runtime <- system.time(results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=
 
 # Summary
 
+Head-to-head odds ratios and 95% confidence bounds are stored in
+[mtcMIHTH.csv](mtcMIHTH.csv).
+
 ```{r}
 hth <- combineResults()
 hth[, .(label, result)]
-write.csv(hth, file="mtcMIHTH.csv")
+write.csv(hth, file="mtcMIHTH.csv", row.names=FALSE)
 ```
 
 # Diagnostics
