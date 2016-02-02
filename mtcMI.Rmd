@@ -1,5 +1,5 @@
 ---
-title: "Novel oral anticoagulants network meta-analysis: MI"
+title: "NOAC network meta-analysis: MI"
 author: "Benjamin Chan"
 date: "`r Sys.time()`"
 output: 
@@ -33,9 +33,7 @@ runtime <- system.time(results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=
 
 # Summary
 
-```{r miForest}
-summary(results)
-forest(results)
+```{r}
 pairwiseComparisons <- combineResults()
 pairwiseComparisons[, .(label, result)]
 write.csv(pairwiseComparisons, file="mtcMIPairwiseComparisons.csv")
@@ -45,6 +43,7 @@ write.csv(pairwiseComparisons, file="mtcMIPairwiseComparisons.csv")
 
 ```{r}
 runtime
+summary(results)
 ```
 
 Sampler diagnostics.

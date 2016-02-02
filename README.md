@@ -33,6 +33,13 @@ library(gemtc)
 ## NOAC NMA Data.xlsx 2016-01-30 06:00:03 48838
 ```
 
+Set `linearModel`.
+
+
+```r
+effect <- "fixed"
+```
+
 Set sampler parameters.
 
 
