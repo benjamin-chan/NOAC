@@ -47,7 +47,8 @@ tidyData <- function (D) {
   D <- D[, label := gsub("\\s$", "", label)]
   D <- D[, label := gsub("\\sivaroxaban", " Rivaroxaban", label)]
   D <- D[, label := gsub("0$", "0 mg", label)]
-  D <- D[, `:=` (study = NA_character_, noac = NA_character_)]
+  D$study <- NA_character_
+  D$noac <- NA_character_
   assignStudy <- function (str) {
     D[grep(str, label), study := str]
   }
