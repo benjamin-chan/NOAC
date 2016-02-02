@@ -138,7 +138,7 @@ thin <- 10
 
 Links to outcomes.
 
-* [Mortality](https://github.com/benjamin-chan/NOAC/blob/master/mtcMortality.md)
-* [Stroke](https://github.com/benjamin-chan/NOAC/blob/master/mtcStroke.md)
-* [MI](https://github.com/benjamin-chan/NOAC/blob/master/mtcMI.md)
-* [Bleeding](https://github.com/benjamin-chan/NOAC/blob/master/mtcBleeding.md)
+* [Mortality](mtcMortality.md)
+* [Stroke](mtcStroke.md)
+* [MI](mtcMI.md)
+* [Bleeding](mtcBleeding.md)
