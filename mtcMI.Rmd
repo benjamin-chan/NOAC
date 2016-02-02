@@ -34,9 +34,9 @@ runtime <- system.time(results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=
 # Summary
 
 ```{r}
-pairwiseComparisons <- combineResults()
-pairwiseComparisons[, .(label, result)]
-write.csv(pairwiseComparisons, file="mtcMIPairwiseComparisons.csv")
+hth <- combineResults()
+hth[, .(label, result)]
+write.csv(hth, file="mtcMIHTH.csv")
 ```
 
 # Diagnostics
