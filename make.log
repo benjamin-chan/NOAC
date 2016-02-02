@@ -27,15 +27,15 @@ label: unnamed-chunk-4
   ordinary text without R code
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output index.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpM78Wey\rmarkdown-str29a011c32b6.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+"C:/Program Files/RStudio/bin/pandoc/pandoc" MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output index.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpM78Wey\rmarkdown-str29a072061c69.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
 
 > file.rename("index.md", "README.md")
 [1] TRUE
 
 > file.info(c("index.html", "README.md"))
              size isdir mode               mtime               ctime               atime exe
-index.html 646954 FALSE  666 2016-02-02 08:04:38 2016-02-02 07:29:27 2016-02-02 07:29:27  no
-README.md    1253 FALSE  666 2016-02-02 08:04:38 2016-02-02 08:04:38 2016-02-02 08:04:38  no
+index.html 646954 FALSE  666 2016-02-02 11:03:41 2016-02-02 07:29:27 2016-02-02 07:29:27  no
+README.md    1253 FALSE  666 2016-02-02 11:03:41 2016-02-02 11:03:41 2016-02-02 11:03:41  no
 
 > .timeStart <- Sys.time()
 
@@ -104,7 +104,7 @@ List of 1
  $ fig.height: num 8
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcMortality.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcMortality.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpM78Wey\rmarkdown-str29a01dd27883.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcMortality.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcMortality.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpM78Wey\rmarkdown-str29a02fd13735.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
 
 > rmarkdown::render("mtcStroke.Rmd")
   |                                                                         |                                                                 |   0%  |                                                                         |....                                                             |   6%
@@ -171,7 +171,7 @@ List of 1
  $ fig.height: num 8
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcStroke.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcStroke.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpM78Wey\rmarkdown-str29a018b256f9.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcStroke.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcStroke.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpM78Wey\rmarkdown-str29a032c02713.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
 
 > rmarkdown::render("mtcMI.Rmd")
   |                                                                         |                                                                 |   0%  |                                                                         |....                                                             |   6%
@@ -238,7 +238,7 @@ List of 1
  $ fig.height: num 8
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcMI.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcMI.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpM78Wey\rmarkdown-str29a0456b518c.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcMI.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcMI.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpM78Wey\rmarkdown-str29a03845644e.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
 
 > rmarkdown::render("mtcBleeding.Rmd")
   |                                                                         |                                                                 |   0%  |                                                                         |....                                                             |   6%
@@ -267,86 +267,42 @@ List of 1
 
   |                                                                         |.............................                                    |  44%
 label: unnamed-chunk-3
-  |                                                                         |................................                                 |  50%
-  ordinary text without R code
 
-  |                                                                         |....................................                             |  56%
-label: unnamed-chunk-4
-  |                                                                         |........................................                         |  61%
-  ordinary text without R code
+$measure
+[1] "Log Odds Ratio"
 
-  |                                                                         |...........................................                      |  67%
-label: bleedingGelman (with options) 
-List of 1
- $ fig.height: num 8
+$summaries
 
-  |                                                                         |...............................................                  |  72%
-  ordinary text without R code
+Iterations = 5010:25000
+Thinning interval = 10 
+Number of chains = 4 
+Sample size per chain = 2000 
 
-  |                                                                         |...................................................              |  78%
-label: bleedingTrace (with options) 
-List of 1
- $ fig.height: num 10
+1. Empirical mean and standard deviation for each variable,
+   plus standard error of the mean:
 
-  |                                                                         |......................................................           |  83%
-  ordinary text without R code
+                                 Mean      SD  Naive SE Time-series SE
+d.Warfarin.Apixaban_5_mg     -0.56648 0.10512 0.0011753      0.0012806
+d.Warfarin.Dabigatran_110_mg -0.22014 0.07645 0.0008547      0.0010088
+d.Warfarin.Dabigatran_150_mg -0.06378 0.07523 0.0008411      0.0008585
+d.Warfarin.Edoxaban_30_mg    -0.24279 0.06804 0.0007607      0.0008364
+d.Warfarin.Edoxaban_60_mg    -0.75834 0.07831 0.0008755      0.0008836
+d.Warfarin.Rivaroxaban_20_mg  0.02487 0.07400 0.0008273      0.0008460
 
-  |                                                                         |..........................................................       |  89%
-label: unnamed-chunk-5 (with options) 
-List of 1
- $ results: chr "hide"
+2. Quantiles for each variable:
 
-  |                                                                         |.............................................................    |  94%
-  ordinary text without R code
-
-  |                                                                         |.................................................................| 100%
-label: bleedingAnohe (with options) 
-List of 1
- $ fig.height: num 8
+                                2.5%      25%      50%      75%    97.5%
+d.Warfarin.Apixaban_5_mg     -0.7707 -0.63645 -0.56717 -0.49736 -0.36049
+d.Warfarin.Dabigatran_110_mg -0.3710 -0.27113 -0.22030 -0.16867 -0.07145
+d.Warfarin.Dabigatran_150_mg -0.2114 -0.11536 -0.06311 -0.01301  0.08261
+d.Warfarin.Edoxaban_30_mg    -0.3757 -0.28812 -0.24178 -0.19737 -0.10948
+d.Warfarin.Edoxaban_60_mg    -0.9125 -0.81056 -0.75945 -0.70625 -0.60234
+d.Warfarin.Rivaroxaban_20_mg -0.1217 -0.02485  0.02426  0.07446  0.16984
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcBleeding.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcBleeding.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpM78Wey\rmarkdown-str29a0249a569.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+$DIC
+    Dbar       pD      DIC 
+23.46812 13.30049 36.76861 
 
-> library(devtools)
-
-> source_gist("https://gist.github.com/benjamin-chan/80149dd4cdb16b2760ec",
-+             print.eval=TRUE,
-+             quiet=TRUE)
-$timeStart
-[1] "2016-02-02 08:04:38"
-
-$timeEnd
-[1] "2016-02-02 08:08:30 PST"
-
-$timeElapsed
-[1] "3.871787 mins"
-
-$Sys.info
-                     sysname                      release                      version                     nodename 
-                   "Windows"                      "7 x64" "build 7601, Service Pack 1"                    "GHBA299" 
-                     machine                        login                         user               effective_user 
-                    "x86-64"                      "chanb"                      "chanb"                      "chanb" 
-
-$sessionInfo
-R version 3.2.2 (2015-08-14)
-Platform: x86_64-w64-mingw32/x64 (64-bit)
-Running under: Windows 7 x64 (build 7601) Service Pack 1
-
-locale:
-[1] LC_COLLATE=English_United States.1252  LC_CTYPE=English_United States.1252    LC_MONETARY=English_United States.1252
-[4] LC_NUMERIC=C                           LC_TIME=English_United States.1252    
-
-attached base packages:
-[1] stats     graphics  grDevices utils     datasets  methods   base     
-
-other attached packages:
-[1] devtools_1.8.0      gemtc_0.7-1         coda_0.17-1         data.table_1.9.6    openxlsx_3.0.0      RevoUtilsMath_3.2.2
-
-loaded via a namespace (and not attached):
- [1] igraph_1.0.1     Rcpp_0.12.1      rstudioapi_0.3.1 xml2_0.1.2       knitr_1.11       magrittr_1.5     lattice_0.20-33  R6_2.1.1        
- [9] httr_1.0.0       stringr_1.0.0    plyr_1.8.3       tools_3.2.2      grid_3.2.2       git2r_0.11.0     htmltools_0.2.6  rversions_1.0.2 
-[17] yaml_2.1.13      digest_0.6.8     formatR_1.2      curl_0.9.3       memoise_0.2.1    evaluate_0.7.2   rmarkdown_0.7    stringi_0.5-5   
-[25] meta_4.3-0       rjags_4-5        jsonlite_0.9.16  truncnorm_1.0-7  chron_2.3-47    
-
-
-> sink(NULL)
+attr(,"class")
+[1] "summary.mtc.result"
