@@ -24,7 +24,7 @@ network <- mtc.network(D4[!is.na(responders)])
 plot(network)
 ```
 
-Run the model.
+Run the model using `r sprintf("%s-effects", effect)`.
 
 ```{r, results='hide'}
 M <- mtc.model(network, type="consistency", linearModel=effect)
