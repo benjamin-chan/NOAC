@@ -28,7 +28,7 @@ Run the model using `r sprintf("%s-effects", effect)`.
 
 ```{r, results='hide'}
 M <- mtc.model(network, type="consistency", linearModel=effect)
-runtime <- system.time(results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=thin))
+results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=thin)
 ```
 
 # Summary
@@ -45,7 +45,6 @@ show(or)
 # Diagnostics
 
 ```{r}
-runtime
 summary(results)
 ```
 
