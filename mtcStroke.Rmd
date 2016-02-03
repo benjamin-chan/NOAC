@@ -33,13 +33,13 @@ runtime <- system.time(results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=
 
 # Summary
 
-Head-to-head odds ratios and 95% confidence bounds are stored in
-[mtcStrokeHTH.csv](mtcStrokeHTH.csv).
+Direct and indirect odds ratios and 95% confidence bounds are stored in
+[mtcStrokeOddsRatios.csv](mtcStrokeOddsRatios.csv).
 
 ```{r}
-hth <- combineResults()
-hth[, .(label, result)]
-write.csv(hth, file="mtcStrokeHTH.csv", row.names=FALSE)
+or <- combineResults()
+write.csv(or, file="mtcStrokeOddsRatios.csv", row.names=FALSE)
+show(or)
 ```
 
 # Diagnostics
