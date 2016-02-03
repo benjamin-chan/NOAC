@@ -18,16 +18,11 @@ show(D3)
 network <- mtc.network(D3)
 ```
 
-# Network plot
-
-```{r miNetwork}
-plot(network)
-```
-
 Run the model using `r sprintf("%s-effects", effect)`.
 
-```{r, results='hide'}
+```{r miNetwork, results='hide'}
 M <- mtc.model(network, type="consistency", linearModel=effect)
+plot(M)
 results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=thin)
 ```
 

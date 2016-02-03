@@ -18,16 +18,11 @@ show(D4)
 network <- mtc.network(D4[!is.na(responders)])
 ```
 
-# Network plot
+`Run the model using `r sprintf("%s-effects", effect)`.
 
-```{r bleedingNetwork}
-plot(network)
-```
-
-Run the model using `r sprintf("%s-effects", effect)`.
-
-```{r, results='hide'}
+```{r bleedingNetwork, results='hide'}
 M <- mtc.model(network, type="consistency", linearModel=effect)
+plot(M)
 results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=thin)
 ```
 
