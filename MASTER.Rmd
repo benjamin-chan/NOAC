@@ -88,6 +88,7 @@ tidyData <- function (D) {
   setkey(D, study, treatment)
   setcolorder(D, c("study", "treatment", "responders", "sampleSize"))
   D <- unique(D)
+  D <- D[study %in% c("RE-LY", "ARISTOTLE", "ROCKET-AF", "ENGAGE AF-TIMI")]  # Replicate Fu 2014
   D
 }
 
@@ -115,7 +116,7 @@ combineResults <- function () {
                  tidyResults("Dabigatran_150_mg"),
                  tidyResults("Edoxaban_30_mg"),
                  tidyResults("Edoxaban_60_mg"),
-                 tidyResults("Rivaroxaban_15_mg"),
+                 # tidyResults("Rivaroxaban_15_mg"),
                  tidyResults("Rivaroxaban_20_mg"),
                  tidyResults("Warfarin")))
 }
