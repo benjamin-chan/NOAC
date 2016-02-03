@@ -30,7 +30,7 @@ library(gemtc)
 
 ```
 ##                                  mtime  size
-## NOAC NMA Data.xlsx 2016-01-30 06:00:03 48838
+## NOAC NMA Data.xlsx 2016-02-02 07:29:27 48838
 ```
 
 Set `linearModel`.
