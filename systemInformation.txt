@@ -1,0 +1,45 @@
+
+> library(devtools)
+
+> source_gist("https://gist.github.com/benjamin-chan/80149dd4cdb16b2760ec",
++             print.eval=TRUE,
++             quiet=TRUE)
+$timeStart
+[1] "2016-02-03 14:17:50"
+
+$timeEnd
+[1] "2016-02-03 14:20:30 PST"
+
+$timeElapsed
+[1] "2.652915 mins"
+
+$Sys.info
+                     sysname                      release                      version                     nodename 
+                   "Windows"                      "7 x64" "build 7601, Service Pack 1"                    "GHBA299" 
+                     machine                        login                         user               effective_user 
+                    "x86-64"                      "chanb"                      "chanb"                      "chanb" 
+
+$sessionInfo
+R version 3.2.2 (2015-08-14)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 7 x64 (build 7601) Service Pack 1
+
+locale:
+[1] LC_COLLATE=English_United States.1252  LC_CTYPE=English_United States.1252    LC_MONETARY=English_United States.1252
+[4] LC_NUMERIC=C                           LC_TIME=English_United States.1252    
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] rjags_4-5           devtools_1.8.0      gemtc_0.7-1         coda_0.17-1         data.table_1.9.6    openxlsx_3.0.0     
+[7] RevoUtilsMath_3.2.2
+
+loaded via a namespace (and not attached):
+ [1] igraph_1.0.1     Rcpp_0.12.1      rstudioapi_0.3.1 xml2_0.1.2       knitr_1.11       magrittr_1.5     lattice_0.20-33  R6_2.1.1        
+ [9] httr_1.0.0       stringr_1.0.0    plyr_1.8.3       tools_3.2.2      grid_3.2.2       git2r_0.11.0     htmltools_0.2.6  rversions_1.0.2 
+[17] yaml_2.1.13      digest_0.6.8     formatR_1.2      curl_0.9.3       memoise_0.2.1    evaluate_0.7.2   rmarkdown_0.7    stringi_0.5-5   
+[25] meta_4.3-0       jsonlite_0.9.16  truncnorm_1.0-7  chron_2.3-47    
+
+
+> sink(NULL)

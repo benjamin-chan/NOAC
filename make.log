@@ -27,15 +27,15 @@ label: unnamed-chunk-4
   ordinary text without R code
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output index.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpM78Wey\rmarkdown-str29a01114487.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+"C:/Program Files/RStudio/bin/pandoc/pandoc" MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output index.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpM78Wey\rmarkdown-str29a0350f45aa.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
 
 > file.rename("index.md", "README.md")
 [1] TRUE
 
 > file.info(c("index.html", "README.md"))
              size isdir mode               mtime               ctime               atime exe
-index.html 646954 FALSE  666 2016-02-03 08:07:52 2016-02-02 07:29:27 2016-02-03 08:06:55  no
-README.md    1253 FALSE  666 2016-02-03 08:07:52 2016-02-03 08:07:52 2016-02-03 08:07:52  no
+index.html 646954 FALSE  666 2016-02-03 14:17:50 2016-02-03 14:02:34 2016-02-03 14:05:30  no
+README.md    1253 FALSE  666 2016-02-03 14:17:50 2016-02-03 14:17:50 2016-02-03 14:17:50  no
 
 > .timeStart <- Sys.time()
 
@@ -43,55 +43,50 @@ README.md    1253 FALSE  666 2016-02-03 08:07:52 2016-02-03 08:07:52 2016-02-03 
   |                                                                         |                                                                 |   0%  |                                                                         |....                                                             |   6%
    inline R code fragments
 
-  |                                                                         |.......                                                          |  11%
+  |                                                                         |........                                                         |  12%
 label: unnamed-chunk-1 (with options) 
 List of 1
  $ echo: logi FALSE
 
-  |                                                                         |...........                                                      |  17%
-  ordinary text without R code
-
-  |                                                                         |..............                                                   |  22%
-label: mortalityNetwork
-  |                                                                         |..................                                               |  28%
+  |                                                                         |............                                                     |  19%
    inline R code fragments
 
-  |                                                                         |......................                                           |  33%
-label: unnamed-chunk-2 (with options) 
+  |                                                                         |................                                                 |  25%
+label: mortalityNetwork (with options) 
 List of 1
  $ results: chr "hide"
 
-  |                                                                         |.........................                                        |  39%
+  |                                                                         |....................                                             |  31%
   ordinary text without R code
 
-  |                                                                         |.............................                                    |  44%
-label: unnamed-chunk-3
+  |                                                                         |........................                                         |  38%
+label: unnamed-chunk-2
+  |                                                                         |............................                                     |  44%
+  ordinary text without R code
+
   |                                                                         |................................                                 |  50%
+label: unnamed-chunk-3
+  |                                                                         |.....................................                            |  56%
   ordinary text without R code
 
-  |                                                                         |....................................                             |  56%
-label: unnamed-chunk-4
-  |                                                                         |........................................                         |  61%
-  ordinary text without R code
-
-  |                                                                         |...........................................                      |  67%
+  |                                                                         |.........................................                        |  62%
 label: mortalityGelman (with options) 
 List of 1
  $ fig.height: num 8
 
-  |                                                                         |...............................................                  |  72%
+  |                                                                         |.............................................                    |  69%
   ordinary text without R code
 
-  |                                                                         |...................................................              |  78%
+  |                                                                         |.................................................                |  75%
 label: mortalityTrace (with options) 
 List of 1
  $ fig.height: num 10
 
-  |                                                                         |......................................................           |  83%
+  |                                                                         |.....................................................            |  81%
   ordinary text without R code
 
-  |                                                                         |..........................................................       |  89%
-label: unnamed-chunk-5 (with options) 
+  |                                                                         |.........................................................        |  88%
+label: unnamed-chunk-4 (with options) 
 List of 1
  $ results: chr "hide"
 
@@ -104,61 +99,56 @@ List of 1
  $ fig.height: num 8
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcMortality.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcMortality.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpM78Wey\rmarkdown-str29a01a1d7a5.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcMortality.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcMortality.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpM78Wey\rmarkdown-str29a0549c5146.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
 
 > rmarkdown::render("mtcStroke.Rmd")
   |                                                                         |                                                                 |   0%  |                                                                         |....                                                             |   6%
    inline R code fragments
 
-  |                                                                         |.......                                                          |  11%
+  |                                                                         |........                                                         |  12%
 label: unnamed-chunk-1 (with options) 
 List of 1
  $ echo: logi FALSE
 
-  |                                                                         |...........                                                      |  17%
-  ordinary text without R code
-
-  |                                                                         |..............                                                   |  22%
-label: strokeNetwork
-  |                                                                         |..................                                               |  28%
+  |                                                                         |............                                                     |  19%
    inline R code fragments
 
-  |                                                                         |......................                                           |  33%
-label: unnamed-chunk-2 (with options) 
+  |                                                                         |................                                                 |  25%
+label: strokeNetwork (with options) 
 List of 1
  $ results: chr "hide"
 
-  |                                                                         |.........................                                        |  39%
+  |                                                                         |....................                                             |  31%
   ordinary text without R code
 
-  |                                                                         |.............................                                    |  44%
-label: unnamed-chunk-3
+  |                                                                         |........................                                         |  38%
+label: unnamed-chunk-2
+  |                                                                         |............................                                     |  44%
+  ordinary text without R code
+
   |                                                                         |................................                                 |  50%
+label: unnamed-chunk-3
+  |                                                                         |.....................................                            |  56%
   ordinary text without R code
 
-  |                                                                         |....................................                             |  56%
-label: unnamed-chunk-4
-  |                                                                         |........................................                         |  61%
-  ordinary text without R code
-
-  |                                                                         |...........................................                      |  67%
+  |                                                                         |.........................................                        |  62%
 label: strokeGelman (with options) 
 List of 1
  $ fig.height: num 8
 
-  |                                                                         |...............................................                  |  72%
+  |                                                                         |.............................................                    |  69%
   ordinary text without R code
 
-  |                                                                         |...................................................              |  78%
+  |                                                                         |.................................................                |  75%
 label: strokeTrace (with options) 
 List of 1
  $ fig.height: num 10
 
-  |                                                                         |......................................................           |  83%
+  |                                                                         |.....................................................            |  81%
   ordinary text without R code
 
-  |                                                                         |..........................................................       |  89%
-label: unnamed-chunk-5 (with options) 
+  |                                                                         |.........................................................        |  88%
+label: unnamed-chunk-4 (with options) 
 List of 1
  $ results: chr "hide"
 
@@ -171,61 +161,56 @@ List of 1
  $ fig.height: num 8
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcStroke.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcStroke.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpM78Wey\rmarkdown-str29a030564e83.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcStroke.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcStroke.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpM78Wey\rmarkdown-str29a0284e7cb8.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
 
 > rmarkdown::render("mtcMI.Rmd")
   |                                                                         |                                                                 |   0%  |                                                                         |....                                                             |   6%
    inline R code fragments
 
-  |                                                                         |.......                                                          |  11%
+  |                                                                         |........                                                         |  12%
 label: unnamed-chunk-1 (with options) 
 List of 1
  $ echo: logi FALSE
 
-  |                                                                         |...........                                                      |  17%
-  ordinary text without R code
-
-  |                                                                         |..............                                                   |  22%
-label: miNetwork
-  |                                                                         |..................                                               |  28%
+  |                                                                         |............                                                     |  19%
    inline R code fragments
 
-  |                                                                         |......................                                           |  33%
-label: unnamed-chunk-2 (with options) 
+  |                                                                         |................                                                 |  25%
+label: miNetwork (with options) 
 List of 1
  $ results: chr "hide"
 
-  |                                                                         |.........................                                        |  39%
+  |                                                                         |....................                                             |  31%
   ordinary text without R code
 
-  |                                                                         |.............................                                    |  44%
-label: unnamed-chunk-3
+  |                                                                         |........................                                         |  38%
+label: unnamed-chunk-2
+  |                                                                         |............................                                     |  44%
+  ordinary text without R code
+
   |                                                                         |................................                                 |  50%
+label: unnamed-chunk-3
+  |                                                                         |.....................................                            |  56%
   ordinary text without R code
 
-  |                                                                         |....................................                             |  56%
-label: unnamed-chunk-4
-  |                                                                         |........................................                         |  61%
-  ordinary text without R code
-
-  |                                                                         |...........................................                      |  67%
+  |                                                                         |.........................................                        |  62%
 label: miGelman (with options) 
 List of 1
  $ fig.height: num 8
 
-  |                                                                         |...............................................                  |  72%
+  |                                                                         |.............................................                    |  69%
   ordinary text without R code
 
-  |                                                                         |...................................................              |  78%
+  |                                                                         |.................................................                |  75%
 label: miTrace (with options) 
 List of 1
  $ fig.height: num 10
 
-  |                                                                         |......................................................           |  83%
+  |                                                                         |.....................................................            |  81%
   ordinary text without R code
 
-  |                                                                         |..........................................................       |  89%
-label: unnamed-chunk-5 (with options) 
+  |                                                                         |.........................................................        |  88%
+label: unnamed-chunk-4 (with options) 
 List of 1
  $ results: chr "hide"
 
@@ -238,100 +223,68 @@ List of 1
  $ fig.height: num 8
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcMI.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcMI.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpM78Wey\rmarkdown-str29a0486128aa.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcMI.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcMI.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpM78Wey\rmarkdown-str29a06e5b457e.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
 
 > rmarkdown::render("mtcBleeding.Rmd")
   |                                                                         |                                                                 |   0%  |                                                                         |....                                                             |   6%
    inline R code fragments
 
-  |                                                                         |.......                                                          |  11%
+  |                                                                         |........                                                         |  12%
 label: unnamed-chunk-1 (with options) 
 List of 1
  $ echo: logi FALSE
 
-  |                                                                         |...........                                                      |  17%
-  ordinary text without R code
-
-  |                                                                         |..............                                                   |  22%
-label: bleedingNetwork
-  |                                                                         |..................                                               |  28%
+  |                                                                         |............                                                     |  19%
    inline R code fragments
 
-  |                                                                         |......................                                           |  33%
-label: unnamed-chunk-2 (with options) 
+  |                                                                         |................                                                 |  25%
+label: bleedingNetwork (with options) 
 List of 1
  $ results: chr "hide"
 
-  |                                                                         |.........................                                        |  39%
+  |                                                                         |....................                                             |  31%
   ordinary text without R code
 
-  |                                                                         |.............................                                    |  44%
-label: unnamed-chunk-3
+  |                                                                         |........................                                         |  38%
+label: unnamed-chunk-2
+  |                                                                         |............................                                     |  44%
+  ordinary text without R code
+
   |                                                                         |................................                                 |  50%
+label: unnamed-chunk-3
+  |                                                                         |.....................................                            |  56%
   ordinary text without R code
 
-  |                                                                         |....................................                             |  56%
-label: unnamed-chunk-4
-  |                                                                         |........................................                         |  61%
-  ordinary text without R code
-
-  |                                                                         |...........................................                      |  67%
+  |                                                                         |.........................................                        |  62%
 label: bleedingGelman (with options) 
 List of 1
  $ fig.height: num 8
 
-  |                                                                         |...............................................                  |  72%
+  |                                                                         |.............................................                    |  69%
   ordinary text without R code
 
-  |                                                                         |...................................................              |  78%
+  |                                                                         |.................................................                |  75%
 label: bleedingTrace (with options) 
 List of 1
  $ fig.height: num 10
 
-  |                                                                         |......................................................           |  83%
+  |                                                                         |.....................................................            |  81%
   ordinary text without R code
 
-  |                                                                         |.....................................................                                     label            result         treatment        comparator    median boundLower boundUpper
- 1:     Dabigatran 110 mg vs Apixaban 5 mg 1.41 (1.09, 1.82) Dabigatran_110_mg     Apixaban_5_mg 1.4089932  1.0909454  1.8198472
- 2:     Dabigatran 150 mg vs Apixaban 5 mg 1.64 (1.28, 2.11) Dabigatran_150_mg     Apixaban_5_mg 1.6383665  1.2774355  2.1082943
- 3:        Edoxaban 30 mg vs Apixaban 5 mg 1.38 (1.08, 1.76)    Edoxaban_30_mg     Apixaban_5_mg 1.3784465  1.0833320  1.7586918
- 4:        Edoxaban 60 mg vs Apixaban 5 mg 0.82 (0.64, 1.05)    Edoxaban_60_mg     Apixaban_5_mg 0.8193663  0.6352257  1.0524618
- 5:     Rivaroxaban 20 mg vs Apixaban 5 mg 1.81 (1.41, 2.31) Rivaroxaban_20_mg     Apixaban_5_mg 1.8055331  1.4149200  2.3132626
- 6:              Warfarin vs Apixaban 5 mg 1.76 (1.44, 2.15)          Warfarin     Apixaban_5_mg 1.7565453  1.4378514  2.1540504
- 7:     Apixaban 5 mg vs Dabigatran 110 mg 0.71 (0.55, 0.92)     Apixaban_5_mg Dabigatran_110_mg 0.7097266  0.5494967  0.9166362
- 8: Dabigatran 150 mg vs Dabigatran 110 mg 1.16 (1.00, 1.36) Dabigatran_150_mg Dabigatran_110_mg 1.1604396  0.9971904  1.3586778
- 9:    Edoxaban 30 mg vs Dabigatran 110 mg 0.98 (0.80, 1.20)    Edoxaban_30_mg Dabigatran_110_mg 0.9790532  0.7984364  1.1985903
-10:    Edoxaban 60 mg vs Dabigatran 110 mg 0.58 (0.47, 0.72)    Edoxaban_60_mg Dabigatran_110_mg 0.5810222  0.4697067  0.7212207
-11: Rivaroxaban 20 mg vs Dabigatran 110 mg 1.28 (1.04, 1.58) Rivaroxaban_20_mg Dabigatran_110_mg 1.2798167  1.0432256  1.5751769
-12:          Warfarin vs Dabigatran 110 mg 1.25 (1.07, 1.45)          Warfarin Dabigatran_110_mg 1.2467869  1.0707739  1.4546581
-13:     Apixaban 5 mg vs Dabigatran 150 mg 0.61 (0.47, 0.78)     Apixaban_5_mg Dabigatran_150_mg 0.6103640  0.4743171  0.7828184
-14: Dabigatran 110 mg vs Dabigatran 150 mg 0.86 (0.74, 1.00) Dabigatran_110_mg Dabigatran_150_mg 0.8617424  0.7360097  1.0028175
-15:    Edoxaban 30 mg vs Dabigatran 150 mg 0.84 (0.69, 1.02)    Edoxaban_30_mg Dabigatran_150_mg 0.8434684  0.6922646  1.0245329
-16:    Edoxaban 60 mg vs Dabigatran 150 mg 0.50 (0.40, 0.62)    Edoxaban_60_mg Dabigatran_150_mg 0.5002377  0.4032635  0.6153598
-17: Rivaroxaban 20 mg vs Dabigatran 150 mg 1.10 (0.90, 1.35) Rivaroxaban_20_mg Dabigatran_150_mg 1.1019402  0.9023259  1.3502345
-18:          Warfarin vs Dabigatran 150 mg 1.07 (0.93, 1.24)          Warfarin Dabigatran_150_mg 1.0734076  0.9296846  1.2424410
-19:        Apixaban 5 mg vs Edoxaban 30 mg 0.73 (0.57, 0.92)     Apixaban_5_mg    Edoxaban_30_mg 0.7254544  0.5686045  0.9230780
-20:    Dabigatran 110 mg vs Edoxaban 30 mg 1.02 (0.83, 1.25) Dabigatran_110_mg    Edoxaban_30_mg 1.0213950  0.8343134  1.2524479
-21:    Dabigatran 150 mg vs Edoxaban 30 mg 1.19 (0.98, 1.44) Dabigatran_150_mg    Edoxaban_30_mg 1.1855809  0.9760545  1.4445344
-22:       Edoxaban 60 mg vs Edoxaban 30 mg 0.59 (0.51, 0.70)    Edoxaban_60_mg    Edoxaban_30_mg 0.5931488  0.5056152  0.6966936
-23:    Rivaroxaban 20 mg vs Edoxaban 30 mg 1.31 (1.07, 1.59) Rivaroxaban_20_mg    Edoxaban_30_mg 1.3094928  1.0749733  1.5877346
-24:             Warfarin vs Edoxaban 30 mg 1.27 (1.12, 1.46)          Warfarin    Edoxaban_30_mg 1.2732315  1.1175050  1.4578721
-25:        Apixaban 5 mg vs Edoxaban 60 mg 1.22 (0.95, 1.57)     Apixaban_5_mg    Edoxaban_60_mg 1.2204554  0.9501533  1.5742435
-26:    Dabigatran 110 mg vs Edoxaban 60 mg 1.72 (1.39, 2.13) Dabigatran_110_mg    Edoxaban_60_mg 1.7211047  1.3865381  2.1289883
-27:    Dabigatran 150 mg vs Edoxaban 60 mg 2.00 (1.63, 2.48) Dabigatran_150_mg    Edoxaban_60_mg 1.9990495  1.6250655  2.4797684
-28:       Edoxaban 30 mg vs Edoxaban 60 mg 1.69 (1.44, 1.98)    Edoxaban_30_mg    Edoxaban_60_mg 1.6859176  1.4353511  1.9777885
-29:    Rivaroxaban 20 mg vs Edoxaban 60 mg 2.20 (1.78, 2.72) Rivaroxaban_20_mg    Edoxaban_60_mg 2.2034799  1.7849126  2.7206749
-30:             Warfarin vs Edoxaban 60 mg 2.15 (1.85, 2.50)          Warfarin    Edoxaban_60_mg 2.1487398  1.8453616  2.4980123
-31:     Apixaban 5 mg vs Rivaroxaban 20 mg 0.55 (0.43, 0.71)     Apixaban_5_mg Rivaroxaban_20_mg 0.5538530  0.4322899  0.7067537
-32: Dabigatran 110 mg vs Rivaroxaban 20 mg 0.78 (0.63, 0.96) Dabigatran_110_mg Rivaroxaban_20_mg 0.7813619  0.6348493  0.9585654
-33: Dabigatran 150 mg vs Rivaroxaban 20 mg 0.91 (0.74, 1.11) Dabigatran_150_mg Rivaroxaban_20_mg 0.9074903  0.7406121  1.1082470
-34:    Edoxaban 30 mg vs Rivaroxaban 20 mg 0.76 (0.63, 0.93)    Edoxaban_30_mg Rivaroxaban_20_mg 0.7636544  0.6298282  0.9302556
-35:    Edoxaban 60 mg vs Rivaroxaban 20 mg 0.45 (0.37, 0.56)    Edoxaban_60_mg Rivaroxaban_20_mg 0.4538276  0.3675559  0.5602515
-36:          Warfarin vs Rivaroxaban 20 mg 0.97 (0.84, 1.12)          Warfarin Rivaroxaban_20_mg 0.9735143  0.8445525  1.1246853
-37:              Apixaban 5 mg vs Warfarin 0.57 (0.46, 0.70)     Apixaban_5_mg          Warfarin 0.5692993  0.4642417  0.6954822
-38:          Dabigatran 110 mg vs Warfarin 0.80 (0.69, 0.93) Dabigatran_110_mg          Warfarin 0.8020617  0.6874468  0.9339040
-39:          Dabigatran 150 mg vs Warfarin 0.93 (0.80, 1.08) Dabigatran_150_mg          Warfarin 0.9316126  0.8048672  1.0756336
-40:             Edoxaban 30 mg vs Warfarin 0.79 (0.69, 0.89)    Edoxaban_30_mg          Warfarin 0.7854031  0.6859312  0.8948506
-41:             Edoxaban 60 mg vs Warfarin 0.47 (0.40, 0.54)    Edoxaban_60_mg          Warfarin 0.4653891  0.4003183  0.5418992
-42:          Rivaroxaban 20 mg vs Warfarin 1.03 (0.89, 1.18) Rivaroxaban_20_mg          Warfarin 1.0272063  0.8891376  1.1840590
-                                     label            result         treatment        comparator    median boundLower boundUpper
+  |                                                                         |.........................................................        |  88%
+label: unnamed-chunk-4 (with options) 
+List of 1
+ $ results: chr "hide"
+
+  |                                                                         |.............................................................    |  94%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: bleedingAnohe (with options) 
+List of 1
+ $ fig.height: num 8
+
+
+"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcBleeding.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcBleeding.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpM78Wey\rmarkdown-str29a076282908.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+
+> sink(NULL)
