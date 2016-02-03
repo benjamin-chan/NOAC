@@ -18,34 +18,28 @@ show(D3)
 network <- mtc.network(D3)
 ```
 
-# Network plot
-
-```{r miNetwork}
-plot(network)
-```
-
 Run the model using `r sprintf("%s-effects", effect)`.
 
-```{r, results='hide'}
+```{r miNetwork, results='hide'}
 M <- mtc.model(network, type="consistency", linearModel=effect)
-runtime <- system.time(results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=thin))
+plot(M)
+results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=thin)
 ```
 
 # Summary
 
-Head-to-head odds ratios and 95% confidence bounds are stored in
-[mtcMIHTH.csv](mtcMIHTH.csv).
+Direct and indirect odds ratios and 95% confidence bounds are stored in
+[mtcMIOddsRatios.csv](mtcMIOddsRatios.csv).
 
 ```{r}
-hth <- combineResults()
-hth[, .(label, result)]
-write.csv(hth, file="mtcMIHTH.csv", row.names=FALSE)
+or <- combineResults()
+write.csv(or, file="mtcMIOddsRatios.csv", row.names=FALSE)
+show(or)
 ```
 
 # Diagnostics
 
 ```{r}
-runtime
 summary(results)
 ```
 
