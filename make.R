@@ -9,6 +9,9 @@ rmarkdown::render("mtcMortality.Rmd")
 rmarkdown::render("mtcStroke.Rmd")
 rmarkdown::render("mtcMI.Rmd")
 rmarkdown::render("mtcBleeding.Rmd")
+sink(NULL)
+f <- "software.log"
+sink(f)
 library(devtools)
 source_gist("https://gist.github.com/benjamin-chan/80149dd4cdb16b2760ec",
             print.eval=TRUE,

@@ -136,3 +136,5 @@ Links to outcomes.
 * [Stroke](mtcStroke.md)
 * [MI](mtcMI.md)
 * [Bleeding](mtcBleeding.md)
+
+Software information is in [`software.log`](software.log) file.
