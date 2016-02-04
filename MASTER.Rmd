@@ -13,16 +13,6 @@ This network meta-analysis is an update to
 [Fu *et al*, 2014](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4244213/),
 *J Cardiovasc Med (Hagerstown).* 2014 Dec; 15(12): 873-879.
 
-> From: Marian McDonagh  
-> Sent: Friday, January 29, 2016 4:19 PM  
-> To: Benjamin Chan  
-> Subject: Re: Network Meta-analysis  
-> 
-> OK, last email for today!
-> I put it all into an excel spreadsheet --- all the outcomes.
-> Looks like it might not add up to much since several outcome cells are 0's.
-> Let me know what you think.
-
 Use the [`gemtc`](https://drugis.org/software/r-packages/gemtc) package.
 Check the link for references.
 
@@ -33,8 +23,6 @@ library(gemtc)
 ```
 
 ```{r, echo=FALSE}
-file.info("NOAC NMA Data.xlsx")[, c("mtime", "size")]
-
 readSheet <- function (sheet) {
   D <- data.table(read.xlsx("NOAC NMA Data.xlsx", sheet=sheet, startRow=3, cols=1:5))
   names(D) <- c("label", "nNOAC", "yNOAC", "nWarfarin", "yWarfarin")
