@@ -45,16 +45,16 @@ summary(results)
 
 Sampler diagnostics.
 
-```{r bleedingGelman, fig.height=8}
+```{r bleedingGelman, fig.height=6}
 gelman.plot(results)
 gelman.diag(results)
 ```
 
-```{r bleedingTrace, fig.height=10}
+```{r bleedingTrace, fig.height=8}
 plot(results)
 ```
 
-```{r bleedingAutocorr}
+```{r bleedingAutocorr, fig.height=6}
 autocorr.plot(results$samples)
 ```
 
@@ -64,7 +64,7 @@ Assess the degree of heterogeneity and inconsistency.
 anohe <- mtc.anohe(network, n.adapt=nAdapt, n.iter=nIter, thin=thin)
 ```
 
-```{r bleedingAnohe, fig.height=8}
+```{r bleedingAnohe, fig.height=6}
 summary(anohe)
 plot(anohe)
 ```
