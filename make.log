@@ -1,322 +1,348 @@
 
 > rmarkdown::render("MASTER.Rmd", output_file="index.html")
-  |                                                                         |                                                                 |   0%  |                                                                         |.......                                                          |  11%
+  |                                                                         |                                                                 |   0%  |                                                                         |......                                                           |  10%
    inline R code fragments
 
-  |                                                                         |..............                                                   |  22%
+  |                                                                         |.............                                                    |  20%
 label: unnamed-chunk-1
-  |                                                                         |......................                                           |  33%
+  |                                                                         |....................                                             |  30%
   ordinary text without R code
 
-  |                                                                         |.............................                                    |  44%
+  |                                                                         |..........................                                       |  40%
 label: unnamed-chunk-2 (with options) 
 List of 1
  $ echo: logi FALSE
 
-  |                                                                         |....................................                             |  56%
+  |                                                                         |................................                                 |  50%
   ordinary text without R code
 
-  |                                                                         |...........................................                      |  67%
+  |                                                                         |.......................................                          |  60%
 label: unnamed-chunk-3
-  |                                                                         |...................................................              |  78%
+  |                                                                         |..............................................                   |  70%
   ordinary text without R code
 
-  |                                                                         |..........................................................       |  89%
+  |                                                                         |....................................................             |  80%
 label: unnamed-chunk-4
-  |                                                                         |.................................................................| 100%
+  |                                                                         |..........................................................       |  90%
   ordinary text without R code
 
+  |                                                                         |.................................................................| 100%
+label: unnamed-chunk-5
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output index.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\Users\Ben\Documents\R\win-library\3.2\rmarkdown\rmd\h\default.html" --variable "theme:bootstrap" --include-in-header "C:\Users\Ben\AppData\Local\Temp\RtmpGC7nUd\rmarkdown-str2aec5f906104.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\Users\Ben\Documents\R\win-library\3.2\rmarkdown\rmd\h\highlight" 
+"C:/Program Files/RStudio/bin/pandoc/pandoc" MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output index.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpWM2T6i\rmarkdown-str2f741a792ad6.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
 
 > file.rename("index.md", "README.md")
 [1] TRUE
 
 > file.info(c("index.html", "README.md"))
              size isdir mode               mtime               ctime               atime exe
-index.html 646558 FALSE  666 2016-02-03 22:00:44 2016-02-01 21:40:16 2016-02-03 19:17:46  no
-README.md     868 FALSE  666 2016-02-03 22:00:44 2016-02-03 22:00:44 2016-02-03 22:00:44  no
+index.html 649979 FALSE  666 2016-02-04 08:17:40 2016-02-03 14:02:34 2016-02-04 07:27:43  no
+README.md    3377 FALSE  666 2016-02-04 08:17:40 2016-02-04 08:17:40 2016-02-04 08:17:40  no
 
 > .timeStart <- Sys.time()
 
 > rmarkdown::render("mtcMortality.Rmd")
-  |                                                                         |                                                                 |   0%  |                                                                         |....                                                             |   6%
+  |                                                                         |                                                                 |   0%  |                                                                         |........                                                         |  12%
    inline R code fragments
 
-  |                                                                         |.......                                                          |  11%
+  |                                                                         |................                                                 |  25%
 label: unnamed-chunk-1 (with options) 
 List of 1
  $ echo: logi FALSE
 
-  |                                                                         |...........                                                      |  17%
+  |                                                                         |........................                                         |  38%
    inline R code fragments
 
-  |                                                                         |..............                                                   |  22%
-label: mortalityNetwork (with options) 
-List of 1
- $ results: chr "hide"
-
-  |                                                                         |..................                                               |  28%
-  ordinary text without R code
-
-  |                                                                         |......................                                           |  33%
-label: unnamed-chunk-2
-  |                                                                         |.........................                                        |  39%
-  ordinary text without R code
-
-  |                                                                         |.............................                                    |  44%
-label: unnamed-chunk-3
   |                                                                         |................................                                 |  50%
-  ordinary text without R code
-
-  |                                                                         |....................................                             |  56%
-label: mortalityGelman (with options) 
-List of 1
- $ fig.height: num 6
-
-  |                                                                         |........................................                         |  61%
-  ordinary text without R code
-
-  |                                                                         |...........................................                      |  67%
-label: mortalityTrace (with options) 
-List of 1
- $ fig.height: num 8
-
-  |                                                                         |...............................................                  |  72%
-  ordinary text without R code
-
-  |                                                                         |...................................................              |  78%
-label: mortalityAutocorr (with options) 
-List of 1
- $ fig.height: num 6
-
-  |                                                                         |......................................................           |  83%
-  ordinary text without R code
-
-  |                                                                         |..........................................................       |  89%
-label: unnamed-chunk-4 (with options) 
+label: network (with options) 
 List of 1
  $ results: chr "hide"
 
-  |                                                                         |.............................................................    |  94%
+  |                                                                         |.........................................                        |  62%
+  ordinary text without R code
+
+  |                                                                         |.................................................                |  75%
+label: unnamed-chunk-2
+  |                                                                         |.........................................................        |  88%
   ordinary text without R code
 
   |                                                                         |.................................................................| 100%
-label: mortalityAnohe (with options) 
+label: unnamed-chunk-3 (with options) 
+List of 1
+ $ child: chr "modelDiagnostics.Rmd"
+
+  |                                                                         |                                                                 |   0%  |                                                                         |......                                                           |   9%
+label: unnamed-chunk-4
+  |                                                                         |............                                                     |  18%
+  ordinary text without R code
+
+  |                                                                         |..................                                               |  27%
+label: gelman (with options) 
+List of 1
+ $ fig.height: num 6
+
+  |                                                                         |........................                                         |  36%
+  ordinary text without R code
+
+  |                                                                         |..............................                                   |  45%
+label: trace (with options) 
+List of 1
+ $ fig.height: num 8
+
+  |                                                                         |...................................                              |  55%
+  ordinary text without R code
+
+  |                                                                         |.........................................                        |  64%
+label: autocorr (with options) 
+List of 1
+ $ fig.height: num 6
+
+  |                                                                         |...............................................                  |  73%
+  ordinary text without R code
+
+  |                                                                         |.....................................................            |  82%
+label: unnamed-chunk-5 (with options) 
+List of 1
+ $ results: chr "hide"
+
+  |                                                                         |...........................................................      |  91%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: anohe (with options) 
 List of 1
  $ fig.height: num 6
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS mtcMortality.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcMortality.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\Users\Ben\Documents\R\win-library\3.2\rmarkdown\rmd\h\default.html" --variable "theme:bootstrap" --include-in-header "C:\Users\Ben\AppData\Local\Temp\RtmpGC7nUd\rmarkdown-str2aec67566a71.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\Users\Ben\Documents\R\win-library\3.2\rmarkdown\rmd\h\highlight" 
+
+"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcMortality.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcMortality.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpWM2T6i\rmarkdown-str2f7431f698d.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
 
 > rmarkdown::render("mtcStroke.Rmd")
-  |                                                                         |                                                                 |   0%  |                                                                         |....                                                             |   6%
+  |                                                                         |                                                                 |   0%  |                                                                         |........                                                         |  12%
    inline R code fragments
 
-  |                                                                         |.......                                                          |  11%
+  |                                                                         |................                                                 |  25%
 label: unnamed-chunk-1 (with options) 
 List of 1
  $ echo: logi FALSE
 
-  |                                                                         |...........                                                      |  17%
+  |                                                                         |........................                                         |  38%
    inline R code fragments
 
-  |                                                                         |..............                                                   |  22%
-label: strokeNetwork (with options) 
-List of 1
- $ results: chr "hide"
-
-  |                                                                         |..................                                               |  28%
-  ordinary text without R code
-
-  |                                                                         |......................                                           |  33%
-label: unnamed-chunk-2
-  |                                                                         |.........................                                        |  39%
-  ordinary text without R code
-
-  |                                                                         |.............................                                    |  44%
-label: unnamed-chunk-3
   |                                                                         |................................                                 |  50%
-  ordinary text without R code
-
-  |                                                                         |....................................                             |  56%
-label: strokeGelman (with options) 
-List of 1
- $ fig.height: num 6
-
-  |                                                                         |........................................                         |  61%
-  ordinary text without R code
-
-  |                                                                         |...........................................                      |  67%
-label: strokeTrace (with options) 
-List of 1
- $ fig.height: num 8
-
-  |                                                                         |...............................................                  |  72%
-  ordinary text without R code
-
-  |                                                                         |...................................................              |  78%
-label: strokeAutocorr (with options) 
-List of 1
- $ fig.height: num 6
-
-  |                                                                         |......................................................           |  83%
-  ordinary text without R code
-
-  |                                                                         |..........................................................       |  89%
-label: unnamed-chunk-4 (with options) 
+label: network (with options) 
 List of 1
  $ results: chr "hide"
 
-  |                                                                         |.............................................................    |  94%
+  |                                                                         |.........................................                        |  62%
+  ordinary text without R code
+
+  |                                                                         |.................................................                |  75%
+label: unnamed-chunk-2
+  |                                                                         |.........................................................        |  88%
   ordinary text without R code
 
   |                                                                         |.................................................................| 100%
-label: strokeAnohe (with options) 
+label: unnamed-chunk-3 (with options) 
+List of 1
+ $ child: chr "modelDiagnostics.Rmd"
+
+  |                                                                         |                                                                 |   0%  |                                                                         |......                                                           |   9%
+label: unnamed-chunk-4
+  |                                                                         |............                                                     |  18%
+  ordinary text without R code
+
+  |                                                                         |..................                                               |  27%
+label: gelman (with options) 
+List of 1
+ $ fig.height: num 6
+
+  |                                                                         |........................                                         |  36%
+  ordinary text without R code
+
+  |                                                                         |..............................                                   |  45%
+label: trace (with options) 
+List of 1
+ $ fig.height: num 8
+
+  |                                                                         |...................................                              |  55%
+  ordinary text without R code
+
+  |                                                                         |.........................................                        |  64%
+label: autocorr (with options) 
+List of 1
+ $ fig.height: num 6
+
+  |                                                                         |...............................................                  |  73%
+  ordinary text without R code
+
+  |                                                                         |.....................................................            |  82%
+label: unnamed-chunk-5 (with options) 
+List of 1
+ $ results: chr "hide"
+
+  |                                                                         |...........................................................      |  91%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: anohe (with options) 
 List of 1
  $ fig.height: num 6
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS mtcStroke.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcStroke.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\Users\Ben\Documents\R\win-library\3.2\rmarkdown\rmd\h\default.html" --variable "theme:bootstrap" --include-in-header "C:\Users\Ben\AppData\Local\Temp\RtmpGC7nUd\rmarkdown-str2aec4b1359e9.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\Users\Ben\Documents\R\win-library\3.2\rmarkdown\rmd\h\highlight" 
+
+"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcStroke.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcStroke.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpWM2T6i\rmarkdown-str2f747ecb79ee.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
 
 > rmarkdown::render("mtcMI.Rmd")
-  |                                                                         |                                                                 |   0%  |                                                                         |....                                                             |   6%
+  |                                                                         |                                                                 |   0%  |                                                                         |........                                                         |  12%
    inline R code fragments
 
-  |                                                                         |.......                                                          |  11%
+  |                                                                         |................                                                 |  25%
 label: unnamed-chunk-1 (with options) 
 List of 1
  $ echo: logi FALSE
 
-  |                                                                         |...........                                                      |  17%
+  |                                                                         |........................                                         |  38%
    inline R code fragments
 
-  |                                                                         |..............                                                   |  22%
-label: miNetwork (with options) 
-List of 1
- $ results: chr "hide"
-
-  |                                                                         |..................                                               |  28%
-  ordinary text without R code
-
-  |                                                                         |......................                                           |  33%
-label: unnamed-chunk-2
-  |                                                                         |.........................                                        |  39%
-  ordinary text without R code
-
-  |                                                                         |.............................                                    |  44%
-label: unnamed-chunk-3
   |                                                                         |................................                                 |  50%
-  ordinary text without R code
-
-  |                                                                         |....................................                             |  56%
-label: miGelman (with options) 
-List of 1
- $ fig.height: num 6
-
-  |                                                                         |........................................                         |  61%
-  ordinary text without R code
-
-  |                                                                         |...........................................                      |  67%
-label: miTrace (with options) 
-List of 1
- $ fig.height: num 8
-
-  |                                                                         |...............................................                  |  72%
-  ordinary text without R code
-
-  |                                                                         |...................................................              |  78%
-label: miAutocorr (with options) 
-List of 1
- $ fig.height: num 6
-
-  |                                                                         |......................................................           |  83%
-  ordinary text without R code
-
-  |                                                                         |..........................................................       |  89%
-label: unnamed-chunk-4 (with options) 
+label: network (with options) 
 List of 1
  $ results: chr "hide"
 
-  |                                                                         |.............................................................    |  94%
+  |                                                                         |.........................................                        |  62%
+  ordinary text without R code
+
+  |                                                                         |.................................................                |  75%
+label: unnamed-chunk-2
+  |                                                                         |.........................................................        |  88%
   ordinary text without R code
 
   |                                                                         |.................................................................| 100%
-label: miAnohe (with options) 
+label: unnamed-chunk-3 (with options) 
+List of 1
+ $ child: chr "modelDiagnostics.Rmd"
+
+  |                                                                         |                                                                 |   0%  |                                                                         |......                                                           |   9%
+label: unnamed-chunk-4
+  |                                                                         |............                                                     |  18%
+  ordinary text without R code
+
+  |                                                                         |..................                                               |  27%
+label: gelman (with options) 
+List of 1
+ $ fig.height: num 6
+
+  |                                                                         |........................                                         |  36%
+  ordinary text without R code
+
+  |                                                                         |..............................                                   |  45%
+label: trace (with options) 
+List of 1
+ $ fig.height: num 8
+
+  |                                                                         |...................................                              |  55%
+  ordinary text without R code
+
+  |                                                                         |.........................................                        |  64%
+label: autocorr (with options) 
+List of 1
+ $ fig.height: num 6
+
+  |                                                                         |...............................................                  |  73%
+  ordinary text without R code
+
+  |                                                                         |.....................................................            |  82%
+label: unnamed-chunk-5 (with options) 
+List of 1
+ $ results: chr "hide"
+
+  |                                                                         |...........................................................      |  91%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: anohe (with options) 
 List of 1
  $ fig.height: num 6
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS mtcMI.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcMI.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\Users\Ben\Documents\R\win-library\3.2\rmarkdown\rmd\h\default.html" --variable "theme:bootstrap" --include-in-header "C:\Users\Ben\AppData\Local\Temp\RtmpGC7nUd\rmarkdown-str2aec73221825.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\Users\Ben\Documents\R\win-library\3.2\rmarkdown\rmd\h\highlight" 
+
+"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcMI.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcMI.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpWM2T6i\rmarkdown-str2f74311b6236.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
 
 > rmarkdown::render("mtcBleeding.Rmd")
-  |                                                                         |                                                                 |   0%  |                                                                         |....                                                             |   6%
+  |                                                                         |                                                                 |   0%  |                                                                         |........                                                         |  12%
    inline R code fragments
 
-  |                                                                         |.......                                                          |  11%
+  |                                                                         |................                                                 |  25%
 label: unnamed-chunk-1 (with options) 
 List of 1
  $ echo: logi FALSE
 
-  |                                                                         |...........                                                      |  17%
+  |                                                                         |........................                                         |  38%
    inline R code fragments
 
-  |                                                                         |..............                                                   |  22%
-label: bleedingNetwork (with options) 
-List of 1
- $ results: chr "hide"
-
-  |                                                                         |..................                                               |  28%
-  ordinary text without R code
-
-  |                                                                         |......................                                           |  33%
-label: unnamed-chunk-2
-  |                                                                         |.........................                                        |  39%
-  ordinary text without R code
-
-  |                                                                         |.............................                                    |  44%
-label: unnamed-chunk-3
   |                                                                         |................................                                 |  50%
-  ordinary text without R code
-
-  |                                                                         |....................................                             |  56%
-label: bleedingGelman (with options) 
-List of 1
- $ fig.height: num 6
-
-  |                                                                         |........................................                         |  61%
-  ordinary text without R code
-
-  |                                                                         |...........................................                      |  67%
-label: bleedingTrace (with options) 
-List of 1
- $ fig.height: num 8
-
-  |                                                                         |...............................................                  |  72%
-  ordinary text without R code
-
-  |                                                                         |...................................................              |  78%
-label: bleedingAutocorr (with options) 
-List of 1
- $ fig.height: num 6
-
-  |                                                                         |......................................................           |  83%
-  ordinary text without R code
-
-  |                                                                         |..........................................................       |  89%
-label: unnamed-chunk-4 (with options) 
+label: network (with options) 
 List of 1
  $ results: chr "hide"
 
-  |                                                                         |.............................................................    |  94%
+  |                                                                         |.........................................                        |  62%
+  ordinary text without R code
+
+  |                                                                         |.................................................                |  75%
+label: unnamed-chunk-2
+  |                                                                         |.........................................................        |  88%
   ordinary text without R code
 
   |                                                                         |.................................................................| 100%
-label: bleedingAnohe (with options) 
+label: unnamed-chunk-3 (with options) 
+List of 1
+ $ child: chr "modelDiagnostics.Rmd"
+
+  |                                                                         |                                                                 |   0%  |                                                                         |......                                                           |   9%
+label: unnamed-chunk-4
+  |                                                                         |............                                                     |  18%
+  ordinary text without R code
+
+  |                                                                         |..................                                               |  27%
+label: gelman (with options) 
+List of 1
+ $ fig.height: num 6
+
+  |                                                                         |........................                                         |  36%
+  ordinary text without R code
+
+  |                                                                         |..............................                                   |  45%
+label: trace (with options) 
+List of 1
+ $ fig.height: num 8
+
+  |                                                                         |...................................                              |  55%
+  ordinary text without R code
+
+  |                                                                         |.........................................                        |  64%
+label: autocorr (with options) 
+List of 1
+ $ fig.height: num 6
+
+  |                                                                         |...............................................                  |  73%
+  ordinary text without R code
+
+  |                                                                         |.....................................................            |  82%
+label: unnamed-chunk-5 (with options) 
+List of 1
+ $ results: chr "hide"
+
+  |                                                                         |...........................................................      |  91%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: anohe (with options) 
 List of 1
  $ fig.height: num 6
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS mtcBleeding.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcBleeding.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\Users\Ben\Documents\R\win-library\3.2\rmarkdown\rmd\h\default.html" --variable "theme:bootstrap" --include-in-header "C:\Users\Ben\AppData\Local\Temp\RtmpGC7nUd\rmarkdown-str2aec196d4b9.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\Users\Ben\Documents\R\win-library\3.2\rmarkdown\rmd\h\highlight" 
+
+"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcBleeding.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcBleeding.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpWM2T6i\rmarkdown-str2f7498c45.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
 
 > sink(NULL)
