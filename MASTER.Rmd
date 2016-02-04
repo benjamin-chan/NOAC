@@ -97,15 +97,25 @@ tidyResults <- function (comparator) {
   setcolorder(D, c("label", "result", "treatment", "comparator", "median", "boundLower", "boundUpper"))
   D
 }
-combineResults <- function () {
-  D <- rbindlist(list(tidyResults("Apixaban_5_mg"),
-                      tidyResults("Dabigatran_110_mg"),
-                      tidyResults("Dabigatran_150_mg"),
-                      tidyResults("Edoxaban_30_mg"),
-                      tidyResults("Edoxaban_60_mg"),
-                      # tidyResults("Rivaroxaban_15_mg"),
-                      tidyResults("Rivaroxaban_20_mg"),
-                      tidyResults("Warfarin")))
+combineResults <- function (outcomeBleeding=FALSE) {
+  if (outcomeBleeding != TRUE) {
+    D <- rbindlist(list(tidyResults("Apixaban_5_mg"),
+                        tidyResults("Dabigatran_110_mg"),
+                        tidyResults("Dabigatran_150_mg"),
+                        tidyResults("Edoxaban_30_mg"),
+                        tidyResults("Edoxaban_60_mg"),
+                        tidyResults("Rivaroxaban_15_mg"),
+                        tidyResults("Rivaroxaban_20_mg"),
+                        tidyResults("Warfarin")))
+  } else if (outcomeBleeding == TRUE) {
+    D <- rbindlist(list(tidyResults("Apixaban_5_mg"),
+                        tidyResults("Dabigatran_110_mg"),
+                        tidyResults("Dabigatran_150_mg"),
+                        tidyResults("Edoxaban_30_mg"),
+                        tidyResults("Edoxaban_60_mg"),
+                        tidyResults("Rivaroxaban_20_mg"),
+                        tidyResults("Warfarin")))
+  }
   M <- D[, .(treatment, comparator, result)]
   M <- reshape(M, idvar="treatment", timevar="comparator", direction="wide")
   M <- M[, treatment := gsub("_", " ", sprintf("%s vs", treatment))]

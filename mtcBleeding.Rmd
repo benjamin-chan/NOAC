@@ -32,7 +32,7 @@ Direct and indirect odds ratios and 95% confidence bounds are stored in
 [mtcBleedingOddsRatios.csv](mtcBleedingOddsRatios.csv).
 
 ```{r}
-or <- combineResults()
+or <- combineResults(outcomeBleeding=TRUE)
 write.csv(or, file="mtcBleedingOddsRatios.csv", row.names=FALSE)
 show(or)
 ```
