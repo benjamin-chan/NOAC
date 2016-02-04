@@ -65,7 +65,7 @@ Set sampler parameters.
 ```r
 nAdapt <- 5000  # Burn-in
 # nChain <- 4  # gemtc defaults to 4 MCMC chains; no need to set
-nIter <- 1250
+nIter <- 25000
 thin <- 10
 message(sprintf("Each MCMC chain will have %d samples.\nInferences will be based on a total of %d samples.",
                 nIter / thin,
@@ -73,8 +73,8 @@ message(sprintf("Each MCMC chain will have %d samples.\nInferences will be based
 ```
 
 ```
-## Each MCMC chain will have 125 samples.
-## Inferences will be based on a total of 500 samples.
+## Each MCMC chain will have 2500 samples.
+## Inferences will be based on a total of 10000 samples.
 ```
 
 Software version information.

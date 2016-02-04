@@ -63,7 +63,7 @@ img {
 <div id="header">
 <h1 class="title">Novel oral anticoagulants network meta-analysis</h1>
 <h4 class="author"><em>Benjamin Chan</em></h4>
-<h4 class="date"><em>2016-02-04 08:17:40</em></h4>
+<h4 class="date"><em>2016-02-04 10:35:09</em></h4>
 </div>
 
 <div id="TOC">
@@ -129,13 +129,13 @@ library(gemtc)</code></pre>
 <p>Set sampler parameters.</p>
 <pre class="r"><code>nAdapt &lt;- 5000  # Burn-in
 # nChain &lt;- 4  # gemtc defaults to 4 MCMC chains; no need to set
-nIter &lt;- 1250
+nIter &lt;- 25000
 thin &lt;- 10
 message(sprintf(&quot;Each MCMC chain will have %d samples.\nInferences will be based on a total of %d samples.&quot;,
                 nIter / thin,
                 4 * (nIter / thin)))</code></pre>
-<pre><code>## Each MCMC chain will have 125 samples.
-## Inferences will be based on a total of 500 samples.</code></pre>
+<pre><code>## Each MCMC chain will have 2500 samples.
+## Inferences will be based on a total of 10000 samples.</code></pre>
 <p>Software version information.</p>
 <pre class="r"><code>sessionInfo()</code></pre>
 <pre><code>## R version 3.2.2 (2015-08-14)

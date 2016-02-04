@@ -1,15 +1,11 @@
 "study","treatment","responders","sampleSize"
-"ARISTOTLE","Apixaban_5_mg",90,9120
-"ARISTOTLE","Warfarin",102,9081
-"ARISTOTLE-J","Apixaban_5_mg",0,72
-"ARISTOTLE-J","Warfarin",0,75
-"ENGAGE AF-TIMI","Edoxaban_30_mg",133,7034
-"ENGAGE AF-TIMI","Edoxaban_60_mg",169,7035
-"ENGAGE AF-TIMI","Warfarin",141,7036
-"J-ROCKET","Rivaroxaban_15_mg",3,639
-"J-ROCKET","Warfarin",1,639
 "RE-LY","Dabigatran_110_mg",86,6015
 "RE-LY","Dabigatran_150_mg",89,6076
 "RE-LY","Warfarin",63,6022
+"ARISTOTLE","Apixaban_5_mg",90,9120
+"ARISTOTLE","Warfarin",102,9081
 "ROCKET-AF","Rivaroxaban_20_mg",101,7131
 "ROCKET-AF","Warfarin",126,7133
+"ENGAGE AF-TIMI","Edoxaban_30_mg",169,7034
+"ENGAGE AF-TIMI","Edoxaban_60_mg",133,7035
+"ENGAGE AF-TIMI","Warfarin",141,7036
