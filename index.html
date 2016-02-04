@@ -63,27 +63,21 @@ img {
 <div id="header">
 <h1 class="title">Novel oral anticoagulants network meta-analysis</h1>
 <h4 class="author"><em>Benjamin Chan</em></h4>
-<h4 class="date"><em>2016-02-02 11:03:40</em></h4>
+<h4 class="date"><em>2016-02-03 22:00:43</em></h4>
 </div>
 
 
 <p>This network meta-analysis is an update to <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4244213/">Fu <em>et al</em>, 2014</a>, <em>J Cardiovasc Med (Hagerstown).</em> 2014 Dec; 15(12): 873-879.</p>
-<blockquote>
-<p>From: Marian McDonagh<br />Sent: Friday, January 29, 2016 4:19 PM<br />To: Benjamin Chan<br />Subject: Re: Network Meta-analysis</p>
-<p>OK, last email for today! I put it all into an excel spreadsheet — all the outcomes. Looks like it might not add up to much since several outcome cells are 0’s. Let me know what you think.</p>
-</blockquote>
 <p>Use the <a href="https://drugis.org/software/r-packages/gemtc"><code>gemtc</code></a> package. Check the link for references.</p>
 <pre class="r"><code>library(openxlsx)
 library(data.table)
 library(gemtc)</code></pre>
-<pre><code>##                                  mtime  size
-## NOAC NMA Data.xlsx 2016-02-02 07:29:27 48838</code></pre>
 <p>Set <code>linearModel</code>.</p>
 <pre class="r"><code>effect &lt;- &quot;fixed&quot;</code></pre>
 <p>Set sampler parameters.</p>
 <pre class="r"><code>nAdapt &lt;- 5000  # Burn-in
 # nChain &lt;- 4  # gemtc defaults to 4 MCMC chains; no need to set
-nIter &lt;- 20000
+nIter &lt;- 2000
 thin &lt;- 10</code></pre>
 <p>Links to outcomes.</p>
 <ul>
@@ -92,6 +86,7 @@ thin &lt;- 10</code></pre>
 <li><a href="mtcMI.md">MI</a></li>
 <li><a href="mtcBleeding.md">Bleeding</a></li>
 </ul>
+<p>Software information is in <a href="software.log"><code>software.log</code></a> file.</p>
 
 
 </div>
