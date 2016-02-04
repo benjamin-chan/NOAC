@@ -14,6 +14,7 @@ Clean up the data (do not show the code).
 ```{r, echo=FALSE}
 D3 <- readSheet("MI")
 D3 <- tidyData(D3)
+write.csv(D3, file="mtcMIData.csv", row.names=FALSE)
 show(D3)
 network <- mtc.network(D3)
 ```

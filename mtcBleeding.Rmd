@@ -14,6 +14,7 @@ Clean up the data (do not show the code).
 ```{r, echo=FALSE}
 D4 <- readSheet("Bleeding")
 D4 <- tidyData(D4)
+write.csv(D4, file="mtcBleedingData.csv", row.names=FALSE)
 show(D4)
 network <- mtc.network(D4[!is.na(responders)])
 ```
