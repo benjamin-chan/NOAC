@@ -87,6 +87,7 @@ tidyData <- function (D) {
   D <- assignStudy("Mao, 2014")
   D <- assignNOAC("Dabigatran 110 mg")
   D <- assignNOAC("Dabigatran 150 mg")
+  D <- assignNOAC("Dabigatran 300 mg")
   D <- assignNOAC("Edoxaban 30 mg")
   D <- assignNOAC("Edoxaban 60 mg")
   D <- assignNOAC("Apixaban 5 mg")
