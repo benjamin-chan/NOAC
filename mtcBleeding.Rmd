@@ -14,6 +14,10 @@ Clean up the data (do not show the code).
 
 ```{r, echo=FALSE}
 D4 <- readSheet("Bleeding")
+D4 <- D4[!is.na(label)]
+D4 <- D4[,
+         `:=` (nWarfarin = as.numeric(nWarfarin),
+               yWarfarin = as.numeric(yWarfarin))]
 D4 <- tidyData(D4)
 write.csv(D4, file="mtcBleedingData.csv", row.names=FALSE)
 show(D4)
