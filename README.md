@@ -48,6 +48,7 @@ Check the link for references.
 library(openxlsx)
 library(data.table)
 library(gemtc)
+library(xtable)
 ```
 
 
@@ -100,12 +101,13 @@ sessionInfo()
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-## [1] devtools_1.8.0      gemtc_0.7-1         coda_0.17-1        
-## [4] data.table_1.9.6    openxlsx_3.0.0      RevoUtilsMath_3.2.2
+## [1] xtable_1.7-4        knitr_1.11          devtools_1.8.0     
+## [4] gemtc_0.7-1         coda_0.17-1         data.table_1.9.6   
+## [7] openxlsx_3.0.0      RevoUtilsMath_3.2.2
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] igraph_1.0.1     Rcpp_0.12.1      rstudioapi_0.3.1 xml2_0.1.2      
-##  [5] knitr_1.11       magrittr_1.5     lattice_0.20-33  R6_2.1.1        
+##  [5] magrittr_1.5     lattice_0.20-33  R6_2.1.1         highr_0.5       
 ##  [9] httr_1.0.0       stringr_1.0.0    plyr_1.8.3       tools_3.2.2     
 ## [13] grid_3.2.2       git2r_0.11.0     htmltools_0.2.6  rversions_1.0.2 
 ## [17] yaml_2.1.13      digest_0.6.8     formatR_1.2      curl_0.9.3      
