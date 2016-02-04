@@ -13,6 +13,39 @@ This network meta-analysis is an update to
 [Fu *et al*, 2014](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4244213/),
 *J Cardiovasc Med (Hagerstown).* 2014 Dec; 15(12): 873-879.
 
+# Results
+
+## Mortality
+
+* [Data](mtcMortalityData.csv)
+* Treatment [network](mtcMortality_files/figure-html/network-1.png)
+* Direct and indirect [odds ratio](mtcMortalityOddsRatios.csv) matrix
+* [Full details](mtcMortality.md), including model diagnostics
+
+## Stroke
+
+* [Data](mtcStrokeData.csv)
+* Treatment [network](mtcStroke_files/figure-html/network-1.png)
+* Direct and indirect [odds ratio](mtcStrokeOddsRatios.csv) matrix
+* [Full details](mtcStroke.md), including model diagnostics
+
+## MI
+
+* [Data](mtcMIData.csv)
+* Treatment [network](mtcMI_files/figure-html/network-1.png)
+* Direct and indirect [odds ratio](mtcMIOddsRatios.csv) matrix
+* [Full details](mtcMI.md), including model diagnostics
+
+## Bleeding
+
+* [Data](mtcBleedingData.csv)
+* Treatment [network](mtcBleeding_files/figure-html/network-1.png)
+* Direct and indirect [odds ratio](mtcBleedingOddsRatios.csv) matrix
+* [Full details](mtcBleeding.md), including model diagnostics
+
+
+# Methods
+
 Use the [`gemtc`](https://drugis.org/software/r-packages/gemtc) package.
 Check the link for references.
 
@@ -125,7 +158,7 @@ combineResults <- function (outcomeBleeding=FALSE) {
 }
 ```
 
-Set `linearModel`.
+Set `effect` to be used for the `linearModel` parameter in the `mtc.model` function.
 
 ```{r}
 effect <- "fixed"
@@ -138,13 +171,13 @@ nAdapt <- 5000  # Burn-in
 # nChain <- 4  # gemtc defaults to 4 MCMC chains; no need to set
 nIter <- 2000
 thin <- 10
+message(sprintf("Each MCMC chain will have %d samples.\nInferences will be based on a total of %d samples.",
+                nIter / thin,
+                4 * (nIter / thin)))
 ```
 
-Links to outcomes.
+Software version information.
 
-* [Mortality](mtcMortality.md)
-* [Stroke](mtcStroke.md)
-* [MI](mtcMI.md)
-* [Bleeding](mtcBleeding.md)
-
-Software information is in [`software.log`](software.log) file.
+```{r}
+sessionInfo()
+```

@@ -8,6 +8,7 @@ output:
     toc: yes
 ---
 
+[Back](README.md) to main page.
 
 Clean up the data (do not show the code).
 
@@ -21,7 +22,7 @@ network <- mtc.network(D1)
 
 Run the model using `r sprintf("%s-effects", effect)`.
 
-```{r mortalityNetwork, results='hide'}
+```{r network, results='hide'}
 M <- mtc.model(network, type="consistency", linearModel=effect)
 plot(M)
 results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=thin)
