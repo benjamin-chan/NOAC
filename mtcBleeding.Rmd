@@ -54,6 +54,10 @@ gelman.diag(results)
 plot(results)
 ```
 
+```{r bleedingAutocorr}
+autocorr.plot(results$samples)
+```
+
 Assess the degree of heterogeneity and inconsistency.
 
 ```{r, results='hide'}
