@@ -12,7 +12,7 @@ output:
 
 Clean up the data (do not show the code).
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, results='asis'}
 D4 <- readSheet("Bleeding")
 D4 <- D4[!is.na(label)]
 D4 <- D4[,
@@ -20,7 +20,7 @@ D4 <- D4[,
                yWarfarin = as.numeric(yWarfarin))]
 D4 <- tidyData(D4)
 write.csv(D4, file="mtcBleedingData.csv", row.names=FALSE)
-show(D4)
+print(xtable(D4, digits=rep(0, 5)), type="html", include.rownames=FALSE)
 network <- mtc.network(D4[!is.na(responders)])
 ```
 
@@ -37,10 +37,10 @@ results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=thin)
 Direct and indirect odds ratios and 95% confidence bounds are stored in
 [mtcBleedingOddsRatios.csv](mtcBleedingOddsRatios.csv).
 
-```{r}
+```{r, results='asis'}
 or <- combineResults(outcomeBleeding=TRUE)
 write.csv(or, file="mtcBleedingOddsRatios.csv", row.names=FALSE)
-show(or)
+print(xtable(or), type="html", include.rownames=FALSE)
 ```
 
 # Diagnostics

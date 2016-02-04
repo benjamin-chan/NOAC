@@ -12,11 +12,11 @@ output:
 
 Clean up the data (do not show the code).
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, results='asis'}
 D2 <- readSheet("Stroke")
 D2 <- tidyData(D2)
 write.csv(D2, file="mtcStrokeData.csv", row.names=FALSE)
-show(D2)
+print(xtable(D2, digits=rep(0, 5)), type="html", include.rownames=FALSE)
 network <- mtc.network(D2)
 ```
 
@@ -33,10 +33,10 @@ results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=thin)
 Direct and indirect odds ratios and 95% confidence bounds are stored in
 [mtcStrokeOddsRatios.csv](mtcStrokeOddsRatios.csv).
 
-```{r}
+```{r, results='asis'}
 or <- combineResults()
 write.csv(or, file="mtcStrokeOddsRatios.csv", row.names=FALSE)
-show(or)
+print(xtable(or), type="html", include.rownames=FALSE)
 ```
 
 # Diagnostics

@@ -53,6 +53,7 @@ Check the link for references.
 library(openxlsx)
 library(data.table)
 library(gemtc)
+library(xtable)
 ```
 
 ```{r, echo=FALSE}
