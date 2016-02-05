@@ -63,7 +63,7 @@ img {
 <div id="header">
 <h1 class="title">Novel oral anticoagulants network meta-analysis</h1>
 <h4 class="author"><em>Benjamin Chan</em></h4>
-<h4 class="date"><em>2016-02-04 15:37:14</em></h4>
+<h4 class="date"><em>2016-02-05 12:53:32</em></h4>
 </div>
 
 <div id="TOC">
@@ -122,9 +122,13 @@ img {
 <h1>Methods</h1>
 <p>Use the <a href="https://drugis.org/software/r-packages/gemtc"><code>gemtc</code></a> package. Check the link for references.</p>
 <pre class="r"><code>library(openxlsx)
-library(data.table)
-library(gemtc)
-library(xtable)</code></pre>
+library(data.table)</code></pre>
+<pre><code>## data.table 1.9.6  For help type ?data.table or https://github.com/Rdatatable/data.table/wiki
+## The fastest way to learn (by data.table authors): https://www.datacamp.com/courses/data-analysis-the-data-table-way</code></pre>
+<pre class="r"><code>library(gemtc)</code></pre>
+<pre><code>## Warning: package 'gemtc' was built under R version 3.2.3</code></pre>
+<pre><code>## Loading required package: coda</code></pre>
+<pre class="r"><code>library(xtable)</code></pre>
 <p>Set <code>effect</code> to be used for the <code>linearModel</code> parameter in the <code>mtc.model</code> function.</p>
 <pre class="r"><code>effect &lt;- &quot;fixed&quot;</code></pre>
 <p>Set sampler parameters.</p>
@@ -154,19 +158,15 @@ message(sprintf(&quot;Each MCMC chain will have %d samples.\nInferences will be 
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-## [1] xtable_1.7-4        knitr_1.11          devtools_1.8.0     
-## [4] gemtc_0.7-1         coda_0.17-1         data.table_1.9.6   
-## [7] openxlsx_3.0.0      RevoUtilsMath_3.2.2
+## [1] xtable_1.7-4        gemtc_0.7-1         coda_0.17-1        
+## [4] data.table_1.9.6    openxlsx_3.0.0      RevoUtilsMath_3.2.2
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] igraph_1.0.1     Rcpp_0.12.1      rstudioapi_0.3.1 xml2_0.1.2      
-##  [5] magrittr_1.5     lattice_0.20-33  R6_2.1.1         highr_0.5       
-##  [9] httr_1.0.0       stringr_1.0.0    plyr_1.8.3       tools_3.2.2     
-## [13] grid_3.2.2       git2r_0.11.0     htmltools_0.2.6  rversions_1.0.2 
-## [17] yaml_2.1.13      digest_0.6.8     formatR_1.2      curl_0.9.3      
-## [21] memoise_0.2.1    evaluate_0.7.2   rmarkdown_0.7    stringi_0.5-5   
-## [25] meta_4.3-0       rjags_4-5        jsonlite_0.9.16  truncnorm_1.0-7 
-## [29] chron_2.3-47</code></pre>
+##  [1] Rcpp_0.12.1     lattice_0.20-33 digest_0.6.8    plyr_1.8.3     
+##  [5] grid_3.2.2      chron_2.3-47    meta_4.3-0      formatR_1.2    
+##  [9] magrittr_1.5    evaluate_0.7.2  stringi_0.5-5   rmarkdown_0.7  
+## [13] tools_3.2.2     stringr_1.0.0   igraph_1.0.1    yaml_2.1.13    
+## [17] htmltools_0.2.6 knitr_1.11</code></pre>
 </div>
 
 
