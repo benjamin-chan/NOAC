@@ -1,0 +1,5 @@
+```{r, echo=FALSE, results='asis'}
+D <- tidyData(D)
+write.csv(D, file="mtcMIData.csv", row.names=FALSE)
+print(xtable(D, digits=rep(0, 5)), type="html", include.rownames=FALSE)
+```

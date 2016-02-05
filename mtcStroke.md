@@ -4,25 +4,44 @@ Benjamin Chan
 
 [Back](README.md) to main page.
 
-Clean up the data (do not show the code).
+Read data.
+
+
+```r
+D <- readSheet("Strokeembolism")
+```
+
+Tidy up the data (do not show the code).
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Feb 05 12:54:21 2016 -->
+<!-- Fri Feb 05 15:21:59 2016 -->
 <table border=1>
 <tr> <th> study </th> <th> treatment </th> <th> responders </th> <th> sampleSize </th>  </tr>
-  <tr> <td> RE-LY </td> <td> Dabigatran_110_mg </td> <td align="right"> 182 </td> <td align="right"> 6015 </td> </tr>
-  <tr> <td> RE-LY </td> <td> Dabigatran_150_mg </td> <td align="right"> 134 </td> <td align="right"> 6076 </td> </tr>
-  <tr> <td> RE-LY </td> <td> Warfarin </td> <td align="right"> 199 </td> <td align="right"> 6022 </td> </tr>
   <tr> <td> ARISTOTLE </td> <td> Apixaban_5_mg </td> <td align="right"> 212 </td> <td align="right"> 9120 </td> </tr>
   <tr> <td> ARISTOTLE </td> <td> Warfarin </td> <td align="right"> 265 </td> <td align="right"> 9081 </td> </tr>
-  <tr> <td> ROCKET-AF </td> <td> Rivaroxaban_20_mg </td> <td align="right"> 269 </td> <td align="right"> 7081 </td> </tr>
-  <tr> <td> ROCKET-AF </td> <td> Warfarin </td> <td align="right"> 306 </td> <td align="right"> 7090 </td> </tr>
+  <tr> <td> ARISTOTLE-J </td> <td> Apixaban_5_mg </td> <td align="right"> 0 </td> <td align="right"> 74 </td> </tr>
+  <tr> <td> ARISTOTLE-J </td> <td> Warfarin </td> <td align="right"> 3 </td> <td align="right"> 74 </td> </tr>
   <tr> <td> ENGAGE AF-TIMI </td> <td> Edoxaban_30_mg </td> <td align="right"> 253 </td> <td align="right"> 7002 </td> </tr>
   <tr> <td> ENGAGE AF-TIMI </td> <td> Edoxaban_60_mg </td> <td align="right"> 182 </td> <td align="right"> 7012 </td> </tr>
   <tr> <td> ENGAGE AF-TIMI </td> <td> Warfarin </td> <td align="right"> 232 </td> <td align="right"> 7012 </td> </tr>
+  <tr> <td> J-ROCKET </td> <td> Rivaroxaban_15_mg </td> <td align="right"> 11 </td> <td align="right"> 637 </td> </tr>
+  <tr> <td> J-ROCKET </td> <td> Warfarin </td> <td align="right"> 22 </td> <td align="right"> 637 </td> </tr>
+  <tr> <td> Mao, 2014 </td> <td> Rivaroxaban_20_mg </td> <td align="right"> 5 </td> <td align="right"> 177 </td> </tr>
+  <tr> <td> Mao, 2014 </td> <td> Warfarin </td> <td align="right"> 7 </td> <td align="right"> 176 </td> </tr>
+  <tr> <td> PETRO </td> <td> Dabigatran_150_mg </td> <td align="right"> 0 </td> <td align="right"> 166 </td> </tr>
+  <tr> <td> PETRO </td> <td> Warfarin </td> <td align="right"> 0 </td> <td align="right"> 70 </td> </tr>
+  <tr> <td> RE-LY </td> <td> Dabigatran_110_mg </td> <td align="right"> 182 </td> <td align="right"> 6015 </td> </tr>
+  <tr> <td> RE-LY </td> <td> Dabigatran_150_mg </td> <td align="right"> 134 </td> <td align="right"> 6076 </td> </tr>
+  <tr> <td> RE-LY </td> <td> Warfarin </td> <td align="right"> 199 </td> <td align="right"> 6022 </td> </tr>
+  <tr> <td> ROCKET-AF </td> <td> Rivaroxaban_20_mg </td> <td align="right"> 269 </td> <td align="right"> 7081 </td> </tr>
+  <tr> <td> ROCKET-AF </td> <td> Warfarin </td> <td align="right"> 306 </td> <td align="right"> 7090 </td> </tr>
+  <tr> <td> Yamashita, 2012 </td> <td> Edoxaban_30_mg </td> <td align="right"> 0 </td> <td align="right"> 131 </td> </tr>
+  <tr> <td> Yamashita, 2012 </td> <td> Edoxaban_60_mg </td> <td align="right"> 0 </td> <td align="right"> 131 </td> </tr>
+  <tr> <td> Yamashita, 2012 </td> <td> Warfarin </td> <td align="right"> 0 </td> <td align="right"> 129 </td> </tr>
    </table>
 
 Run the model using fixed-effects.
+
 
 
 ```r
@@ -49,17 +68,31 @@ print(xtable(or), type="html", include.rownames=FALSE)
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Feb 05 12:54:34 2016 -->
+<!-- Fri Feb 05 15:22:20 2016 -->
 <table border=1>
-<tr> <th> treatment </th> <th> Apixaban 5 mg </th> <th> Dabigatran 110 mg </th> <th> Dabigatran 150 mg </th> <th> Edoxaban 30 mg </th> <th> Edoxaban 60 mg </th> <th> Rivaroxaban 20 mg </th> <th> Warfarin </th>  </tr>
-  <tr> <td> Apixaban 5 mg vs </td> <td>  </td> <td> 0.87 (0.66, 1.14) </td> <td> 1.20 (0.90, 1.61) </td> <td> 0.72 (0.56, 0.93) </td> <td> 1.02 (0.78, 1.33) </td> <td> 0.90 (0.70, 1.15) </td> <td> 0.79 (0.66, 0.95) </td> </tr>
-  <tr> <td> Dabigatran 110 mg vs </td> <td> 1.15 (0.87, 1.51) </td> <td>  </td> <td> 1.38 (1.11, 1.74) </td> <td> 0.83 (0.63, 1.09) </td> <td> 1.17 (0.88, 1.55) </td> <td> 1.04 (0.80, 1.36) </td> <td> 0.91 (0.74, 1.12) </td> </tr>
-  <tr> <td> Dabigatran 150 mg vs </td> <td> 0.83 (0.62, 1.11) </td> <td> 0.72 (0.57, 0.90) </td> <td>  </td> <td> 0.60 (0.45, 0.80) </td> <td> 0.85 (0.63, 1.14) </td> <td> 0.75 (0.57, 0.99) </td> <td> 0.66 (0.53, 0.82) </td> </tr>
-  <tr> <td> Edoxaban 30 mg vs </td> <td> 1.39 (1.07, 1.80) </td> <td> 1.21 (0.92, 1.59) </td> <td> 1.66 (1.26, 2.22) </td> <td>  </td> <td> 1.41 (1.16, 1.71) </td> <td> 1.25 (0.98, 1.61) </td> <td> 1.10 (0.92, 1.32) </td> </tr>
-  <tr> <td> Edoxaban 60 mg vs </td> <td> 0.98 (0.75, 1.29) </td> <td> 0.85 (0.65, 1.13) </td> <td> 1.18 (0.88, 1.58) </td> <td> 0.71 (0.58, 0.86) </td> <td>  </td> <td> 0.89 (0.69, 1.15) </td> <td> 0.78 (0.64, 0.95) </td> </tr>
-  <tr> <td> Rivaroxaban 20 mg vs </td> <td> 1.11 (0.87, 1.42) </td> <td> 0.96 (0.73, 1.25) </td> <td> 1.33 (1.01, 1.75) </td> <td> 0.80 (0.62, 1.02) </td> <td> 1.12 (0.87, 1.45) </td> <td>  </td> <td> 0.88 (0.74, 1.03) </td> </tr>
-  <tr> <td> Warfarin vs </td> <td> 1.26 (1.05, 1.52) </td> <td> 1.10 (0.90, 1.35) </td> <td> 1.51 (1.22, 1.90) </td> <td> 0.91 (0.76, 1.09) </td> <td> 1.28 (1.05, 1.57) </td> <td> 1.14 (0.97, 1.35) </td> <td>  </td> </tr>
+<tr> <th> treatment </th> <th> Apixaban 5 mg </th> <th> Dabigatran 110 mg </th> <th> Dabigatran 150 mg </th> <th> Edoxaban 30 mg </th> <th> Edoxaban 60 mg </th> <th> Rivaroxaban 15 mg </th> <th> Rivaroxaban 20 mg </th> <th> Warfarin </th>  </tr>
+  <tr> <td> Apixaban 5 mg vs </td> <td>  </td> <td> 0.86 (0.65, 1.13) </td> <td> 1.19 (0.90, 1.58) </td> <td> 0.71 (0.55, 0.92) </td> <td> 1.00 (0.76, 1.32) </td> <td> 1.62 (0.77, 3.67) </td> <td> 0.90 (0.70, 1.15) </td> <td> 0.78 (0.65, 0.94) </td> </tr>
+  <tr> <td> Dabigatran 110 mg vs </td> <td> 1.17 (0.89, 1.54) </td> <td>  </td> <td> 1.39 (1.11, 1.74) </td> <td> 0.83 (0.64, 1.10) </td> <td> 1.17 (0.88, 1.56) </td> <td> 1.90 (0.91, 4.32) </td> <td> 1.05 (0.81, 1.37) </td> <td> 0.92 (0.74, 1.12) </td> </tr>
+  <tr> <td> Dabigatran 150 mg vs </td> <td> 0.84 (0.63, 1.12) </td> <td> 0.72 (0.57, 0.90) </td> <td>  </td> <td> 0.60 (0.45, 0.80) </td> <td> 0.85 (0.63, 1.13) </td> <td> 1.37 (0.64, 3.15) </td> <td> 0.76 (0.58, 1.00) </td> <td> 0.66 (0.53, 0.82) </td> </tr>
+  <tr> <td> Edoxaban 30 mg vs </td> <td> 1.40 (1.08, 1.81) </td> <td> 1.20 (0.91, 1.57) </td> <td> 1.66 (1.25, 2.20) </td> <td>  </td> <td> 1.41 (1.15, 1.71) </td> <td> 2.27 (1.09, 5.13) </td> <td> 1.26 (0.98, 1.61) </td> <td> 1.09 (0.91, 1.31) </td> </tr>
+  <tr> <td> Edoxaban 60 mg vs </td> <td> 1.00 (0.76, 1.31) </td> <td> 0.85 (0.64, 1.13) </td> <td> 1.18 (0.88, 1.59) </td> <td> 0.71 (0.59, 0.87) </td> <td>  </td> <td> 1.61 (0.77, 3.67) </td> <td> 0.89 (0.69, 1.16) </td> <td> 0.78 (0.64, 0.95) </td> </tr>
+  <tr> <td> Rivaroxaban 15 mg vs </td> <td> 0.62 (0.27, 1.30) </td> <td> 0.53 (0.23, 1.10) </td> <td> 0.73 (0.32, 1.56) </td> <td> 0.44 (0.19, 0.92) </td> <td> 0.62 (0.27, 1.29) </td> <td>  </td> <td> 0.56 (0.25, 1.15) </td> <td> 0.48 (0.22, 0.98) </td> </tr>
+  <tr> <td> Rivaroxaban 20 mg vs </td> <td> 1.11 (0.87, 1.42) </td> <td> 0.95 (0.73, 1.24) </td> <td> 1.32 (1.00, 1.74) </td> <td> 0.79 (0.62, 1.02) </td> <td> 1.12 (0.86, 1.45) </td> <td> 1.80 (0.87, 4.08) </td> <td>  </td> <td> 0.87 (0.74, 1.03) </td> </tr>
+  <tr> <td> Warfarin vs </td> <td> 1.28 (1.06, 1.53) </td> <td> 1.09 (0.89, 1.34) </td> <td> 1.52 (1.22, 1.89) </td> <td> 0.91 (0.76, 1.09) </td> <td> 1.28 (1.06, 1.57) </td> <td> 2.06 (1.02, 4.62) </td> <td> 1.15 (0.97, 1.36) </td> <td>  </td> </tr>
    </table>
+
+# Forest plots, NOAC vs NOAC
+
+
+
+```r
+noac <- unique(D[treatment != "Warfarin", treatment])
+for (i in 1:length(noac)) {
+  forest(relative.effect(results, noac[i], noac[1:length(noac) != i]))
+}
+```
+
+![](mtcStroke_files/figure-html/forest-1.png) ![](mtcStroke_files/figure-html/forest-2.png) ![](mtcStroke_files/figure-html/forest-3.png) ![](mtcStroke_files/figure-html/forest-4.png) ![](mtcStroke_files/figure-html/forest-5.png) ![](mtcStroke_files/figure-html/forest-6.png) ![](mtcStroke_files/figure-html/forest-7.png) 
 
 # Diagnostics
 
@@ -84,27 +117,29 @@ summary(results)
 ##    plus standard error of the mean:
 ## 
 ##                                  Mean      SD  Naive SE Time-series SE
-## d.Warfarin.Apixaban_5_mg     -0.23335 0.09423 0.0009423      0.0009650
-## d.Warfarin.Dabigatran_110_mg -0.09280 0.10430 0.0010430      0.0011642
-## d.Warfarin.Dabigatran_150_mg -0.41620 0.11387 0.0011387      0.0011777
-## d.Warfarin.Edoxaban_30_mg     0.09354 0.09300 0.0009300      0.0010205
-## d.Warfarin.Edoxaban_60_mg    -0.24955 0.10020 0.0010020      0.0009941
-## d.Warfarin.Rivaroxaban_20_mg -0.13260 0.08536 0.0008536      0.0008792
+## d.Warfarin.Apixaban_5_mg     -0.24527 0.09358 0.0009358      0.0009739
+## d.Warfarin.Dabigatran_110_mg -0.08998 0.10458 0.0010458      0.0011557
+## d.Warfarin.Dabigatran_150_mg -0.41660 0.11196 0.0011196      0.0011305
+## d.Warfarin.Edoxaban_30_mg     0.09085 0.09305 0.0009305      0.0010523
+## d.Warfarin.Edoxaban_60_mg    -0.24962 0.10125 0.0010125      0.0010255
+## d.Warfarin.Rivaroxaban_15_mg -0.73677 0.38094 0.0038094      0.0041510
+## d.Warfarin.Rivaroxaban_20_mg -0.13905 0.08525 0.0008525      0.0008886
 ## 
 ## 2. Quantiles for each variable:
 ## 
-##                                  2.5%      25%      50%      75%    97.5%
-## d.Warfarin.Apixaban_5_mg     -0.41651 -0.29676 -0.23340 -0.16935 -0.04743
-## d.Warfarin.Dabigatran_110_mg -0.29846 -0.16314 -0.09356 -0.02298  0.11058
-## d.Warfarin.Dabigatran_150_mg -0.63982 -0.49290 -0.41506 -0.33799 -0.19718
-## d.Warfarin.Edoxaban_30_mg    -0.08706  0.03162  0.09327  0.15594  0.27974
-## d.Warfarin.Edoxaban_60_mg    -0.44867 -0.31699 -0.24799 -0.18192 -0.05351
-## d.Warfarin.Rivaroxaban_20_mg -0.29905 -0.18986 -0.13339 -0.07373  0.03320
+##                                  2.5%     25%      50%      75%    97.5%
+## d.Warfarin.Apixaban_5_mg     -0.42711 -0.3078 -0.24607 -0.18149 -0.06198
+## d.Warfarin.Dabigatran_110_mg -0.29501 -0.1595 -0.08840 -0.02010  0.11369
+## d.Warfarin.Dabigatran_150_mg -0.63680 -0.4929 -0.41574 -0.34106 -0.19819
+## d.Warfarin.Edoxaban_30_mg    -0.08946  0.0280  0.09048  0.15426  0.27275
+## d.Warfarin.Edoxaban_60_mg    -0.45039 -0.3179 -0.24986 -0.18040 -0.05391
+## d.Warfarin.Rivaroxaban_15_mg -1.52969 -0.9801 -0.72494 -0.48030 -0.02064
+## d.Warfarin.Rivaroxaban_20_mg -0.30438 -0.1970 -0.13773 -0.08096  0.02804
 ## 
 ## 
 ## $DIC
 ##     Dbar       pD      DIC 
-## 10.05021 10.04896 20.09917 
+## 17.91173 14.10536 32.01709 
 ## 
 ## attr(,"class")
 ## [1] "summary.mtc.result"
@@ -132,6 +167,7 @@ gelman.diag(results)
 ## d.Warfarin.Dabigatran_150_mg          1          1
 ## d.Warfarin.Edoxaban_30_mg             1          1
 ## d.Warfarin.Edoxaban_60_mg             1          1
+## d.Warfarin.Rivaroxaban_15_mg          1          1
 ## d.Warfarin.Rivaroxaban_20_mg          1          1
 ## 
 ## Multivariate psrf
@@ -172,21 +208,22 @@ summary(anohe)
 ## Per-comparison I-squared:
 ## -------------------------
 ## 
-##                  t1                t2 i2.pair i2.cons incons.p
-## 1     Apixaban_5_mg          Warfarin      NA      NA       NA
-## 2 Dabigatran_110_mg Dabigatran_150_mg      NA      NA       NA
-## 3 Dabigatran_110_mg          Warfarin      NA      NA       NA
-## 4 Dabigatran_150_mg          Warfarin      NA      NA       NA
-## 5    Edoxaban_30_mg    Edoxaban_60_mg      NA      NA       NA
-## 6    Edoxaban_30_mg          Warfarin      NA      NA       NA
-## 7    Edoxaban_60_mg          Warfarin      NA      NA       NA
-## 8 Rivaroxaban_20_mg          Warfarin      NA      NA       NA
+##                  t1                t2  i2.pair  i2.cons incons.p
+## 1     Apixaban_5_mg          Warfarin 99.05897 91.48331       NA
+## 2 Dabigatran_110_mg Dabigatran_150_mg       NA       NA       NA
+## 3 Dabigatran_110_mg          Warfarin       NA       NA       NA
+## 4 Dabigatran_150_mg          Warfarin  0.00000  0.00000       NA
+## 5    Edoxaban_30_mg    Edoxaban_60_mg  0.00000  0.00000       NA
+## 6    Edoxaban_30_mg          Warfarin  0.00000  0.00000       NA
+## 7    Edoxaban_60_mg          Warfarin  0.00000  0.00000       NA
+## 8 Rivaroxaban_15_mg          Warfarin       NA       NA       NA
+## 9 Rivaroxaban_20_mg          Warfarin  0.00000  0.00000       NA
 ## 
 ## Global I-squared:
 ## -------------------------
 ## 
-##   i2.pair i2.cons
-## 1       0       0
+##    i2.pair i2.cons
+## 1 87.02801       0
 ```
 
 ```r
@@ -198,16 +235,16 @@ plot(anohe)
 ## Unrelated Study Effects (USE) model:
 ```
 
-![](mtcStroke_files/figure-html/anohe-1.png) ![](mtcStroke_files/figure-html/anohe-2.png) 
+![](mtcStroke_files/figure-html/anohe-1.png) ![](mtcStroke_files/figure-html/anohe-2.png) ![](mtcStroke_files/figure-html/anohe-3.png) ![](mtcStroke_files/figure-html/anohe-4.png) 
 
 ```
 ## Unrelated Mean Effects (UME) model:
 ```
 
-![](mtcStroke_files/figure-html/anohe-3.png) ![](mtcStroke_files/figure-html/anohe-4.png) ![](mtcStroke_files/figure-html/anohe-5.png) 
+![](mtcStroke_files/figure-html/anohe-5.png) ![](mtcStroke_files/figure-html/anohe-6.png) ![](mtcStroke_files/figure-html/anohe-7.png) ![](mtcStroke_files/figure-html/anohe-8.png) 
 
 ```
 ## Consistency model:
 ```
 
-![](mtcStroke_files/figure-html/anohe-6.png) ![](mtcStroke_files/figure-html/anohe-7.png) 
+![](mtcStroke_files/figure-html/anohe-9.png) ![](mtcStroke_files/figure-html/anohe-10.png) 
