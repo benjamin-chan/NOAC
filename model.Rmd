@@ -1,0 +1,5 @@
+```{r network, results='hide'}
+M <- mtc.model(network, type="consistency", linearModel=effect)
+plot(M)
+results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=thin)
+```

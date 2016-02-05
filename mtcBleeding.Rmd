@@ -10,26 +10,29 @@ output:
 
 [Back](README.md) to main page.
 
-Clean up the data (do not show the code).
+Read data.
 
-```{r, echo=FALSE, results='asis'}
-D4 <- readSheet("Bleeding")
-D4 <- D4[!is.na(label)]
-D4 <- D4[,
-         `:=` (nWarfarin = as.numeric(nWarfarin),
-               yWarfarin = as.numeric(yWarfarin))]
-D4 <- tidyData(D4)
-write.csv(D4, file="mtcBleedingData.csv", row.names=FALSE)
-print(xtable(D4, digits=rep(0, 5)), type="html", include.rownames=FALSE)
-network <- mtc.network(D4[!is.na(responders)])
+```{r}
+D <- readSheet("Bleeding")
+D <- D[!is.na(label)]
+D <- D[,
+       `:=` (nWarfarin = as.numeric(nWarfarin),
+             yWarfarin = as.numeric(yWarfarin))]
 ```
 
-`Run the model using `r sprintf("%s-effects", effect)`.
+Tidy up the data (do not show the code).
 
-```{r network, results='hide'}
-M <- mtc.model(network, type="consistency", linearModel=effect)
-plot(M)
-results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=thin)
+```{r, echo=FALSE, results='asis'}
+D <- tidyData(D)
+write.csv(D, file="mtcBleedingData.csv", row.names=FALSE)
+print(xtable(D, digits=rep(0, 5)), type="html", include.rownames=FALSE)
+D <- D[!is.na(responders)]
+network <- mtc.network(D)
+```
+
+Run the model using `r sprintf("%s-effects", effect)`.
+
+```{r, child="model.Rmd"}
 ```
 
 # Summary

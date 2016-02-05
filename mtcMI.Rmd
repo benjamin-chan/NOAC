@@ -10,22 +10,24 @@ output:
 
 [Back](README.md) to main page.
 
-Clean up the data (do not show the code).
+Read data.
+
+```{r}
+D <- readSheet("MI")
+```
+
+Tidy up the data (do not show the code).
 
 ```{r, echo=FALSE, results='asis'}
-D3 <- readSheet("MI")
-D3 <- tidyData(D3)
-write.csv(D3, file="mtcMIData.csv", row.names=FALSE)
-print(xtable(D3, digits=rep(0, 5)), type="html", include.rownames=FALSE)
-network <- mtc.network(D3)
+D <- tidyData(D)
+write.csv(D, file="mtcMIData.csv", row.names=FALSE)
+print(xtable(D, digits=rep(0, 5)), type="html", include.rownames=FALSE)
+network <- mtc.network(D)
 ```
 
 Run the model using `r sprintf("%s-effects", effect)`.
 
-```{r network, results='hide'}
-M <- mtc.model(network, type="consistency", linearModel=effect)
-plot(M)
-results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=thin)
+```{r, child="model.Rmd"}
 ```
 
 # Summary

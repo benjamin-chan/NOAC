@@ -10,22 +10,24 @@ output:
 
 [Back](README.md) to main page.
 
-Clean up the data (do not show the code).
+Read data.
+
+```{r}
+D <- readSheet("Strokeembolism")
+```
+
+Tidy up the data (do not show the code).
 
 ```{r, echo=FALSE, results='asis'}
-D2 <- readSheet("Strokeembolism")
-D2 <- tidyData(D2)
-write.csv(D2, file="mtcStrokeData.csv", row.names=FALSE)
-print(xtable(D2, digits=rep(0, 5)), type="html", include.rownames=FALSE)
-network <- mtc.network(D2)
+D <- tidyData(D)
+write.csv(D, file="mtcStrokeData.csv", row.names=FALSE)
+print(xtable(D, digits=rep(0, 5)), type="html", include.rownames=FALSE)
+network <- mtc.network(D)
 ```
 
 Run the model using `r sprintf("%s-effects", effect)`.
 
-```{r network, results='hide'}
-M <- mtc.model(network, type="consistency", linearModel=effect)
-plot(M)
-results <- mtc.run(M, n.adapt=nAdapt, n.iter=nIter, thin=thin)
+```{r, child="model.Rmd"}
 ```
 
 # Summary
