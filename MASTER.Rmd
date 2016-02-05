@@ -58,7 +58,7 @@ library(xtable)
 
 ```{r, echo=FALSE}
 readSheet <- function (sheet) {
-  D <- data.table(read.xlsx("Revised NOAC NMA Data.xlsx", sheet=sheet, startRow=3, cols=1:5))
+  D <- data.table(read.xlsx("Revised NOAC NMA Data 2-5-16.xlsx", sheet=sheet, startRow=3, cols=1:5))
   names(D) <- c("label", "nNOAC", "yNOAC", "nWarfarin", "yWarfarin")
   D
 }

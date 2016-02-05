@@ -13,7 +13,7 @@ output:
 Clean up the data (do not show the code).
 
 ```{r, echo=FALSE, results='asis'}
-D2 <- readSheet("Stroke")
+D2 <- readSheet("Strokeembolism")
 D2 <- tidyData(D2)
 write.csv(D2, file="mtcStrokeData.csv", row.names=FALSE)
 print(xtable(D2, digits=rep(0, 5)), type="html", include.rownames=FALSE)
