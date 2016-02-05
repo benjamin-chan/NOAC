@@ -1,0 +1,6 @@
+```{r forest}
+noac <- unique(D2[treatment != "Warfarin", treatment])
+for (i in 1:length(noac)) {
+  forest(relative.effect(results, noac[i], noac[1:length(noac) != i]))
+}
+```

@@ -43,6 +43,11 @@ write.csv(or, file="mtcBleedingOddsRatios.csv", row.names=FALSE)
 print(xtable(or), type="html", include.rownames=FALSE)
 ```
 
+# Forest plots, NOAC vs NOAC
+
+```{r, child="forestPlots.Rmd"}
+```
+
 # Diagnostics
 
 ```{r, child="modelDiagnostics.Rmd"}
