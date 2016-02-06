@@ -20,6 +20,7 @@ This network meta-analysis is an update to
 * [Data](mtcMortalityData.csv)
 * Treatment [network](mtcMortality_files/figure-html/network-1.png)
 * Direct and indirect [odds ratio](mtcMortalityOddsRatios.csv) matrix
+* Forest plots, `forest-#.png` files, are in this [folder](mtcMortality_files/figure-html)
 * [Full details](mtcMortality.md), including model diagnostics
 
 ## Stroke
@@ -27,6 +28,7 @@ This network meta-analysis is an update to
 * [Data](mtcStrokeData.csv)
 * Treatment [network](mtcStroke_files/figure-html/network-1.png)
 * Direct and indirect [odds ratio](mtcStrokeOddsRatios.csv) matrix
+* Forest plots, `forest-#.png` files, are in this [folder](mtcStroke_files/figure-html)
 * [Full details](mtcStroke.md), including model diagnostics
 
 ## MI
@@ -34,6 +36,7 @@ This network meta-analysis is an update to
 * [Data](mtcMIData.csv)
 * Treatment [network](mtcMI_files/figure-html/network-1.png)
 * Direct and indirect [odds ratio](mtcMIOddsRatios.csv) matrix
+* Forest plots, `forest-#.png` files, are in this [folder](mtcMI_files/figure-html)
 * [Full details](mtcMI.md), including model diagnostics
 
 ## Bleeding
@@ -41,6 +44,7 @@ This network meta-analysis is an update to
 * [Data](mtcBleedingData.csv)
 * Treatment [network](mtcBleeding_files/figure-html/network-1.png)
 * Direct and indirect [odds ratio](mtcBleedingOddsRatios.csv) matrix
+* Forest plots, `forest-#.png` files, are in this [folder](mtcBleeding_files/figure-html)
 * [Full details](mtcBleeding.md), including model diagnostics
 
 
