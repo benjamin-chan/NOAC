@@ -146,7 +146,6 @@ combineResults <- function (outcomeBleeding=FALSE) {
     D <- rbindlist(list(tidyResults("Apixaban_5_mg"),
                         tidyResults("Dabigatran_110_mg"),
                         tidyResults("Dabigatran_150_mg"),
-                        tidyResults("Dabigatran_300_mg"),
                         tidyResults("Edoxaban_30_mg"),
                         tidyResults("Edoxaban_60_mg"),
                         tidyResults("Rivaroxaban_20_mg"),
