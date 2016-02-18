@@ -17,8 +17,8 @@ This network meta-analysis is an update to
 In light of the [*Cohen 2016*](http://dx.doi.org/10.1136/bmj.i575),
 *Rivaroxaban: can we trust the evidence?*,
 these results are from a sensitivity analysis where the data are altered.
-The warfarin arm of the ROCKET-AF is forced to have a response rate equal to the Rivaroxaban arm.
-The effect of this sensitivity analysis is the assume a zero effect of ROCKET-AF
+The warfarin arm of the ROCKET-AF is assumed to have 10% fewer responses than originally reported.
+The effect of this sensitivity analysis is bias ROCKET-AF in favor of warfarin
 and the see how that affects indirect comparisons.
 
 Results from the NMA using data as originally reported in the studies is found [here](http://dx.doi.org/10.5281/zenodo.46116).
@@ -129,11 +129,9 @@ tidyData <- function (D) {
   D
 }
 
-biasROCKETAF <- function () {
-  rivaArm <- D[study == "ROCKET-AF" & grepl("Rivaroxaban", treatment)]
-  rate <- rivaArm[, responders] / rivaArm[, sampleSize]
+biasROCKETAF <- function (magnitude = 0.10) {
   D <- D[study == "ROCKET-AF" & treatment == "Warfarin",
-         responders := round(sampleSize * rate)]
+         responders := round(responders * (1 - magnitude))]
   D
 }
 
