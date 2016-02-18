@@ -20,7 +20,7 @@ D <- D[,
              yWarfarin = as.numeric(yWarfarin))]
 ```
 
-Tidy up the data and bias the warfarin arm of ROCKET-AF to be similar to the Rivaroxaban arm.
+Tidy up the data and bias the warfarin arm of ROCKET-AF in favor of warfarin.
 
 ```{r, results='asis'}
 D <- tidyData(D)
