@@ -13,6 +13,17 @@ This network meta-analysis is an update to
 [Fu *et al*, 2014](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4244213/),
 *J Cardiovasc Med (Hagerstown).* 2014 Dec; 15(12): 873-879.
 
+**Sensitivity analysis**
+In light of the [*Cohen 2016*](http://dx.doi.org/10.1136/bmj.i575),
+*Rivaroxaban: can we trust the evidence?*,
+these results are from a sensitivity analysis where the data are altered.
+The warfarin arm of the ROCKET-AF is forced to have a response rate equal to the Rivaroxaban arm.
+The effect of this sensitivity analysis is the assume a zero effect of ROCKET-AF
+and the see how that affects indirect comparisons.
+
+Results from the NMA using data as originally reported in the studies is found [here](http://dx.doi.org/10.5281/zenodo.46116).
+
+
 # Results
 
 ## Mortality
@@ -115,6 +126,14 @@ tidyData <- function (D) {
   setkey(D, study, treatment)
   setcolorder(D, c("study", "treatment", "responders", "sampleSize"))
   D <- unique(D)
+  D
+}
+
+biasROCKETAF <- function () {
+  rivaArm <- D[study == "ROCKET-AF" & grepl("Rivaroxaban", treatment)]
+  rate <- rivaArm[, responders] / rivaArm[, sampleSize]
+  D <- D[study == "ROCKET-AF" & treatment == "Warfarin",
+         responders := round(sampleSize * rate)]
   D
 }
 
