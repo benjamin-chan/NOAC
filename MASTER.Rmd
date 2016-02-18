@@ -13,6 +13,14 @@ This network meta-analysis is an update to
 [Fu *et al*, 2014](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4244213/),
 *J Cardiovasc Med (Hagerstown).* 2014 Dec; 15(12): 873-879.
 
+This project is built by sourcing [`make.R`](make.R).
+
+```{r, eval=FALSE}
+setwd("~/GitHub repositories/NOAC")
+source("make.R", echo=TRUE)
+```
+
+
 # Results
 
 ## Mortality
