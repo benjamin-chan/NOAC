@@ -20,7 +20,6 @@ Tidy up the data and bias the warfarin arm of ROCKET-AF to be similar to the Riv
 
 ```{r, results='asis'}
 D <- tidyData(D)
-D <- biasROCKETAF()
 write.csv(D, file="mtcMortalityData.csv", row.names=FALSE)
 print(xtable(D, digits=rep(0, 5)), type="html", include.rownames=FALSE)
 network <- mtc.network(D)
