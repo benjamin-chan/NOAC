@@ -29,15 +29,15 @@ label: unnamed-chunk-4
   |                                                                         |.................................................................| 100%
 label: unnamed-chunk-5
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output index.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpEfGwy4\rmarkdown-str21a475127ded.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+"C:/Program Files/RStudio/bin/pandoc/pandoc" MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output index.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpAJ6j8W\rmarkdown-str21b474e147a1.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
 
 > file.rename("index.md", "README.md")
 [1] TRUE
 
 > file.info(c("index.html", "README.md"))
              size isdir mode               mtime               ctime               atime exe
-index.html 651324 FALSE  666 2016-02-18 10:56:36 2016-02-03 14:02:34 2016-02-16 10:22:24  no
-README.md    4477 FALSE  666 2016-02-18 10:56:36 2016-02-18 10:56:36 2016-02-18 10:56:36  no
+index.html 650948 FALSE  666 2016-02-24 10:45:49 2016-02-03 14:02:34 2016-02-24 10:44:38  no
+README.md    4180 FALSE  666 2016-02-24 10:45:49 2016-02-24 10:45:49 2016-02-24 10:45:49  no
 
 > .timeStart <- Sys.time()
 
@@ -140,7 +140,7 @@ List of 1
 
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcMortality.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcMortality.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpEfGwy4\rmarkdown-str21a453bc570b.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcMortality.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcMortality.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpAJ6j8W\rmarkdown-str21b41ba94185.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
 
 > rmarkdown::render("mtcStroke.Rmd")
   |                                                                         |                                                                 |   0%  |                                                                         |.....                                                            |   8%
@@ -241,7 +241,7 @@ List of 1
 
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcStroke.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcStroke.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpEfGwy4\rmarkdown-str21a469ae3a7e.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcStroke.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcStroke.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpAJ6j8W\rmarkdown-str21b462fc7fb.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
 
 > rmarkdown::render("mtcMI.Rmd")
   |                                                                         |                                                                 |   0%  |                                                                         |.....                                                            |   8%
@@ -342,7 +342,7 @@ List of 1
 
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcMI.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcMI.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpEfGwy4\rmarkdown-str21a46dca4a67.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcMI.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcMI.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpAJ6j8W\rmarkdown-str21b438d3afd.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
 
 > rmarkdown::render("mtcBleeding.Rmd")
   |                                                                         |                                                                 |   0%  |                                                                         |....                                                             |   6%
@@ -457,6 +457,6 @@ List of 1
 
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcBleeding.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcBleeding.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpEfGwy4\rmarkdown-str21a4203837d0.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcBleeding.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcBleeding.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpAJ6j8W\rmarkdown-str21b43ded2862.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
 
 > sink(NULL)
