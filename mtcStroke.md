@@ -16,13 +16,12 @@ Tidy up the data and bias the warfarin arm of ROCKET-AF in favor of warfarin.
 
 ```r
 D <- tidyData(D)
-D <- biasROCKETAF()
 write.csv(D, file="mtcStrokeData.csv", row.names=FALSE)
 print(xtable(D, digits=rep(0, 5)), type="html", include.rownames=FALSE)
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Tue Feb 23 16:14:52 2016 -->
+<!-- Wed Feb 24 10:54:57 2016 -->
 <table border=1>
 <tr> <th> study </th> <th> treatment </th> <th> responders </th> <th> sampleSize </th>  </tr>
   <tr> <td> ARISTOTLE </td> <td> Apixaban_5_mg </td> <td align="right"> 212 </td> <td align="right"> 9120 </td> </tr>
@@ -42,7 +41,7 @@ print(xtable(D, digits=rep(0, 5)), type="html", include.rownames=FALSE)
   <tr> <td> RE-LY </td> <td> Dabigatran_150_mg </td> <td align="right"> 134 </td> <td align="right"> 6076 </td> </tr>
   <tr> <td> RE-LY </td> <td> Warfarin </td> <td align="right"> 199 </td> <td align="right"> 6022 </td> </tr>
   <tr> <td> ROCKET-AF </td> <td> Rivaroxaban_20_mg </td> <td align="right"> 269 </td> <td align="right"> 7081 </td> </tr>
-  <tr> <td> ROCKET-AF </td> <td> Warfarin </td> <td align="right"> 275 </td> <td align="right"> 7090 </td> </tr>
+  <tr> <td> ROCKET-AF </td> <td> Warfarin </td> <td align="right"> 306 </td> <td align="right"> 7090 </td> </tr>
   <tr> <td> Yamashita, 2012 </td> <td> Edoxaban_30_mg </td> <td align="right"> 0 </td> <td align="right"> 131 </td> </tr>
   <tr> <td> Yamashita, 2012 </td> <td> Edoxaban_60_mg </td> <td align="right"> 0 </td> <td align="right"> 131 </td> </tr>
   <tr> <td> Yamashita, 2012 </td> <td> Warfarin </td> <td align="right"> 0 </td> <td align="right"> 129 </td> </tr>
@@ -80,17 +79,17 @@ print(xtable(or), type="html", include.rownames=FALSE)
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Tue Feb 23 16:15:12 2016 -->
+<!-- Wed Feb 24 10:55:18 2016 -->
 <table border=1>
 <tr> <th> treatment </th> <th> Apixaban 5 mg </th> <th> Dabigatran 110 mg </th> <th> Dabigatran 150 mg </th> <th> Edoxaban 30 mg </th> <th> Edoxaban 60 mg </th> <th> Rivaroxaban 15 mg </th> <th> Rivaroxaban 20 mg </th> <th> Warfarin </th>  </tr>
-  <tr> <td> Apixaban 5 mg vs </td> <td>  </td> <td> 0.86 (0.65, 1.13) </td> <td> 1.18 (0.89, 1.58) </td> <td> 0.71 (0.55, 0.92) </td> <td> 1.00 (0.77, 1.31) </td> <td> 1.62 (0.78, 3.63) </td> <td> 0.80 (0.63, 1.03) </td> <td> 0.78 (0.65, 0.94) </td> </tr>
-  <tr> <td> Dabigatran 110 mg vs </td> <td> 1.17 (0.88, 1.54) </td> <td>  </td> <td> 1.38 (1.10, 1.74) </td> <td> 0.83 (0.64, 1.09) </td> <td> 1.17 (0.88, 1.56) </td> <td> 1.89 (0.90, 4.23) </td> <td> 0.94 (0.72, 1.22) </td> <td> 0.92 (0.74, 1.12) </td> </tr>
-  <tr> <td> Dabigatran 150 mg vs </td> <td> 0.84 (0.63, 1.12) </td> <td> 0.72 (0.57, 0.91) </td> <td>  </td> <td> 0.60 (0.45, 0.80) </td> <td> 0.85 (0.63, 1.14) </td> <td> 1.37 (0.64, 3.04) </td> <td> 0.68 (0.51, 0.90) </td> <td> 0.66 (0.53, 0.82) </td> </tr>
-  <tr> <td> Edoxaban 30 mg vs </td> <td> 1.40 (1.09, 1.81) </td> <td> 1.20 (0.91, 1.57) </td> <td> 1.66 (1.25, 2.21) </td> <td>  </td> <td> 1.41 (1.17, 1.70) </td> <td> 2.27 (1.08, 5.04) </td> <td> 1.13 (0.88, 1.45) </td> <td> 1.10 (0.92, 1.31) </td> </tr>
-  <tr> <td> Edoxaban 60 mg vs </td> <td> 1.00 (0.76, 1.29) </td> <td> 0.85 (0.64, 1.14) </td> <td> 1.18 (0.88, 1.59) </td> <td> 0.71 (0.59, 0.86) </td> <td>  </td> <td> 1.62 (0.77, 3.60) </td> <td> 0.80 (0.62, 1.04) </td> <td> 0.78 (0.64, 0.95) </td> </tr>
-  <tr> <td> Rivaroxaban 15 mg vs </td> <td> 0.62 (0.28, 1.28) </td> <td> 0.53 (0.24, 1.11) </td> <td> 0.73 (0.33, 1.56) </td> <td> 0.44 (0.20, 0.93) </td> <td> 0.62 (0.28, 1.30) </td> <td>  </td> <td> 0.50 (0.22, 1.03) </td> <td> 0.48 (0.22, 0.99) </td> </tr>
-  <tr> <td> Rivaroxaban 20 mg vs </td> <td> 1.24 (0.97, 1.59) </td> <td> 1.06 (0.82, 1.39) </td> <td> 1.48 (1.12, 1.95) </td> <td> 0.89 (0.69, 1.14) </td> <td> 1.25 (0.96, 1.62) </td> <td> 2.02 (0.97, 4.49) </td> <td>  </td> <td> 0.97 (0.82, 1.15) </td> </tr>
-  <tr> <td> Warfarin vs </td> <td> 1.28 (1.07, 1.54) </td> <td> 1.09 (0.90, 1.35) </td> <td> 1.52 (1.21, 1.90) </td> <td> 0.91 (0.76, 1.09) </td> <td> 1.28 (1.06, 1.56) </td> <td> 2.08 (1.01, 4.52) </td> <td> 1.03 (0.87, 1.22) </td> <td>  </td> </tr>
+  <tr> <td> Apixaban 5 mg vs </td> <td>  </td> <td> 0.86 (0.65, 1.13) </td> <td> 1.18 (0.89, 1.58) </td> <td> 0.71 (0.55, 0.92) </td> <td> 1.00 (0.77, 1.31) </td> <td> 1.62 (0.78, 3.60) </td> <td> 0.90 (0.71, 1.15) </td> <td> 0.78 (0.66, 0.94) </td> </tr>
+  <tr> <td> Dabigatran 110 mg vs </td> <td> 1.16 (0.89, 1.55) </td> <td>  </td> <td> 1.38 (1.10, 1.74) </td> <td> 0.83 (0.63, 1.09) </td> <td> 1.17 (0.88, 1.56) </td> <td> 1.88 (0.91, 4.23) </td> <td> 1.05 (0.81, 1.37) </td> <td> 0.91 (0.74, 1.12) </td> </tr>
+  <tr> <td> Dabigatran 150 mg vs </td> <td> 0.84 (0.63, 1.12) </td> <td> 0.72 (0.57, 0.91) </td> <td>  </td> <td> 0.60 (0.45, 0.81) </td> <td> 0.85 (0.63, 1.14) </td> <td> 1.37 (0.65, 3.07) </td> <td> 0.76 (0.57, 1.01) </td> <td> 0.66 (0.53, 0.83) </td> </tr>
+  <tr> <td> Edoxaban 30 mg vs </td> <td> 1.40 (1.08, 1.80) </td> <td> 1.20 (0.91, 1.58) </td> <td> 1.66 (1.24, 2.21) </td> <td>  </td> <td> 1.41 (1.17, 1.71) </td> <td> 2.27 (1.09, 5.03) </td> <td> 1.26 (0.99, 1.60) </td> <td> 1.10 (0.92, 1.31) </td> </tr>
+  <tr> <td> Edoxaban 60 mg vs </td> <td> 1.00 (0.76, 1.30) </td> <td> 0.85 (0.64, 1.13) </td> <td> 1.18 (0.87, 1.59) </td> <td> 0.71 (0.58, 0.86) </td> <td>  </td> <td> 1.61 (0.77, 3.60) </td> <td> 0.90 (0.69, 1.15) </td> <td> 0.78 (0.64, 0.95) </td> </tr>
+  <tr> <td> Rivaroxaban 15 mg vs </td> <td> 0.62 (0.28, 1.29) </td> <td> 0.53 (0.24, 1.10) </td> <td> 0.73 (0.33, 1.54) </td> <td> 0.44 (0.20, 0.92) </td> <td> 0.62 (0.28, 1.29) </td> <td>  </td> <td> 0.56 (0.25, 1.15) </td> <td> 0.49 (0.22, 0.98) </td> </tr>
+  <tr> <td> Rivaroxaban 20 mg vs </td> <td> 1.12 (0.87, 1.41) </td> <td> 0.95 (0.73, 1.24) </td> <td> 1.32 (0.99, 1.74) </td> <td> 0.80 (0.63, 1.01) </td> <td> 1.12 (0.87, 1.44) </td> <td> 1.80 (0.87, 4.02) </td> <td>  </td> <td> 0.87 (0.74, 1.02) </td> </tr>
+  <tr> <td> Warfarin vs </td> <td> 1.28 (1.06, 1.53) </td> <td> 1.10 (0.89, 1.34) </td> <td> 1.51 (1.21, 1.90) </td> <td> 0.91 (0.76, 1.09) </td> <td> 1.28 (1.06, 1.56) </td> <td> 2.06 (1.02, 4.55) </td> <td> 1.15 (0.98, 1.36) </td> <td>  </td> </tr>
    </table>
 
 # Forest plots, NOAC vs NOAC
@@ -129,29 +128,29 @@ summary(results)
 ##    plus standard error of the mean:
 ## 
 ##                                  Mean      SD  Naive SE Time-series SE
-## d.Warfarin.Apixaban_5_mg     -0.24601 0.09262 0.0009262      0.0009427
-## d.Warfarin.Dabigatran_110_mg -0.09095 0.10381 0.0010381      0.0011339
-## d.Warfarin.Dabigatran_150_mg -0.41673 0.11376 0.0011376      0.0011685
-## d.Warfarin.Edoxaban_30_mg     0.09143 0.09241 0.0009241      0.0009885
-## d.Warfarin.Edoxaban_60_mg    -0.24964 0.09987 0.0009987      0.0010066
-## d.Warfarin.Rivaroxaban_15_mg -0.73631 0.38161 0.0038161      0.0042864
-## d.Warfarin.Rivaroxaban_20_mg -0.02781 0.08628 0.0008628      0.0008652
+## d.Warfarin.Apixaban_5_mg     -0.24491 0.09271 0.0009271      0.0009666
+## d.Warfarin.Dabigatran_110_mg -0.08989 0.10523 0.0010523      0.0011213
+## d.Warfarin.Dabigatran_150_mg -0.41452 0.11493 0.0011493      0.0011531
+## d.Warfarin.Edoxaban_30_mg     0.09174 0.09123 0.0009123      0.0010064
+## d.Warfarin.Edoxaban_60_mg    -0.24994 0.09973 0.0009973      0.0010254
+## d.Warfarin.Rivaroxaban_15_mg -0.73528 0.38182 0.0038182      0.0040474
+## d.Warfarin.Rivaroxaban_20_mg -0.13830 0.08384 0.0008384      0.0008490
 ## 
 ## 2. Quantiles for each variable:
 ## 
-##                                 2.5%      25%      50%     75%   97.5%
-## d.Warfarin.Apixaban_5_mg     -0.4286 -0.30896 -0.24510 -0.1844 -0.0651
-## d.Warfarin.Dabigatran_110_mg -0.2967 -0.16074 -0.08878 -0.0206  0.1093
-## d.Warfarin.Dabigatran_150_mg -0.6442 -0.49295 -0.41636 -0.3407 -0.1936
-## d.Warfarin.Edoxaban_30_mg    -0.0859  0.02769  0.09163  0.1539  0.2728
-## d.Warfarin.Edoxaban_60_mg    -0.4466 -0.31741 -0.25007 -0.1806 -0.0547
-## d.Warfarin.Rivaroxaban_15_mg -1.5080 -0.98848 -0.73058 -0.4722 -0.0134
-## d.Warfarin.Rivaroxaban_20_mg -0.1969 -0.08665 -0.02853  0.0307  0.1413
+##                                  2.5%     25%      50%      75%    97.5%
+## d.Warfarin.Apixaban_5_mg     -0.42280 -0.3088 -0.24500 -0.18349 -0.05965
+## d.Warfarin.Dabigatran_110_mg -0.29458 -0.1618 -0.09138 -0.01823  0.11596
+## d.Warfarin.Dabigatran_150_mg -0.64207 -0.4915 -0.41425 -0.33709 -0.19035
+## d.Warfarin.Edoxaban_30_mg    -0.08511  0.0301  0.09217  0.15238  0.27014
+## d.Warfarin.Edoxaban_60_mg    -0.44339 -0.3172 -0.24932 -0.18308 -0.05392
+## d.Warfarin.Rivaroxaban_15_mg -1.51440 -0.9828 -0.72327 -0.47687 -0.02166
+## d.Warfarin.Rivaroxaban_20_mg -0.30455 -0.1944 -0.13828 -0.08111  0.02329
 ## 
 ## 
 ## $DIC
 ##     Dbar       pD      DIC 
-## 18.13780 14.14934 32.28714 
+## 17.90268 14.08546 31.98814 
 ## 
 ## attr(,"class")
 ## [1] "summary.mtc.result"
@@ -220,22 +219,22 @@ summary(anohe)
 ## Per-comparison I-squared:
 ## -------------------------
 ## 
-##                  t1                t2  i2.pair  i2.cons incons.p
-## 1     Apixaban_5_mg          Warfarin 99.00674 91.84207       NA
-## 2 Dabigatran_110_mg Dabigatran_150_mg       NA       NA       NA
-## 3 Dabigatran_110_mg          Warfarin       NA       NA       NA
-## 4 Dabigatran_150_mg          Warfarin  0.00000  0.00000       NA
-## 5    Edoxaban_30_mg    Edoxaban_60_mg  0.00000  0.00000       NA
-## 6    Edoxaban_30_mg          Warfarin  0.00000  0.00000       NA
-## 7    Edoxaban_60_mg          Warfarin  0.00000  0.00000       NA
-## 8 Rivaroxaban_15_mg          Warfarin       NA       NA       NA
-## 9 Rivaroxaban_20_mg          Warfarin 37.97915  0.00000       NA
+##                  t1                t2  i2.pair i2.cons incons.p
+## 1     Apixaban_5_mg          Warfarin 99.10379  92.473       NA
+## 2 Dabigatran_110_mg Dabigatran_150_mg       NA      NA       NA
+## 3 Dabigatran_110_mg          Warfarin       NA      NA       NA
+## 4 Dabigatran_150_mg          Warfarin  0.00000   0.000       NA
+## 5    Edoxaban_30_mg    Edoxaban_60_mg  0.00000   0.000       NA
+## 6    Edoxaban_30_mg          Warfarin  0.00000   0.000       NA
+## 7    Edoxaban_60_mg          Warfarin  0.00000   0.000       NA
+## 8 Rivaroxaban_15_mg          Warfarin       NA      NA       NA
+## 9 Rivaroxaban_20_mg          Warfarin  0.00000   0.000       NA
 ## 
 ## Global I-squared:
 ## -------------------------
 ## 
-##    i2.pair i2.cons
-## 1 86.45757       0
+##    i2.pair  i2.cons
+## 1 87.64026 1.857992
 ```
 
 ```r

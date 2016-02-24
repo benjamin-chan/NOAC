@@ -16,6 +16,7 @@ For the bleeding outcome, the warfarin arm of the ROCKET-AF is assumed to have 1
 This pushes the odds ratio of ROCKET-AF to be statistically significant (upper bound of the warfarin vs rivaroxaban 95% CI < 1.0).
 The effect of this sensitivity analysis is bias ROCKET-AF in favor of warfarin
 and the see how that affects indirect comparisons.
+The issue only affects the bleeding outcome.
 
 Results from the NMA using data as originally reported in the studies is found [here](http://dx.doi.org/10.5281/zenodo.46116).
 
@@ -123,7 +124,7 @@ sessionInfo()
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] Rcpp_0.12.1     lattice_0.20-33 digest_0.6.8    truncnorm_1.0-7
-##  [5] chron_2.3-47    grid_3.2.2      plyr_1.8.3      meta_4.3-0     
+##  [5] plyr_1.8.3      grid_3.2.2      chron_2.3-47    meta_4.3-0     
 ##  [9] formatR_1.2     magrittr_1.5    evaluate_0.7.2  stringi_0.5-5  
 ## [13] rjags_4-5       rmarkdown_0.7   tools_3.2.2     stringr_1.0.0  
 ## [17] igraph_1.0.1    yaml_2.1.13     htmltools_0.2.6 knitr_1.11
