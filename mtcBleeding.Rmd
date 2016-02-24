@@ -24,7 +24,7 @@ Tidy up the data and bias the warfarin arm of ROCKET-AF in favor of warfarin.
 
 ```{r, results='asis'}
 D <- tidyData(D)
-D <- biasROCKETAF()
+D <- biasROCKETAF(magnitude = 0.12)
 ```
 
 Hard-code data corrections to the PETRO study.

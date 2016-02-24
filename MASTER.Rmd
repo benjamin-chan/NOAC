@@ -17,7 +17,9 @@ This network meta-analysis is an update to
 In light of the [*Cohen 2016*](http://dx.doi.org/10.1136/bmj.i575),
 *Rivaroxaban: can we trust the evidence?*,
 these results are from a sensitivity analysis where the data are altered.
-The warfarin arm of the ROCKET-AF is assumed to have 10% fewer responses than originally reported.
+The warfarin arm of the ROCKET-AF is assumed to have 10% fewer responses in the mortality, stroke, and MI outcomes than originally reported.
+For the bleeding outcome, the warfarin arm of the ROCKET-AF is assumed to have 12% fewer responses than originally reported.
+This pushes the odds ratio of ROCKET-AF to be statistically significant (upper bound of the warfarin vs rivaroxaban 95% CI < 1.0).
 The effect of this sensitivity analysis is bias ROCKET-AF in favor of warfarin
 and the see how that affects indirect comparisons.
 
