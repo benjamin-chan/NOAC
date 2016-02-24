@@ -20,9 +20,9 @@ D <- D[,
              yWarfarin = as.numeric(yWarfarin))]
 ```
 
-Tidy up the data (do not show the code).
+Tidy up the data.
 
-```{r, echo=FALSE, results='asis'}
+```{r, results='asis'}
 D <- tidyData(D)
 ```
 
