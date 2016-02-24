@@ -20,10 +20,11 @@ D <- D[,
              yWarfarin = as.numeric(yWarfarin))]
 ```
 
-Tidy up the data (do not show the code).
+Tidy up the data and exclude the ROCKET-AF study.
 
-```{r, echo=FALSE, results='asis'}
+```{r, results='asis'}
 D <- tidyData(D)
+D <- D[study != "ROCKET-AF"]
 ```
 
 Hard-code data corrections to the PETRO study.
