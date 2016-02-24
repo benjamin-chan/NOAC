@@ -14,6 +14,7 @@ these results are from a sensitivity analysis where the data are altered.
 The warfarin arm of the ROCKET-AF is forced to have a response rate equal to the Rivaroxaban arm.
 The effect of this sensitivity analysis is the assume a zero effect of ROCKET-AF
 and the see how that affects indirect comparisons.
+The issue only affects the bleeding outcome.
 
 Results from the NMA using data as originally reported in the studies is found [here](http://dx.doi.org/10.5281/zenodo.46116).
 
@@ -62,7 +63,26 @@ Check the link for references.
 ```r
 library(openxlsx)
 library(data.table)
+```
+
+```
+## data.table 1.9.6  For help type ?data.table or https://github.com/Rdatatable/data.table/wiki
+## The fastest way to learn (by data.table authors): https://www.datacamp.com/courses/data-analysis-the-data-table-way
+```
+
+```r
 library(gemtc)
+```
+
+```
+## Warning: package 'gemtc' was built under R version 3.2.3
+```
+
+```
+## Loading required package: coda
+```
+
+```r
 library(xtable)
 ```
 
@@ -103,7 +123,7 @@ sessionInfo()
 ```
 ## R version 3.2.2 (2015-08-14)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)
-## Running under: Windows 8 x64 (build 9200)
+## Running under: Windows 7 x64 (build 7601) Service Pack 1
 ## 
 ## locale:
 ## [1] LC_COLLATE=English_United States.1252 
@@ -116,13 +136,13 @@ sessionInfo()
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-## [1] xtable_1.7-4     gemtc_0.7-1      coda_0.17-1      data.table_1.9.6
-## [5] openxlsx_3.0.0  
+## [1] xtable_1.7-4        gemtc_0.7-1         coda_0.17-1        
+## [4] data.table_1.9.6    openxlsx_3.0.0      RevoUtilsMath_3.2.2
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] Rcpp_0.11.6     lattice_0.20-33 digest_0.6.8    truncnorm_1.0-7
-##  [5] chron_2.3-47    grid_3.2.2      plyr_1.8.3      meta_4.3-2     
-##  [9] formatR_1.2     magrittr_1.5    evaluate_0.8    stringi_0.4-1  
-## [13] rjags_4-5       rmarkdown_0.8   tools_3.2.2     stringr_1.0.0  
-## [17] igraph_1.0.1    yaml_2.1.13     htmltools_0.2.6 knitr_1.11
+##  [1] Rcpp_0.12.1     lattice_0.20-33 digest_0.6.8    plyr_1.8.3     
+##  [5] grid_3.2.2      chron_2.3-47    meta_4.3-0      formatR_1.2    
+##  [9] magrittr_1.5    evaluate_0.7.2  stringi_0.5-5   rmarkdown_0.7  
+## [13] tools_3.2.2     stringr_1.0.0   igraph_1.0.1    yaml_2.1.13    
+## [17] htmltools_0.2.6 knitr_1.11
 ```
