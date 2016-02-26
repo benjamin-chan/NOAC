@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.46563.svg)](http://dx.doi.org/10.5281/zenodo.46563)
+
 # Novel oral anticoagulants network meta-analysis
 Benjamin Chan  
 `r Sys.time()`  
