@@ -77,9 +77,11 @@ readSheet <- function (sheet) {
 
 tidyData <- function (D) {
   names(D) <- c("label", "nNOAC", "yNOAC", "nWarfarin", "yWarfarin")
+  D <- D[, label := gsub("rivaroxaban", "Rivaroxaban", label)]
+  D <- D[, label := gsub("r ivaroxaban", " Rivaroxaban", label)]
+  D <- D[, label := gsub("edoxaban", "Edoxaban", label)]
   D <- D[, label := gsub("\\s{2,}", " ", label)]
   D <- D[, label := gsub("\\s$", "", label)]
-  D <- D[, label := gsub("\\sivaroxaban", " Rivaroxaban", label)]
   D <- D[, label := gsub("0$", "0 mg", label)]
   D$study <- NA_character_
   D$noac <- NA_character_
@@ -98,6 +100,7 @@ tidyData <- function (D) {
   D <- assignStudy("ROCKET-AF")
   D <- assignStudy("PETRO")
   D <- assignStudy("Mao, 2014")
+  D <- assignStudy("Weitz, 2010")
   D <- assignNOAC("Dabigatran 110 mg")
   D <- assignNOAC("Dabigatran 150 mg")
   D <- assignNOAC("Dabigatran 300 mg")
