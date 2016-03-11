@@ -22,7 +22,14 @@ The effect of this sensitivity analysis is the assume a zero effect of ROCKET-AF
 and the see how that affects indirect comparisons.
 The issue only affects the bleeding outcome.
 
-Results from the NMA using data as originally reported in the studies is found [here](http://dx.doi.org/10.5281/zenodo.46116).
+Results from the NMA using data as originally reported in the studies is found [here](http://dx.doi.org/10.5281/zenodo.47425).
+
+This project is built by sourcing [`make.R`](make.R).
+
+```{r, eval=FALSE}
+setwd("~/GitHub repositories/NOAC")
+source("make.R", echo=TRUE)
+```
 
 
 # Results
@@ -74,16 +81,18 @@ library(xtable)
 
 ```{r, echo=FALSE}
 readSheet <- function (sheet) {
-  D <- data.table(read.xlsx("Revised NOAC NMA Data 2-5-16.xlsx", sheet=sheet, startRow=3, cols=1:5))
+  D <- data.table(read.xlsx("Revised NOAC Data with Weitz and PETRO.xlsx", sheet=sheet, startRow=3, cols=1:5))
   names(D) <- c("label", "nNOAC", "yNOAC", "nWarfarin", "yWarfarin")
   D
 }
 
 tidyData <- function (D) {
   names(D) <- c("label", "nNOAC", "yNOAC", "nWarfarin", "yWarfarin")
+  D <- D[, label := gsub("rivaroxaban", "Rivaroxaban", label)]
+  D <- D[, label := gsub("r ivaroxaban", " Rivaroxaban", label)]
+  D <- D[, label := gsub("edoxaban", "Edoxaban", label)]
   D <- D[, label := gsub("\\s{2,}", " ", label)]
   D <- D[, label := gsub("\\s$", "", label)]
-  D <- D[, label := gsub("\\sivaroxaban", " Rivaroxaban", label)]
   D <- D[, label := gsub("0$", "0 mg", label)]
   D$study <- NA_character_
   D$noac <- NA_character_
@@ -102,6 +111,7 @@ tidyData <- function (D) {
   D <- assignStudy("ROCKET-AF")
   D <- assignStudy("PETRO")
   D <- assignStudy("Mao, 2014")
+  D <- assignStudy("Weitz, 2010")
   D <- assignNOAC("Dabigatran 110 mg")
   D <- assignNOAC("Dabigatran 150 mg")
   D <- assignNOAC("Dabigatran 300 mg")

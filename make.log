@@ -1,47 +1,41 @@
-
-> rmarkdown::render("MASTER.Rmd", output_file="index.html")
-  |                                                                         |                                                                 |   0%  |                                                                         |......                                                           |  10%
+  |                                                                         |                                                                 |   0%  |                                                                         |.....                                                            |   8%
    inline R code fragments
 
-  |                                                                         |.............                                                    |  20%
-label: unnamed-chunk-1
-  |                                                                         |....................                                             |  30%
+  |                                                                         |...........                                                      |  17%
+label: unnamed-chunk-1 (with options) 
+List of 1
+ $ eval: logi FALSE
+
+  |                                                                         |................                                                 |  25%
   ordinary text without R code
 
-  |                                                                         |..........................                                       |  40%
-label: unnamed-chunk-2 (with options) 
+  |                                                                         |......................                                           |  33%
+label: unnamed-chunk-2
+  |                                                                         |...........................                                      |  42%
+  ordinary text without R code
+
+  |                                                                         |................................                                 |  50%
+label: unnamed-chunk-3 (with options) 
 List of 1
  $ echo: logi FALSE
 
-  |                                                                         |................................                                 |  50%
+  |                                                                         |......................................                           |  58%
   ordinary text without R code
 
-  |                                                                         |.......................................                          |  60%
-label: unnamed-chunk-3
-  |                                                                         |..............................................                   |  70%
-  ordinary text without R code
-
-  |                                                                         |....................................................             |  80%
+  |                                                                         |...........................................                      |  67%
 label: unnamed-chunk-4
-  |                                                                         |..........................................................       |  90%
+  |                                                                         |.................................................                |  75%
   ordinary text without R code
 
-  |                                                                         |.................................................................| 100%
+  |                                                                         |......................................................           |  83%
 label: unnamed-chunk-5
+  |                                                                         |............................................................     |  92%
+  ordinary text without R code
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output index.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpAJ6j8W\rmarkdown-str21b45d10660.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+  |                                                                         |.................................................................| 100%
+label: unnamed-chunk-6
 
-> file.rename("index.md", "README.md")
-[1] TRUE
-
-> file.info(c("index.html", "README.md"))
-             size isdir mode               mtime               ctime               atime exe
-index.html 651370 FALSE  666 2016-02-24 10:37:41 2016-02-03 14:02:34 2016-02-24 10:34:24  no
-README.md    4524 FALSE  666 2016-02-24 10:37:41 2016-02-24 10:37:41 2016-02-24 10:37:41  no
-
-> .timeStart <- Sys.time()
-
-> rmarkdown::render("mtcMortality.Rmd")
+"C:/Users/chanb/AppData/Local/Pandoc/pandoc" MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output index.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpietWeC\rmarkdown-str258c695c7b5d.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
   |                                                                         |                                                                 |   0%  |                                                                         |.....                                                            |   8%
    inline R code fragments
 
@@ -140,9 +134,7 @@ List of 1
 
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcMortality.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcMortality.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpAJ6j8W\rmarkdown-str21b46e9962b7.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
-
-> rmarkdown::render("mtcStroke.Rmd")
+"C:/Users/chanb/AppData/Local/Pandoc/pandoc" mtcMortality.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcMortality.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpietWeC\rmarkdown-str258c3a035cce.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
   |                                                                         |                                                                 |   0%  |                                                                         |.....                                                            |   8%
    inline R code fragments
 
@@ -241,9 +233,7 @@ List of 1
 
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcStroke.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcStroke.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpAJ6j8W\rmarkdown-str21b440153a59.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
-
-> rmarkdown::render("mtcMI.Rmd")
+"C:/Users/chanb/AppData/Local/Pandoc/pandoc" mtcStroke.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcStroke.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpietWeC\rmarkdown-str258c501b4eac.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
   |                                                                         |                                                                 |   0%  |                                                                         |.....                                                            |   8%
    inline R code fragments
 
@@ -342,41 +332,34 @@ List of 1
 
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcMI.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcMI.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpAJ6j8W\rmarkdown-str21b41bb848a7.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
-
-> rmarkdown::render("mtcBleeding.Rmd")
-  |                                                                         |                                                                 |   0%  |                                                                         |....                                                             |   6%
+"C:/Users/chanb/AppData/Local/Pandoc/pandoc" mtcMI.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcMI.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpietWeC\rmarkdown-str258c5d4b1fd3.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+  |                                                                         |                                                                 |   0%  |                                                                         |.....                                                            |   7%
    inline R code fragments
 
-  |                                                                         |........                                                         |  12%
+  |                                                                         |.........                                                        |  14%
 label: unnamed-chunk-1
-  |                                                                         |............                                                     |  19%
+  |                                                                         |..............                                                   |  21%
   ordinary text without R code
 
-  |                                                                         |................                                                 |  25%
+  |                                                                         |...................                                              |  29%
 label: unnamed-chunk-2 (with options) 
 List of 1
  $ results: chr "asis"
 
-  |                                                                         |....................                                             |  31%
+  |                                                                         |.......................                                          |  36%
   ordinary text without R code
 
-  |                                                                         |........................                                         |  38%
-label: unnamed-chunk-3
-  |                                                                         |............................                                     |  44%
-  ordinary text without R code
-
-  |                                                                         |................................                                 |  50%
-label: unnamed-chunk-4 (with options) 
+  |                                                                         |............................                                     |  43%
+label: unnamed-chunk-3 (with options) 
 List of 2
  $ echo   : logi FALSE
  $ results: chr "asis"
 
-  |                                                                         |.....................................                            |  56%
+  |                                                                         |................................                                 |  50%
    inline R code fragments
 
-  |                                                                         |.........................................                        |  62%
-label: unnamed-chunk-5 (with options) 
+  |                                                                         |.....................................                            |  57%
+label: unnamed-chunk-4 (with options) 
 List of 1
  $ child: chr "model.Rmd"
 
@@ -386,35 +369,35 @@ List of 1
  $ results: chr "hide"
 
 
-  |                                                                         |.............................................                    |  69%
+  |                                                                         |..........................................                       |  64%
   ordinary text without R code
 
-  |                                                                         |.................................................                |  75%
-label: unnamed-chunk-6 (with options) 
+  |                                                                         |..............................................                   |  71%
+label: unnamed-chunk-5 (with options) 
 List of 1
  $ results: chr "asis"
 
-  |                                                                         |.....................................................            |  81%
+  |                                                                         |...................................................              |  79%
   ordinary text without R code
 
-  |                                                                         |.........................................................        |  88%
-label: unnamed-chunk-7 (with options) 
+  |                                                                         |........................................................         |  86%
+label: unnamed-chunk-6 (with options) 
 List of 1
  $ child: chr "forestPlots.Rmd"
 
   |                                                                         |                                                                 |   0%  |                                                                         |.................................................................| 100%
 label: forest
 
-  |                                                                         |.............................................................    |  94%
+  |                                                                         |............................................................     |  93%
   ordinary text without R code
 
   |                                                                         |.................................................................| 100%
-label: unnamed-chunk-8 (with options) 
+label: unnamed-chunk-7 (with options) 
 List of 1
  $ child: chr "modelDiagnostics.Rmd"
 
   |                                                                         |                                                                 |   0%  |                                                                         |......                                                           |   9%
-label: unnamed-chunk-9
+label: unnamed-chunk-8
   |                                                                         |............                                                     |  18%
   ordinary text without R code
 
@@ -443,7 +426,7 @@ List of 1
   ordinary text without R code
 
   |                                                                         |.....................................................            |  82%
-label: unnamed-chunk-10 (with options) 
+label: unnamed-chunk-9 (with options) 
 List of 1
  $ results: chr "hide"
 
@@ -457,6 +440,4 @@ List of 1
 
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" mtcBleeding.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcBleeding.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpAJ6j8W\rmarkdown-str21b47ced403a.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
-
-> sink(NULL)
+"C:/Users/chanb/AppData/Local/Pandoc/pandoc" mtcBleeding.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output mtcBleeding.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpietWeC\rmarkdown-str258c2a543f.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 

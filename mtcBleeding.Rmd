@@ -27,24 +27,6 @@ D <- tidyData(D)
 D <- biasROCKETAF()
 ```
 
-Hard-code data corrections to the PETRO study.
-
-> From: Marian McDonagh  
-> Sent: Friday, February 05, 2016 5:00 PM  
-> To: Benjamin Chan  
-> Subject: Re: Checking data for meta-analysis  
-> 
-> It looks like this was a dose-ranging studies with multiple arms.
-> The only relevant one here had 0 events in the dabigatran 150 group (N = 100),
-> and of course 0 in the warfarin group (N = 70).
-
-```{r}
-D <- D[study == "PETRO" & treatment == "Dabigatran_300_mg",
-       `:=` (treatment = "Dabigatran_150_mg",
-             responders = 0,
-             sampleSize = 100)]
-```
-
 ```{r, echo=FALSE, results='asis'}
 write.csv(D, file="mtcBleedingData.csv", row.names=FALSE)
 print(xtable(D, digits=rep(0, 5)), type="html", include.rownames=FALSE)

@@ -6,15 +6,17 @@
 "ENGAGE AF-TIMI","Edoxaban_30_mg",254,7034
 "ENGAGE AF-TIMI","Edoxaban_60_mg",418,7035
 "ENGAGE AF-TIMI","Warfarin",524,7036
-"J-ROCKET","Rivaroxaban_15_mg",NA,639
-"J-ROCKET","Warfarin",NA,639
 "PETRO","Dabigatran_150_mg",0,100
+"PETRO","Dabigatran_300_mg",4,161
 "PETRO","Warfarin",0,70
 "RE-LY","Dabigatran_110_mg",322,6015
 "RE-LY","Dabigatran_150_mg",375,6076
 "RE-LY","Warfarin",397,6022
 "ROCKET-AF","Rivaroxaban_20_mg",395,7081
-"ROCKET-AF","Warfarin",396,7090
+"ROCKET-AF","Warfarin",386,7090
+"Weitz, 2010","Edoxaban_30_mg",0,235
+"Weitz, 2010","Edoxaban_60_mg",1,234
+"Weitz, 2010","Warfarin",1,250
 "Yamashita, 2012","Edoxaban_30_mg",0,131
 "Yamashita, 2012","Edoxaban_60_mg",2,131
 "Yamashita, 2012","Warfarin",0,129
