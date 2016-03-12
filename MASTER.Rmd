@@ -20,7 +20,7 @@ these results are from a sensitivity analysis where the data are altered.
 The warfarin arm of the ROCKET-AF is forced to have a response rate equal to the Rivaroxaban arm.
 The effect of this sensitivity analysis is the assume a zero effect of ROCKET-AF
 and the see how that affects indirect comparisons.
-The issue only affects the bleeding outcome.
+**The issue only affects the bleeding outcome.**
 
 Results from the NMA using data as originally reported in the studies is found [here](http://dx.doi.org/10.5281/zenodo.47425).
 
