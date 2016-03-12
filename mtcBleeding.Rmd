@@ -20,32 +20,32 @@ D <- D[,
              yWarfarin = as.numeric(yWarfarin))]
 ```
 
+Hard-code data corrections and additions to the PETRO study.
+
+> From: Marian McDonagh  
+> Sent: Friday, March 11, 2016 4:17 PM  
+> To: Benjamin Chan  
+> Subject: Re: Network Meta-analysis  
+> 
+> Hi Ben,  
+> Yes, I was noticing the Dabi 300mg problem.
+> We should definitely exclude that dose as it is not used (too much bleeding).
+> There were three dabi 150 arms (with varying aspirin doses).
+> Since the aspirin made no difference, and other studies allow its use, we can use all 3 arms.
+> But, the major bleeding events were still 0 across those.
+> The total N for that is actually 169.
+> And of course the 70 patients on warfarin with no events also.
+
+```{r}
+D <- D[label != "PETRO Dabigatran 300 mg"]
+D <- D[label == "PETRO Dabigatran 150 mg", nNOAC := 169]
+```
+
 Tidy up the data and exclude the ROCKET-AF study.
 
 ```{r, results='asis'}
 D <- tidyData(D)
 D <- D[study != "ROCKET-AF"]
-```
-
-Hard-code data corrections to the PETRO study.
-
-> From: Marian McDonagh  
-> Sent: Friday, February 05, 2016 5:00 PM  
-> To: Benjamin Chan  
-> Subject: Re: Checking data for meta-analysis  
-> 
-> It looks like this was a dose-ranging studies with multiple arms.
-> The only relevant one here had 0 events in the dabigatran 150 group (N = 100),
-> and of course 0 in the warfarin group (N = 70).
-
-```{r}
-D <- D[study == "PETRO" & treatment == "Dabigatran_300_mg",
-       `:=` (treatment = "Dabigatran_150_mg",
-             responders = 0,
-             sampleSize = 100)]
-```
-
-```{r, echo=FALSE, results='asis'}
 write.csv(D, file="mtcBleedingData.csv", row.names=FALSE)
 print(xtable(D, digits=rep(0, 5)), type="html", include.rownames=FALSE)
 D <- D[!is.na(responders)]
