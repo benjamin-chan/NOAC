@@ -20,6 +20,27 @@ D <- D[,
              yWarfarin = as.numeric(yWarfarin))]
 ```
 
+Hard-code data corrections and additions to the PETRO study.
+
+> From: Marian McDonagh  
+> Sent: Friday, March 11, 2016 4:17 PM  
+> To: Benjamin Chan  
+> Subject: Re: Network Meta-analysis  
+> 
+> Hi Ben,  
+> Yes, I was noticing the Dabi 300mg problem.
+> We should definitely exclude that dose as it is not used (too much bleeding).
+> There were three dabi 150 arms (with varying aspirin doses).
+> Since the aspirin made no difference, and other studies allow its use, we can use all 3 arms.
+> But, the major bleeding events were still 0 across those.
+> The total N for that is actually 169.
+> And of course the 70 patients on warfarin with no events also.
+
+```{r}
+D <- D[label != "PETRO Dabigatran 300 mg"]
+D <- D[label == "PETRO Dabigatran 150 mg", nNOAC := 169]
+```
+
 Tidy up the data.
 
 ```{r, results='asis'}

@@ -16,6 +16,32 @@ Read data.
 D <- readSheet("Strokeembolism")
 ```
 
+Hard-code data corrections and additions to the PETRO study.
+
+> From: Marian McDonagh  
+> Sent: Friday, March 11, 2016 4:17 PM  
+> To: Benjamin Chan  
+> Subject: Re: Network Meta-analysis  
+> 
+> For stroke, you are right --- we can delete row 18, and correct the N for dabi 150 to be 169 in row 6.  
+> 
+> From: Benjamin Chan  
+> Sent: Friday, March 11, 2016 4:08 PM  
+> To: Marian McDonagh  
+> Subject: RE: Network Meta-analysis  
+> 
+> Marian,
+>  
+> Also, for the stroke outcome, you have PETRO dabigatran 150 mg listed twice (rows 6 and 18).
+> I'm guessing row 6 is for dabi 300 mg.
+> Same question, though.
+> Should I exclude the 300 mg arm?
+
+```{r}
+D <- D[1:(nrow(D) - 1)]
+D <- D[label == "PETRO Dabigatran 150 mg", nNOAC := 169]
+```
+
 Tidy up the data.
 
 ```{r, results='asis'}
