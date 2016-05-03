@@ -48,7 +48,7 @@ print(xtable(D, digits=rep(0, 5)), type="html", include.rownames=FALSE)
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Mar 11 20:52:26 2016 -->
+<!-- Mon May 02 21:08:12 2016 -->
 <table border=1>
 <tr> <th> study </th> <th> treatment </th> <th> responders </th> <th> sampleSize </th>  </tr>
   <tr> <td> ARISTOTLE </td> <td> Apixaban_5_mg </td> <td align="right"> 327 </td> <td align="right"> 9088 </td> </tr>
@@ -104,15 +104,15 @@ print(xtable(or), type="html", include.rownames=FALSE)
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Mar 11 20:52:44 2016 -->
+<!-- Mon May 02 21:08:30 2016 -->
 <table border=1>
 <tr> <th> treatment </th> <th> Apixaban 5 mg </th> <th> Dabigatran 110 mg </th> <th> Dabigatran 150 mg </th> <th> Edoxaban 30 mg </th> <th> Edoxaban 60 mg </th> <th> Warfarin </th>  </tr>
-  <tr> <td> Apixaban 5 mg vs </td> <td>  </td> <td> 0.87 (0.70, 1.06) </td> <td> 0.74 (0.61, 0.91) </td> <td> 1.49 (1.21, 1.84) </td> <td> 0.88 (0.72, 1.07) </td> <td> 0.69 (0.60, 0.80) </td> </tr>
-  <tr> <td> Dabigatran 110 mg vs </td> <td> 1.16 (0.94, 1.43) </td> <td>  </td> <td> 0.86 (0.74, 1.00) </td> <td> 1.72 (1.39, 2.14) </td> <td> 1.02 (0.83, 1.23) </td> <td> 0.80 (0.69, 0.93) </td> </tr>
-  <tr> <td> Dabigatran 150 mg vs </td> <td> 1.34 (1.10, 1.65) </td> <td> 1.16 (1.00, 1.36) </td> <td>  </td> <td> 2.00 (1.63, 2.48) </td> <td> 1.18 (0.97, 1.43) </td> <td> 0.93 (0.80, 1.08) </td> </tr>
-  <tr> <td> Edoxaban 30 mg vs </td> <td> 0.67 (0.54, 0.82) </td> <td> 0.58 (0.47, 0.72) </td> <td> 0.50 (0.40, 0.61) </td> <td>  </td> <td> 0.59 (0.50, 0.69) </td> <td> 0.46 (0.40, 0.54) </td> </tr>
-  <tr> <td> Edoxaban 60 mg vs </td> <td> 1.14 (0.93, 1.38) </td> <td> 0.98 (0.81, 1.20) </td> <td> 0.85 (0.70, 1.03) </td> <td> 1.70 (1.45, 1.99) </td> <td>  </td> <td> 0.79 (0.69, 0.90) </td> </tr>
-  <tr> <td> Warfarin vs </td> <td> 1.44 (1.25, 1.67) </td> <td> 1.25 (1.08, 1.45) </td> <td> 1.07 (0.93, 1.25) </td> <td> 2.15 (1.85, 2.51) </td> <td> 1.27 (1.11, 1.44) </td> <td>  </td> </tr>
+  <tr> <td> Apixaban 5 mg vs </td> <td>  </td> <td> 0.86 (0.70, 1.07) </td> <td> 0.74 (0.60, 0.91) </td> <td> 1.49 (1.21, 1.83) </td> <td> 0.88 (0.72, 1.07) </td> <td> 0.69 (0.60, 0.80) </td> </tr>
+  <tr> <td> Dabigatran 110 mg vs </td> <td> 1.16 (0.93, 1.43) </td> <td>  </td> <td> 0.86 (0.74, 1.00) </td> <td> 1.73 (1.39, 2.15) </td> <td> 1.01 (0.83, 1.24) </td> <td> 0.80 (0.69, 0.93) </td> </tr>
+  <tr> <td> Dabigatran 150 mg vs </td> <td> 1.35 (1.09, 1.66) </td> <td> 1.16 (1.00, 1.36) </td> <td>  </td> <td> 2.01 (1.63, 2.48) </td> <td> 1.18 (0.97, 1.44) </td> <td> 0.93 (0.80, 1.08) </td> </tr>
+  <tr> <td> Edoxaban 30 mg vs </td> <td> 0.67 (0.55, 0.82) </td> <td> 0.58 (0.47, 0.72) </td> <td> 0.50 (0.40, 0.61) </td> <td>  </td> <td> 0.59 (0.50, 0.69) </td> <td> 0.46 (0.40, 0.54) </td> </tr>
+  <tr> <td> Edoxaban 60 mg vs </td> <td> 1.14 (0.94, 1.38) </td> <td> 0.99 (0.80, 1.21) </td> <td> 0.85 (0.69, 1.03) </td> <td> 1.70 (1.46, 1.99) </td> <td>  </td> <td> 0.79 (0.69, 0.90) </td> </tr>
+  <tr> <td> Warfarin vs </td> <td> 1.44 (1.25, 1.67) </td> <td> 1.25 (1.07, 1.45) </td> <td> 1.07 (0.93, 1.24) </td> <td> 2.15 (1.85, 2.51) </td> <td> 1.27 (1.11, 1.45) </td> <td>  </td> </tr>
    </table>
 
 # Forest plots, NOAC vs NOAC
@@ -151,25 +151,25 @@ summary(results)
 ##    plus standard error of the mean:
 ## 
 ##                                  Mean      SD  Naive SE Time-series SE
-## d.Warfarin.Apixaban_5_mg     -0.36743 0.07386 0.0007386      0.0007809
-## d.Warfarin.Dabigatran_110_mg -0.22209 0.07766 0.0007766      0.0009113
-## d.Warfarin.Dabigatran_150_mg -0.07072 0.07513 0.0007513      0.0007487
-## d.Warfarin.Edoxaban_30_mg    -0.76671 0.07816 0.0007816      0.0009976
-## d.Warfarin.Edoxaban_60_mg    -0.23681 0.06757 0.0006757      0.0006630
+## d.Warfarin.Apixaban_5_mg     -0.36764 0.07328 0.0007328      0.0007423
+## d.Warfarin.Dabigatran_110_mg -0.22098 0.07792 0.0007792      0.0009123
+## d.Warfarin.Dabigatran_150_mg -0.07013 0.07484 0.0007484      0.0007568
+## d.Warfarin.Edoxaban_30_mg    -0.76730 0.07732 0.0007732      0.0009380
+## d.Warfarin.Edoxaban_60_mg    -0.23592 0.06876 0.0006876      0.0006874
 ## 
 ## 2. Quantiles for each variable:
 ## 
 ##                                 2.5%     25%      50%      75%    97.5%
-## d.Warfarin.Apixaban_5_mg     -0.5104 -0.4177 -0.36776 -0.31743 -0.22109
-## d.Warfarin.Dabigatran_110_mg -0.3741 -0.2741 -0.22277 -0.16835 -0.07349
-## d.Warfarin.Dabigatran_150_mg -0.2206 -0.1217 -0.07083 -0.01904  0.07687
-## d.Warfarin.Edoxaban_30_mg    -0.9210 -0.8191 -0.76605 -0.71243 -0.61745
-## d.Warfarin.Edoxaban_60_mg    -0.3676 -0.2833 -0.23757 -0.19116 -0.10595
+## d.Warfarin.Apixaban_5_mg     -0.5103 -0.4174 -0.36705 -0.31775 -0.22359
+## d.Warfarin.Dabigatran_110_mg -0.3713 -0.2742 -0.22175 -0.16788 -0.06802
+## d.Warfarin.Dabigatran_150_mg -0.2177 -0.1200 -0.06938 -0.01963  0.07417
+## d.Warfarin.Edoxaban_30_mg    -0.9204 -0.8190 -0.76634 -0.71533 -0.61680
+## d.Warfarin.Edoxaban_60_mg    -0.3706 -0.2817 -0.23703 -0.18857 -0.10129
 ## 
 ## 
 ## $DIC
 ##     Dbar       pD      DIC 
-## 17.57774 11.28918 28.86693 
+## 17.62041 11.33445 28.95486 
 ## 
 ## attr(,"class")
 ## [1] "summary.mtc.result"
@@ -237,19 +237,19 @@ summary(anohe)
 ## -------------------------
 ## 
 ##                  t1                t2  i2.pair  i2.cons incons.p
-## 1     Apixaban_5_mg          Warfarin 98.44347 80.04034       NA
+## 1     Apixaban_5_mg          Warfarin 99.07724 72.00945       NA
 ## 2 Dabigatran_110_mg Dabigatran_150_mg       NA       NA       NA
 ## 3 Dabigatran_110_mg          Warfarin       NA       NA       NA
 ## 4 Dabigatran_150_mg          Warfarin  0.00000  0.00000       NA
-## 5    Edoxaban_30_mg    Edoxaban_60_mg 92.61834 85.77306       NA
-## 6    Edoxaban_30_mg          Warfarin  0.00000  0.00000       NA
-## 7    Edoxaban_60_mg          Warfarin 37.18571 87.11718       NA
+## 5    Edoxaban_30_mg    Edoxaban_60_mg 95.43381 82.76788       NA
+## 6    Edoxaban_30_mg          Warfarin 40.70606  0.00000       NA
+## 7    Edoxaban_60_mg          Warfarin 65.47564 84.34868       NA
 ## 
 ## Global I-squared:
 ## -------------------------
 ## 
 ##    i2.pair  i2.cons
-## 1 85.44575 61.10093
+## 1 91.33637 52.46948
 ```
 
 ```r
