@@ -17,8 +17,8 @@ This network meta-analysis is an update to
 In light of the [*Cohen 2016*](http://dx.doi.org/10.1136/bmj.i575),
 *Rivaroxaban: can we trust the evidence?*,
 these results are from a sensitivity analysis where the data are altered.
-The ROCKET-AF study is excluded.
-**The issue only affects the bleeding outcome.**
+The ROCKET-AF study is excluded **for all outcomes**;
+unlike in *Sensitivity analysis D*, where the ROCKET-AF study was only excluded for the the bleeding outcome.
 
 Results from the NMA using data as originally reported in the studies is found [here](http://dx.doi.org/10.5281/zenodo.46116).
 

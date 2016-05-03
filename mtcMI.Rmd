@@ -20,6 +20,7 @@ Tidy up the data.
 
 ```{r, results='asis'}
 D <- tidyData(D)
+D <- D[study != "ROCKET-AF"]
 write.csv(D, file="mtcMIData.csv", row.names=FALSE)
 print(xtable(D, digits=rep(0, 5)), type="html", include.rownames=FALSE)
 network <- mtc.network(D)
